@@ -4,6 +4,9 @@
 
 ## Since v1.0.0
 
+### New
+- The results show how long you took (in total and on average per image), and the time is also part of the result you copy for Discord. Only the time from image to answer counts.
+
 ### Fixed
 - On phones the Next button sometimes jumped to a second line after answering, depending on whether a variant name was shown. The box below the answers now always has the same height.
 

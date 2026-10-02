@@ -4,6 +4,9 @@
 
 ## Seit v1.0.0
 
+### Neu
+- Die Auswertung zeigt, wie lange du gebraucht hast (gesamt und im Schnitt pro Bild), und die Zeit steht auch im Ergebnis für Discord. Gezählt wird nur die Zeit vom Bild bis zur Antwort.
+
 ### Behoben
 - Auf dem Handy sprang der Weiter-Knopf nach einer Antwort mal in eine zweite Zeile und mal nicht, je nachdem, ob ein Variantenname angezeigt wurde. Der Kasten unter den Antworten ist jetzt immer gleich hoch.
 

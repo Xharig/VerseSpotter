@@ -236,6 +236,7 @@ function renderQuestion() {
   });
   document.getElementById('rueckmeldung').hidden = true;
   box.querySelector('button').focus({ preventScroll: true });
+  run.shownAt = performance.now();
   startTimer();
 }
 
@@ -272,6 +273,8 @@ function answer(i) {
   run.answered = true;
   stopTimer();
   const q = run.questions[run.index];
+  // Gezählt wird nur die Zeit vom Bild bis zur Antwort, nicht das Lesen der Rückmeldung.
+  q.ms = i < 0 ? COMBAT_SECONDS * 1000 : performance.now() - run.shownAt;
   q.chosen = i >= 0 ? q.options[i] : null;
   q.correct = q.chosen === q.family;
   updateProgress(q);
@@ -342,12 +345,22 @@ function rankFor(pct) {
 const RANK_ICONS = { ace: 'trophy', spotter: 'shield-check', cadet: 'graduation-cap', recruit: 'rotate-ccw' };
 const RANK_EMOJI = { ace: '🎖️', spotter: '✅', cadet: '🔸', recruit: '🔻' };
 
-function shareText(score, total, pct, rank, mistakes) {
+// Unter einer Minute mit einer Nachkommastelle („42,3 s"), darüber Minuten und Sekunden („1:42").
+function formatTime(ms) {
+  const s = ms / 1000;
+  if (s < 60) {
+    return s.toLocaleString(currentLang === 'en' ? 'en-GB' : 'de-DE', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' s';
+  }
+  const whole = Math.round(s);
+  return `${Math.floor(whole / 60)}:${String(whole % 60).padStart(2, '0')}`;
+}
+
+function shareText(score, total, pct, rank, mistakes, ms) {
   const wrong = mistakes.length
     ? mistakes.map(q => familyLabel(q.family)).filter((v, i, a) => a.indexOf(v) === i).join(', ')
     : t('share_none');
   const combat = run.combat ? ' ⚡' : '';
-  return `🛰️ ${t('app_name')} – ${score}/${total} (${pct} %)${combat} ${RANK_EMOJI[rank]} ${t('rank_' + rank)}\n` +
+  return `🛰️ ${t('app_name')} – ${score}/${total} (${pct} %) ${t('share_time', { time: formatTime(ms) })}${combat} ${RANK_EMOJI[rank]} ${t('rank_' + rank)}\n` +
     `${t('share_mode')}: ${t('mode_' + run.mode)} · ${t('share_wrong')}: ${wrong}\n` +
     SITE_URL;
 }
@@ -358,7 +371,8 @@ function finishRun() {
   const pct = total ? Math.round(score / total * 100) : 0;
   const rank = rankFor(pct);
   const mistakes = run.questions.filter(q => !q.correct);
-  run.result = { total, score, pct, rank, mistakes };
+  const ms = run.questions.reduce((a, q) => a + (q.ms || 0), 0);
+  run.result = { total, score, pct, rank, mistakes, ms };
 
   sendStat('finish', {
     m: run.mode, n: total, c: run.combat ? 1 : 0, k: score, g: rank,
@@ -369,15 +383,17 @@ function finishRun() {
 }
 
 function renderResult() {
-  const { total, score, pct, rank, mistakes } = run.result;
+  const { total, score, pct, rank, mistakes, ms } = run.result;
   document.getElementById('ergebnis-zahl').textContent = `${score} / ${total}`;
   const rankEl = document.getElementById('ergebnis-rang');
   rankEl.className = 'rang' + (rank === 'recruit' ? ' schwach' : '');
   rankEl.innerHTML = `<span class="ic ic-${RANK_ICONS[rank]}" aria-hidden="true"></span>` +
     `<span>${pct} % · ${t('rank_' + rank)}${run.combat ? ' ' : ''}</span>` +
     (run.combat ? '<span class="ic ic-zap" aria-hidden="true"></span>' : '');
+  document.getElementById('ergebnis-zeit-text').textContent =
+    t('result_time', { time: formatTime(ms), avg: formatTime(total ? ms / total : 0) });
   document.getElementById('ergebnis-text').textContent = t('rank_' + rank + '_text');
-  document.getElementById('kopiertext').textContent = shareText(score, total, pct, rank, mistakes);
+  document.getElementById('kopiertext').textContent = shareText(score, total, pct, rank, mistakes, ms);
   document.getElementById('kopiert').textContent = '';
 
   const list = document.getElementById('fehlerliste');
