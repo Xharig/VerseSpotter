@@ -24,7 +24,7 @@ routes = [
 [[d1_databases]]
 binding = "DB"
 database_name = "versespotter-nutzung"
-database_id = "HIER-DIE-KENNUNG-EINTRAGEN"
+database_id = "7d5385bf-0ea4-4df6-9711-a0486402bf87"
 
 # Höchstens 30 Ereignisse je Absender-Adresse und Minute. Ein Lauf mit
 # 40 Fragen erzeugt drei Ereignisse — alles weit darüber ist kein Mensch.
