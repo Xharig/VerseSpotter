@@ -96,6 +96,7 @@ const TEXTS = {
   share_mode: { de: 'Modus', en: 'Mode' },
   share_wrong: { de: 'Falsch', en: 'Wrong' },
   share_none: { de: 'keine', en: 'none' },
+  share_combat: { de: 'Gefechtsmodus ({s} s pro Bild)', en: 'Combat mode ({s} s per image)' },
   result_time: { de: 'Zeit: {time} · im Schnitt {avg} pro Bild', en: 'Time: {time} · {avg} per image on average' },
   mistakes_title: { de: 'Das hattest du falsch', en: 'What you missed' },
   mistakes_none: { de: 'Keine Fehler — stark!', en: 'No mistakes — great job!' },
@@ -138,6 +139,9 @@ const TEXTS = {
   thanks_images: { de: '{n} Bilder', en: '{n} images' },
   thanks_image_one: { de: '1 Bild', en: '1 image' },
   thanks_none: { de: 'Die ersten Bilder sind unterwegs.', en: 'The first images are on their way.' },
+  thanks_feedback: { de: 'Ideen und Fehlermeldungen', en: 'Ideas and bug reports' },
+  dk_zwaersch: { de: 'Handy-Layout beim Weiter-Knopf', en: 'Phone layout of the Next button' },
+  dk_shepardxl: { de: 'Benötigte Zeit im Ergebnis', en: 'Time taken in the results' },
   licences_title: { de: 'Lizenzen', en: 'Licences' },
   licence_code: {
     de: '<strong>Programmcode:</strong> GPL-3.0. Der Quelltext liegt offen auf GitHub.',

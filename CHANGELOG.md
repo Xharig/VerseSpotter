@@ -5,10 +5,18 @@
 ## Seit v1.0.0
 
 ### Neu
-- Die Auswertung zeigt, wie lange du gebraucht hast (gesamt und im Schnitt pro Bild), und die Zeit steht auch im Ergebnis für Discord. Gezählt wird nur die Zeit vom Bild bis zur Antwort.
+- Die Auswertung zeigt, wie lange du gebraucht hast (gesamt und im Schnitt pro Bild), und die Zeit steht auch im Ergebnis für Discord. Gezählt wird nur die Zeit vom Bild bis zur Antwort. Vorschlag von Shepardxl.
+- Das Ergebnis für Discord nennt den Gefechtsmodus ausgeschrieben.
+
+### Geändert
+- Die Bildarten stehen von leicht nach schwer: Einsteiger, Silhouette, Gemischt, HUD.
 
 ### Behoben
-- Auf dem Handy sprang der Weiter-Knopf nach einer Antwort mal in eine zweite Zeile und mal nicht, je nachdem, ob ein Variantenname angezeigt wurde. Der Kasten unter den Antworten ist jetzt immer gleich hoch.
+- Auf dem Handy sprang der Weiter-Knopf nach einer Antwort mal in eine zweite Zeile und mal nicht, je nachdem, ob ein Variantenname angezeigt wurde. Der Kasten unter den Antworten ist jetzt immer gleich hoch. Gemeldet von zwaersch.
+- Nach einer neuen Version konnte der Browser noch alte Dateien der Seite zeigen. Jetzt lädt er sie nach jeder Änderung neu.
+
+### Dank
+- zwaersch und Shepardxl
 
 ## v1.0.0 - 2026-10-02
 

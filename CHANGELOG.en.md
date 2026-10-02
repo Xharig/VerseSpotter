@@ -5,10 +5,18 @@
 ## Since v1.0.0
 
 ### New
-- The results show how long you took (in total and on average per image), and the time is also part of the result you copy for Discord. Only the time from image to answer counts.
+- The results show how long you took (in total and on average per image), and the time is also part of the result you copy for Discord. Only the time from image to answer counts. Suggested by Shepardxl.
+- The result for Discord spells out combat mode.
+
+### Changed
+- Image types are ordered from easy to hard: Beginner, Silhouette, Mixed, HUD.
 
 ### Fixed
-- On phones the Next button sometimes jumped to a second line after answering, depending on whether a variant name was shown. The box below the answers now always has the same height.
+- On phones the Next button sometimes jumped to a second line after answering, depending on whether a variant name was shown. The box below the answers now always has the same height. Reported by zwaersch.
+- After a new version the browser could still show old files of the site. It now reloads them after every change.
+
+### Thanks
+- zwaersch and Shepardxl
 
 ## v1.0.0 - 2026-10-02
 
