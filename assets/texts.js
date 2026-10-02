@@ -96,7 +96,6 @@ const TEXTS = {
   share_mode: { de: 'Modus', en: 'Mode' },
   share_wrong: { de: 'Falsch', en: 'Wrong' },
   share_none: { de: 'keine', en: 'none' },
-  share_time: { de: 'in {time}', en: 'in {time}' },
   result_time: { de: 'Zeit: {time} · im Schnitt {avg} pro Bild', en: 'Time: {time} · {avg} per image on average' },
   mistakes_title: { de: 'Das hattest du falsch', en: 'What you missed' },
   mistakes_none: { de: 'Keine Fehler — stark!', en: 'No mistakes — great job!' },

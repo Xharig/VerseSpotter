@@ -360,7 +360,8 @@ function shareText(score, total, pct, rank, mistakes, ms) {
     ? mistakes.map(q => familyLabel(q.family)).filter((v, i, a) => a.indexOf(v) === i).join(', ')
     : t('share_none');
   const combat = run.combat ? ' ⚡' : '';
-  return `🛰️ ${t('app_name')} – ${score}/${total} (${pct} %) ${t('share_time', { time: formatTime(ms) })}${combat} ${RANK_EMOJI[rank]} ${t('rank_' + rank)}\n` +
+  return `🛰️ ${t('app_name')} – ${score}/${total} (${pct} %)${combat} ${RANK_EMOJI[rank]} ${t('rank_' + rank)}\n` +
+    `⏱️ ${t('result_time', { time: formatTime(ms), avg: formatTime(total ? ms / total : 0) })}\n` +
     `${t('share_mode')}: ${t('mode_' + run.mode)} · ${t('share_wrong')}: ${wrong}\n` +
     SITE_URL;
 }
