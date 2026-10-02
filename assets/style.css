@@ -71,6 +71,7 @@ a:hover{text-decoration:underline}
 .ic-plane{--ic:url(icons/plane.svg)}
 .ic-image-off{--ic:url(icons/image-off.svg)}
 .ic-trash-2{--ic:url(icons/trash-2.svg)}
+.ic-layout-grid{--ic:url(icons/layout-grid.svg)}
 
 /* Signatur der Marke: dünne Umriss-Kreise, teils aus dem Rand ragend */
 .kreis{position:absolute;border:2px solid var(--neon);border-radius:50%;pointer-events:none}
@@ -90,6 +91,7 @@ header{
 .kopf nav{margin-left:auto;display:flex;align-items:center;gap:22px}
 .kopf nav a{color:var(--text-leise);font-size:15px;display:flex;align-items:center;gap:6px}
 .kopf nav a:hover,.kopf nav a[aria-current=page]{color:var(--neon);text-decoration:none}
+.kopf nav a.alle{padding-right:22px;border-right:1px solid var(--rand)}
 .sprache{display:flex;border:1px solid var(--rand);border-radius:999px;overflow:hidden}
 .sprache button{
   background:none;border:0;color:var(--text-leise);
@@ -98,10 +100,12 @@ header{
 .sprache button.an{background:var(--neon);color:#0a0a0a;font-weight:700}
 @media (max-width:700px){
   .kopf nav{gap:14px}
+  .kopf nav a.alle{padding-right:14px}
   .kopf nav a .txt{display:none}
   .kopf nav a .ic{width:1.35em;height:1.35em}
   .marke{font-size:18px}
 }
+@media (max-width:420px){.kopf .marke{display:none}}
 
 /* ---------- Knöpfe ---------- */
 .knopf{

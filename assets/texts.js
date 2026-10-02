@@ -13,6 +13,8 @@ const TEXTS = {
   page_title_catalog: { de: 'Schiffskatalog — VerseSpotter', en: 'Ship catalogue — VerseSpotter' },
   page_title_thanks: { de: 'Danke & Lizenzen — VerseSpotter', en: 'Thanks & licences — VerseSpotter' },
 
+  nav_all_tools: { de: 'xharig.com', en: 'xharig.com' },
+  nav_all_tools_hint: { de: 'Alle Werkzeuge von Xharig', en: 'All tools by Xharig' },
   nav_train: { de: 'Training', en: 'Training' },
   nav_catalog: { de: 'Schiffskatalog', en: 'Ship catalogue' },
   nav_thanks: { de: 'Danke & Lizenzen', en: 'Thanks & licences' },

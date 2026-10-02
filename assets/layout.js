@@ -17,6 +17,8 @@ const APP_VERSION = '1.0.0';
       '<a class="logo" href="./"><img src="assets/logo.svg" alt="" width="38" height="38">' +
       '<span class="marke" data-t="app_name"></span></a>' +
       '<nav data-t-aria="app_name">' +
+      '<a class="alle" href="https://xharig.com/" data-t-title="nav_all_tools_hint">' +
+      '<span class="ic ic-layout-grid" aria-hidden="true"></span><span class="txt" data-t="nav_all_tools"></span></a>' +
       link('./', 'nav_train', 'crosshair', 'home') +
       link('katalog.html', 'nav_catalog', 'book-open', 'catalog') +
       link('danke.html', 'nav_thanks', 'heart-handshake', 'thanks') +
