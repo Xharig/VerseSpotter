@@ -360,11 +360,12 @@ function shareText(score, total, pct, rank, mistakes, ms) {
     ? mistakes.map(q => familyLabel(q.family)).filter((v, i, a) => a.indexOf(v) === i).join(', ')
     : t('share_none');
   const combat = run.combat ? ` · ⚡ ${t('share_combat', { s: COMBAT_SECONDS })}` : '';
-  return `🛰️ ${t('app_name')} – ${score}/${total} (${pct} %) ${RANK_EMOJI[rank]} ${t('rank_' + rank)}\n` +
-    `⏱️ ${t('result_time', { time: formatTime(ms), avg: formatTime(total ? ms / total : 0) })}\n` +
-    `${t('share_mode')}: ${t('mode_' + run.mode)}${combat}\n` +
-    `${t('share_wrong')}: ${wrong}\n` +
-    SITE_URL;
+  // Discord-Markdown: Zitatbalken (>), Kleintext (-#), Link in <…> ohne Vorschaukarte.
+  return `🛰️ **${t('app_name')}** · **${score}/${total}** (${pct} %) · ${RANK_EMOJI[rank]} **${t('rank_' + rank)}**\n` +
+    `> ⏱️ ${t('result_time', { time: formatTime(ms), avg: formatTime(total ? ms / total : 0) })}\n` +
+    `> 🎯 ${t('share_mode')}: ${t('mode_' + run.mode)}${combat}\n` +
+    `> ${mistakes.length ? '❌' : '✅'} ${t('share_wrong')}: ${wrong}\n` +
+    `-# [${SITE_URL}](<https://${SITE_URL}>)`;
 }
 
 function finishRun() {

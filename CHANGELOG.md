@@ -6,7 +6,7 @@
 
 ### Neu
 - Die Auswertung zeigt, wie lange du gebraucht hast (gesamt und im Schnitt pro Bild), und die Zeit steht auch im Ergebnis für Discord. Gezählt wird nur die Zeit vom Bild bis zur Antwort. Vorschlag von Shepardxl.
-- Das Ergebnis für Discord nennt den Gefechtsmodus ausgeschrieben.
+- Das Ergebnis für Discord ist formatiert (fett, Zitatbalken), nennt den Gefechtsmodus ausgeschrieben und hat einen anklickbaren Link.
 
 ### Geändert
 - Die Bildarten stehen von leicht nach schwer: Einsteiger, Silhouette, Gemischt, HUD.

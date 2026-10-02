@@ -6,7 +6,7 @@
 
 ### New
 - The results show how long you took (in total and on average per image), and the time is also part of the result you copy for Discord. Only the time from image to answer counts. Suggested by Shepardxl.
-- The result for Discord spells out combat mode.
+- The result for Discord is formatted (bold, quote bar), spells out combat mode and has a clickable link.
 
 ### Changed
 - Image types are ordered from easy to hard: Beginner, Silhouette, Mixed, HUD.
