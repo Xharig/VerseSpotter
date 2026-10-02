@@ -2,6 +2,11 @@
 
 **Deutsch** · [English](CHANGELOG.en.md)
 
+## Seit v1.0.0
+
+### Behoben
+- Auf dem Handy sprang der Weiter-Knopf nach einer Antwort mal in eine zweite Zeile und mal nicht, je nachdem, ob ein Variantenname angezeigt wurde. Der Kasten unter den Antworten ist jetzt immer gleich hoch.
+
 ## v1.0.0 - 2026-10-02
 
 Der erste Start: Schiffe erkennen lernen wie in einer Fahrschul-App. Bild ansehen, aus drei Schiffen wählen, am Ende die Auswertung — und was du falsch hattest, kommt bald wieder.

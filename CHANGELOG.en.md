@@ -2,6 +2,11 @@
 
 [Deutsch](CHANGELOG.md) · **English**
 
+## Since v1.0.0
+
+### Fixed
+- On phones the Next button sometimes jumped to a second line after answering, depending on whether a variant name was shown. The box below the answers now always has the same height.
+
 ## v1.0.0 - 2026-10-02
 
 The first launch: learn to recognise ships like in a driving-theory app. Look at the image, pick one of three ships, get your results — and whatever you got wrong comes back soon.
