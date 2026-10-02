@@ -31,6 +31,7 @@ const APP_VERSION = '1.0.0';
     footer.innerHTML =
       '<div class="mitte">' +
       '<div class="fusslinks">' +
+      '<a href="https://xharig.com/" data-t="footer_all_tools"></a>' +
       '<a href="https://versekit.xharig.com/?von=versespotter" data-t="footer_versekit"></a>' +
       '<a href="danke.html" data-t="nav_thanks"></a>' +
       '<a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source"></a>' +

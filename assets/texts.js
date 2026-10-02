@@ -175,6 +175,7 @@ const TEXTS = {
   },
 
   // Fuß
+  footer_all_tools: { de: 'Alle Werkzeuge auf xharig.com', en: 'All tools on xharig.com' },
   footer_versekit: { de: 'Verse-Kit — Baupläne live im Blick', en: 'Verse-Kit — blueprints live while you play' },
   footer_source: { de: 'Quelltext', en: 'Source code' },
   footer_by: { de: 'von Xharig', en: 'by Xharig' },
