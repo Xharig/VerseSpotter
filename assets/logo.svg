@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="VerseSpotter">
+  <circle cx="128" cy="128" r="104" fill="#0d0d0d" stroke="#9ce430" stroke-width="10"/>
+  <circle cx="128" cy="128" r="84" fill="none" stroke="#9ce430" stroke-width="3" stroke-opacity=".35" stroke-dasharray="6 9"/>
+  <g stroke="#9ce430" stroke-width="10" stroke-linecap="round">
+    <line x1="128" y1="6" x2="128" y2="44"/>
+    <line x1="128" y1="212" x2="128" y2="250"/>
+    <line x1="6" y1="128" x2="44" y2="128"/>
+    <line x1="212" y1="128" x2="250" y2="128"/>
+  </g>
+  <path fill="#9ce430" d="M128 58 L139 92 L139 112 L186 140 L188 156 L139 146 L136 170 L152 184 L152 194 L128 188 L104 194 L104 184 L120 170 L117 146 L68 156 L70 140 L117 112 L117 92 Z"/>
+  <path fill="#0d0d0d" d="M128 80 L133 96 L133 112 L123 112 L123 96 Z"/>
+</svg>

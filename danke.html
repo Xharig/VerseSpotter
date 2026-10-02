@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thanks &amp; licences — VerseSpotter</title>
+<meta name="description" content="The community members who collect the in-game images, plus licences and privacy.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="thanks" data-title-key="page_title_thanks">
+<header id="kopf"></header>
+
+<main>
+  <section>
+    <div class="mitte textseite">
+      <div class="label" data-t="thanks_label"></div>
+      <h1 data-t="thanks_title"></h1>
+      <p class="einleitung" data-t="thanks_intro"></p>
+
+      <h2 data-t="thanks_collectors"></h2>
+      <ul class="sammler" id="sammler"></ul>
+      <p id="sammler-leer" hidden data-t="thanks_none"></p>
+
+      <h2 data-t="licences_title"></h2>
+      <ul>
+        <li data-t="licence_code"></li>
+        <li data-t="licence_photos"></li>
+        <li data-t="licence_renders"></li>
+        <li data-t="licence_data"></li>
+        <li data-t="licence_icons"></li>
+      </ul>
+
+      <h2 id="datenschutz" data-t="privacy_title"></h2>
+      <ul>
+        <li data-t="privacy_1"></li>
+        <li data-t="privacy_2"></li>
+        <li data-t="privacy_3"></li>
+        <li data-t="privacy_4"></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer id="fuss"></footer>
+<script src="assets/layout.js"></script>
+<script src="assets/texts.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/stats.js"></script>
+<script>
+// Sammler aus den freigegebenen Bildern zählen, meiste Bilder zuerst.
+let collectors = [];
+function renderCollectors() {
+  const list = document.getElementById('sammler');
+  list.innerHTML = '';
+  document.getElementById('sammler-leer').hidden = collectors.length > 0;
+  for (const [name, n] of collectors) {
+    const li = document.createElement('li');
+    li.textContent = name;
+    const count = document.createElement('span');
+    count.textContent = n === 1 ? t('thanks_image_one') : t('thanks_images', { n });
+    li.appendChild(count);
+    list.appendChild(li);
+  }
+}
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const d = await loadJson('data/photos.json');
+    const count = new Map();
+    for (const p of d.photos || []) if (p.author) count.set(p.author, (count.get(p.author) || 0) + 1);
+    collectors = [...count.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  } catch (e) { collectors = []; }
+  renderCollectors();
+  document.addEventListener('langchange', renderCollectors);
+});
+</script>
+</body>
+</html>

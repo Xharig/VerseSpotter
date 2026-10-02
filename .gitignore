@@ -1,0 +1,15 @@
+# Projektregeln für die Arbeit mit Claude — privat, nicht ins öffentliche Repo
+CLAUDE.md
+.claude/
+
+# Eingangsordner mit Originalbildern aus Discord und Probedateien
+eingang/
+
+# Worker-Werkzeuge
+worker/node_modules/
+worker/.wrangler/
+
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

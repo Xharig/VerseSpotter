@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ship catalogue — VerseSpotter</title>
+<meta name="description" content="Every flight-ready Star Citizen spaceship with renders, HUD holograms and silhouettes — study before you train.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="catalog" data-title-key="page_title_catalog">
+<header id="kopf"></header>
+
+<main>
+  <section>
+    <div class="mitte">
+      <div class="label" data-t="catalog_label"></div>
+      <h1 data-t="catalog_title"></h1>
+      <p class="einleitung" data-t="catalog_intro"></p>
+
+      <div class="werkzeugleiste">
+        <label class="sr" for="suche" data-t="catalog_search_label"></label>
+        <input type="search" id="suche" data-t-placeholder="catalog_search" autocomplete="off">
+        <label class="sr" for="groesse" data-t="catalog_filter_label"></label>
+        <select id="groesse"></select>
+      </div>
+      <p class="einleitung" id="anzahl" aria-live="polite" style="margin-bottom:14px"></p>
+      <div class="katalog" id="katalog"></div>
+      <p class="leer" id="leer" hidden data-t="catalog_empty"></p>
+      <p class="leer" id="ladefehler" hidden data-t="load_error"></p>
+    </div>
+  </section>
+</main>
+
+<dialog id="dlg-galerie" class="gross">
+  <h2 id="galerie-titel"></h2>
+  <div class="galerie" id="galerie"></div>
+  <div class="knopfreihe">
+    <button type="button" class="knopf" id="galerie-zu" data-t="close"></button>
+  </div>
+</dialog>
+
+<dialog id="dlg-melden">
+  <h2 data-t="report_title"></h2>
+  <div class="gruende" id="gruende"></div>
+  <p id="melden-danke" hidden role="status"><span data-t="report_thanks"></span> <a id="melden-github" href="#" target="_blank" rel="noopener" data-t="report_details"></a></p>
+  <div class="knopfreihe">
+    <button type="button" class="knopf" id="melden-zu" data-t="close"></button>
+  </div>
+</dialog>
+
+<footer id="fuss"></footer>
+<script src="assets/layout.js"></script>
+<script src="assets/texts.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/stats.js"></script>
+<script src="assets/report.js"></script>
+<script src="assets/catalog.js"></script>
+</body>
+</html>

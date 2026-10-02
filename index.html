@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VerseSpotter — learn to recognise Star Citizen ships</title>
+<meta name="description" content="Free Star Citizen ship recognition trainer: identify ships by their HUD hologram and silhouette. Spaced repetition, three answers, German and English.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VerseSpotter">
+<meta property="og:url" content="https://versespotter.xharig.com/">
+<meta property="og:title" content="VerseSpotter — learn to recognise Star Citizen ships">
+<meta property="og:description" content="Identify ships by their HUD hologram and silhouette in flight. Free, open source, German and English.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="home" data-title-key="page_title_home">
+<header id="kopf"></header>
+
+<main>
+  <!-- Start: Einstellungen und Lernstand -->
+  <div id="ansicht-start">
+    <div class="hero">
+      <div class="kreis a"></div>
+      <div class="kreis b"></div>
+      <div class="mitte">
+        <img class="zeichen" src="assets/logo.svg" alt="" width="140" height="140">
+        <h1 data-t="app_name"></h1>
+        <p class="unter" data-t="app_claim"></p>
+      </div>
+    </div>
+
+    <section>
+      <div class="mitte">
+        <form class="wahl" id="wahl">
+          <fieldset>
+            <legend data-t="mode_legend"></legend>
+            <div class="optionen modi" id="modi"></div>
+          </fieldset>
+          <fieldset>
+            <legend data-t="length_legend"></legend>
+            <div class="optionen laengen" id="laengen"></div>
+          </fieldset>
+          <label class="schalter">
+            <span class="text">
+              <strong><span class="ic ic-zap" aria-hidden="true"></span><span data-t="combat_title"></span></strong>
+              <span id="gefecht-hinweis"></span>
+            </span>
+            <input type="checkbox" id="gefecht" role="switch">
+          </label>
+          <div class="knopfreihe">
+            <button type="submit" class="knopf voll" id="start">
+              <span class="ic ic-crosshair" aria-hidden="true"></span><span data-t="start_button"></span>
+            </button>
+          </div>
+        </form>
+
+        <div class="fortschritt karte" id="fortschritt">
+          <div class="zeile">
+            <h3 data-t="progress_title"></h3>
+            <span id="fortschritt-text"></span>
+          </div>
+          <div class="balken" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="fortschritt-balken"><div></div></div>
+          <div class="zeile" style="margin-top:10px;margin-bottom:0">
+            <span class="klein" data-t="progress_note"></span>
+            <button type="button" class="textknopf" id="zuruecksetzen">
+              <span class="ic ic-rotate-ccw" aria-hidden="true"></span><span data-t="progress_reset"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="fortschritt karte">
+          <h3 data-t="how_title"></h3>
+          <ul style="margin:0;padding-left:20px;color:var(--text-leise)">
+            <li data-t="how_1"></li>
+            <li data-t="how_2"></li>
+            <li data-t="how_3"></li>
+            <li data-t="how_keys"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Laufendes Training -->
+  <section id="ansicht-quiz" hidden>
+    <div class="mitte quiz">
+      <div class="quiz-kopf">
+        <span class="zaehler" id="zaehler" aria-live="polite"></span>
+        <span class="uhr" id="uhr" hidden><span class="ic ic-timer" aria-hidden="true"></span><span id="uhr-text"></span></span>
+      </div>
+      <div class="bildrahmen" id="bildrahmen">
+        <img id="bild" src="" alt="">
+        <button type="button" class="melden" id="melden">
+          <span class="ic ic-flag" aria-hidden="true"></span><span data-t="report_button"></span>
+        </button>
+        <span class="urheber" id="urheber" hidden></span>
+      </div>
+      <div class="zeitleiste" id="zeitleiste" hidden><div></div></div>
+      <h2 class="frage" id="frage" data-t="question_text"></h2>
+      <div class="antworten" id="antworten" role="group" aria-labelledby="frage"></div>
+      <div class="rueckmeldung" id="rueckmeldung" hidden aria-live="assertive">
+        <span class="ergebnis"><span class="ic" id="rueck-symbol" aria-hidden="true"></span><span id="rueck-text"></span><span class="zusatz" id="rueck-zusatz"></span></span>
+        <button type="button" class="knopf voll" id="weiter">
+          <span id="weiter-text"></span><span class="ic ic-arrow-right" aria-hidden="true"></span>
+        </button>
+      </div>
+      <button type="button" class="textknopf abbrechen" id="abbrechen">
+        <span class="ic ic-x" aria-hidden="true"></span><span data-t="quit"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Auswertung -->
+  <section id="ansicht-ergebnis" hidden>
+    <div class="mitte auswertung">
+      <div class="label" data-t="result_label"></div>
+      <div class="zahl" id="ergebnis-zahl"></div>
+      <div class="rang" id="ergebnis-rang"></div>
+      <p class="einleitung" style="margin:0 auto" id="ergebnis-text"></p>
+
+      <div class="kopierbox karte">
+        <h3 data-t="share_title"></h3>
+        <pre id="kopiertext"></pre>
+        <button type="button" class="knopf" id="kopieren">
+          <span class="ic ic-copy" aria-hidden="true"></span><span data-t="share_copy"></span>
+        </button>
+        <span class="kopiert" id="kopiert" role="status"></span>
+      </div>
+
+      <div class="knopfreihe">
+        <button type="button" class="knopf voll" id="nochmal">
+          <span class="ic ic-rotate-ccw" aria-hidden="true"></span><span data-t="again"></span>
+        </button>
+        <button type="button" class="knopf" id="zur-wahl">
+          <span class="ic ic-house" aria-hidden="true"></span><span data-t="back_setup"></span>
+        </button>
+      </div>
+
+      <h2 style="margin-top:40px" data-t="mistakes_title"></h2>
+      <div class="fehlerliste" id="fehlerliste"></div>
+    </div>
+  </section>
+
+  <p class="mitte leer" id="ladefehler" hidden data-t="load_error"></p>
+</main>
+
+<dialog id="dlg-reset">
+  <h2 data-t="reset_confirm_title"></h2>
+  <p data-t="reset_confirm_text"></p>
+  <div class="knopfreihe">
+    <button type="button" class="knopf" id="reset-nein" data-t="cancel"></button>
+    <button type="button" class="knopf voll" id="reset-ja" data-t="reset_yes"></button>
+  </div>
+</dialog>
+
+<dialog id="dlg-melden">
+  <h2 data-t="report_title"></h2>
+  <div class="gruende" id="gruende"></div>
+  <p id="melden-danke" hidden role="status"><span data-t="report_thanks"></span> <a id="melden-github" href="#" target="_blank" rel="noopener" data-t="report_details"></a></p>
+  <div class="knopfreihe">
+    <button type="button" class="knopf" id="melden-zu" data-t="close"></button>
+  </div>
+</dialog>
+
+<footer id="fuss"></footer>
+<script src="assets/layout.js"></script>
+<script src="assets/texts.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/stats.js"></script>
+<script src="assets/report.js"></script>
+<script src="assets/quiz.js"></script>
+</body>
+</html>

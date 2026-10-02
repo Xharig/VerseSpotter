@@ -1,0 +1,34 @@
+# Cloudflare Worker: zählt die Nutzung von VerseSpotter und zeigt die private
+# Übersicht. Einrichten: siehe README.md daneben.
+name = "versespotter-nutzung"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+# nutzung-versespotter.xharig.com   — nimmt die Ereignisse der Seite an (öffentlich, nur /e)
+# statistik-versespotter.xharig.com — die Übersicht, NUR hinter Cloudflare Access
+workers_dev = false
+routes = [
+  { pattern = "nutzung-versespotter.xharig.com", custom_domain = true },
+  { pattern = "statistik-versespotter.xharig.com", custom_domain = true }
+]
+
+# Die Access-Angaben stehen NICHT hier — das Repo ist öffentlich. Sie kommen
+# als Geheimnisse hinein (siehe README.md):
+#   TEAM_DOMAIN    <team>.cloudflareaccess.com
+#   POLICY_AUD     die AUD-Kennung der Access-Anwendung
+#   ERLAUBTE_MAIL  die Mail-Adresse, mit der du dich anmeldest
+# Fehlt eine, bleibt die Übersicht zu (403).
+
+# Die Datenbank legt `npx wrangler d1 create versespotter-nutzung` an; die
+# Kennung, die der Befehl ausgibt, gehört hier hinein.
+[[d1_databases]]
+binding = "DB"
+database_name = "versespotter-nutzung"
+database_id = "HIER-DIE-KENNUNG-EINTRAGEN"
+
+# Höchstens 30 Ereignisse je Absender-Adresse und Minute. Ein Lauf mit
+# 40 Fragen erzeugt drei Ereignisse — alles weit darüber ist kein Mensch.
+[[ratelimits]]
+name = "LIMIT"
+namespace_id = "1011"
+simple = { limit = 30, period = 60 }

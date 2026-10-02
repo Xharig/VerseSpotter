@@ -1,0 +1,317 @@
+/* ---------------------------------------------------------------
+   Gemeinsames Aussehen aller Seiten.
+   Marke: Neon #9ce430 auf dunklem Grund, Akzent nie flächig.
+   Keine fremden Schriften, keine CDNs.
+   --------------------------------------------------------------- */
+:root{
+  --neon:#9ce430;
+  --neon-tief:#5fa522;
+  --grund:#0d0d0d;
+  --flaeche:#141414;
+  --flaeche-hoch:#1c1c1c;
+  --rand:#242424;
+  --text:#e8e8e8;
+  --text-leise:#a3a3a3;
+  --gut:#9ce430;
+  --schlecht:#ff6b5e;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Calibri,"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  background:var(--grund);
+  background-image:radial-gradient(1200px 700px at 50% -10%, #1c1c1c 0%, #0d0d0d 55%, #0a0a0a 100%);
+  background-attachment:fixed;
+  color:var(--text);
+  line-height:1.6;
+  font-size:17px;
+  min-height:100vh;
+  display:flex;flex-direction:column;
+}
+main{flex:1}
+img{max-width:100%;display:block}
+a{color:var(--neon);text-decoration:none}
+a:hover{text-decoration:underline}
+.mitte{max-width:1120px;margin:0 auto;padding:0 22px}
+@media (max-width:600px){.mitte{padding:0 16px}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[hidden]{display:none !important}
+
+/* Sichtbarer Tastaturfokus auf allem, was bedienbar ist */
+:focus-visible{outline:3px solid var(--neon);outline-offset:3px;border-radius:6px}
+
+/* Lucide-Symbole als Maske: Farbe kommt aus currentColor */
+.ic{
+  display:inline-block;width:1.1em;height:1.1em;flex:none;vertical-align:-.18em;
+  background:currentColor;
+  -webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat;
+}
+.ic-check{--ic:url(icons/check.svg)}
+.ic-x{--ic:url(icons/x.svg)}
+.ic-zap{--ic:url(icons/zap.svg)}
+.ic-crosshair{--ic:url(icons/crosshair.svg)}
+.ic-scan-eye{--ic:url(icons/scan-eye.svg)}
+.ic-rotate-ccw{--ic:url(icons/rotate-ccw.svg)}
+.ic-copy{--ic:url(icons/copy.svg)}
+.ic-flag{--ic:url(icons/flag.svg)}
+.ic-book-open{--ic:url(icons/book-open.svg)}
+.ic-heart-handshake{--ic:url(icons/heart-handshake.svg)}
+.ic-graduation-cap{--ic:url(icons/graduation-cap.svg)}
+.ic-eye{--ic:url(icons/eye.svg)}
+.ic-chevron-right{--ic:url(icons/chevron-right.svg)}
+.ic-circle-check{--ic:url(icons/circle-check.svg)}
+.ic-circle-x{--ic:url(icons/circle-x.svg)}
+.ic-timer{--ic:url(icons/timer.svg)}
+.ic-trophy{--ic:url(icons/trophy.svg)}
+.ic-info{--ic:url(icons/info.svg)}
+.ic-shield-check{--ic:url(icons/shield-check.svg)}
+.ic-arrow-right{--ic:url(icons/arrow-right.svg)}
+.ic-house{--ic:url(icons/house.svg)}
+.ic-plane{--ic:url(icons/plane.svg)}
+.ic-image-off{--ic:url(icons/image-off.svg)}
+.ic-trash-2{--ic:url(icons/trash-2.svg)}
+
+/* Signatur der Marke: dünne Umriss-Kreise, teils aus dem Rand ragend */
+.kreis{position:absolute;border:2px solid var(--neon);border-radius:50%;pointer-events:none}
+
+/* ---------- Kopf ---------- */
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(10,10,10,.85);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rand);
+}
+.kopf{display:flex;align-items:center;gap:14px;height:64px}
+.kopf .logo{display:flex;align-items:center;gap:12px;color:var(--text)}
+.kopf .logo:hover{text-decoration:none}
+.kopf .logo img{width:38px;height:38px}
+.marke{font-weight:800;letter-spacing:.5px;font-size:20px}
+.kopf nav{margin-left:auto;display:flex;align-items:center;gap:22px}
+.kopf nav a{color:var(--text-leise);font-size:15px;display:flex;align-items:center;gap:6px}
+.kopf nav a:hover,.kopf nav a[aria-current=page]{color:var(--neon);text-decoration:none}
+.sprache{display:flex;border:1px solid var(--rand);border-radius:999px;overflow:hidden}
+.sprache button{
+  background:none;border:0;color:var(--text-leise);
+  font:inherit;font-size:14px;padding:5px 13px;cursor:pointer;
+}
+.sprache button.an{background:var(--neon);color:#0a0a0a;font-weight:700}
+@media (max-width:700px){
+  .kopf nav{gap:14px}
+  .kopf nav a .txt{display:none}
+  .kopf nav a .ic{width:1.35em;height:1.35em}
+  .marke{font-size:18px}
+}
+
+/* ---------- Knöpfe ---------- */
+.knopf{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:12px 24px;border-radius:8px;cursor:pointer;
+  font:inherit;font-weight:700;font-size:17px;border:2px solid var(--neon);
+  background:none;color:var(--neon);
+}
+.knopf:hover{background:rgba(156,228,48,.10);text-decoration:none}
+.knopf.voll{background:var(--neon);color:#0a0a0a}
+.knopf.voll:hover{background:#aef03d}
+.knopf:disabled{opacity:.45;cursor:not-allowed}
+.knopfreihe{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- Abschnitte ---------- */
+section{padding:46px 0;position:relative}
+.label{
+  text-transform:uppercase;letter-spacing:6px;font-size:12px;
+  color:var(--neon-tief);font-weight:700;margin-bottom:10px;
+}
+h1{font-size:48px;font-weight:800;margin:0 0 8px;letter-spacing:.5px;line-height:1.15}
+h2{font-size:30px;font-weight:800;margin:0 0 12px;line-height:1.2}
+h3{font-size:19px;font-weight:800;margin:0 0 8px}
+.einleitung{color:var(--text-leise);max-width:760px;margin:0 0 26px}
+@media (max-width:700px){h1{font-size:34px}h2{font-size:25px}}
+
+.karte{background:var(--flaeche);border:1px solid var(--rand);border-radius:12px;padding:22px}
+
+/* ---------- Kopfbereich ---------- */
+.hero{position:relative;overflow:hidden;padding:56px 0 30px;text-align:center}
+.hero .kreis.a{width:520px;height:520px;top:-230px;left:-170px;opacity:.10}
+.hero .kreis.b{width:300px;height:300px;top:120px;right:-110px;opacity:.12}
+.hero img.zeichen{width:140px;height:140px;margin:0 auto 18px}
+.hero .unter{font-size:20px;max-width:720px;margin:0 auto}
+
+/* ---------- Einstellungen vor dem Lauf ---------- */
+.wahl{display:grid;gap:22px;max-width:860px;margin:0 auto}
+.wahl fieldset{border:0;margin:0;padding:0}
+.wahl legend{font-weight:800;font-size:16px;margin-bottom:10px;padding:0}
+.optionen{display:grid;gap:10px}
+.optionen.modi{grid-template-columns:repeat(4,1fr)}
+.optionen.laengen{grid-template-columns:repeat(4,1fr)}
+@media (max-width:760px){.optionen.modi{grid-template-columns:repeat(2,1fr)}}
+.option{position:relative}
+.option input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.option label{
+  display:flex;flex-direction:column;gap:4px;height:100%;
+  background:var(--flaeche);border:2px solid var(--rand);border-radius:10px;
+  padding:14px 16px;cursor:pointer;
+}
+.option label .titel{font-weight:800;display:flex;align-items:center;gap:8px}
+.option label .klein{color:var(--text-leise);font-size:14px;line-height:1.4}
+.option input:checked + label{border-color:var(--neon);background:rgba(156,228,48,.07)}
+.option input:checked + label .titel{color:var(--neon)}
+.option input:focus-visible + label{outline:3px solid var(--neon);outline-offset:3px}
+.option input:disabled + label{opacity:.45;cursor:not-allowed}
+.laengen .option label{align-items:center;font-weight:800;font-size:20px;padding:12px}
+
+.schalter{display:flex;align-items:center;gap:14px;background:var(--flaeche);border:1px solid var(--rand);border-radius:10px;padding:14px 16px}
+.schalter .text{flex:1}
+.schalter .text strong{display:flex;align-items:center;gap:8px}
+.schalter .text > span{color:var(--text-leise);font-size:14px}
+.schalter input{appearance:none;width:52px;height:30px;border-radius:999px;background:#333;position:relative;cursor:pointer;flex:none;margin:0}
+.schalter input::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#ddd;transition:left .15s}
+.schalter input:checked{background:var(--neon)}
+.schalter input:checked::after{left:25px;background:#0a0a0a}
+
+.fortschritt{max-width:860px;margin:30px auto 0}
+.balken{height:12px;background:var(--flaeche-hoch);border-radius:999px;overflow:hidden;border:1px solid var(--rand)}
+.balken > div{height:100%;background:var(--neon);width:0}
+.fortschritt .zeile{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.fortschritt .klein{color:var(--text-leise);font-size:14px}
+.textknopf{background:none;border:0;color:var(--text-leise);font:inherit;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:4px}
+.textknopf:hover{color:var(--neon)}
+
+/* ---------- Quiz ---------- */
+.quiz{max-width:860px;margin:0 auto}
+.quiz-kopf{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:12px;color:var(--text-leise);font-size:15px}
+.quiz-kopf .zaehler strong{color:var(--text);font-size:18px}
+.quiz-kopf .uhr{display:flex;align-items:center;gap:6px;color:var(--neon);font-weight:800}
+.quiz-kopf .uhr.knapp{color:var(--schlecht)}
+.bildrahmen{
+  position:relative;aspect-ratio:16/10;background:#06080b;border:1px solid var(--rand);
+  border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;
+}
+.bildrahmen img{width:100%;height:100%;object-fit:contain}
+.quiz .bildrahmen{max-height:56vh;min-height:220px}
+.bildrahmen .urheber{
+  position:absolute;right:10px;bottom:8px;font-size:13px;color:#ddd;
+  background:rgba(0,0,0,.6);padding:2px 9px;border-radius:999px;
+}
+.bildrahmen .melden{
+  position:absolute;left:10px;bottom:8px;font-size:13px;color:#ddd;
+  background:rgba(0,0,0,.6);padding:2px 10px;border-radius:999px;border:0;cursor:pointer;
+  display:flex;align-items:center;gap:6px;font-family:inherit;
+}
+.bildrahmen .melden:hover{color:var(--neon)}
+.zeitleiste{height:4px;background:var(--flaeche-hoch);border-radius:999px;margin-top:8px;overflow:hidden}
+.zeitleiste > div{height:100%;background:var(--neon);width:100%}
+.frage{font-size:20px;font-weight:800;margin:20px 0 12px;text-align:center}
+.antworten{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:700px){.antworten{grid-template-columns:1fr}}
+.antwort{
+  display:flex;align-items:center;gap:12px;text-align:left;
+  background:var(--flaeche);border:2px solid var(--rand);border-radius:10px;
+  color:var(--text);font:inherit;font-size:18px;font-weight:700;padding:14px 16px;cursor:pointer;
+  min-height:64px;
+}
+.antwort:hover:not(:disabled){border-color:var(--neon)}
+.antwort .taste{
+  flex:none;width:30px;height:30px;border-radius:7px;border:1px solid #3a3a3a;
+  display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--text-leise);
+}
+.antwort .name{flex:1}
+.antwort .zeichen{display:none}
+.antwort.richtig{border-color:var(--gut);background:rgba(156,228,48,.10)}
+.antwort.richtig .zeichen{display:inline-block;color:var(--gut)}
+.antwort.falsch{border-color:var(--schlecht);background:rgba(255,107,94,.10)}
+.antwort.falsch .zeichen{display:inline-block;color:var(--schlecht)}
+.antwort:disabled{cursor:default}
+.rueckmeldung{
+  margin-top:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:space-between;
+  background:var(--flaeche);border:1px solid var(--rand);border-radius:10px;padding:14px 16px;
+}
+.rueckmeldung .ergebnis{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:800}
+.rueckmeldung.gut .ergebnis{color:var(--gut)}
+.rueckmeldung.schlecht .ergebnis{color:var(--schlecht)}
+.rueckmeldung .zusatz{color:var(--text-leise);font-size:15px;font-weight:400}
+.abbrechen{display:block;margin:18px auto 0}
+
+/* ---------- Ergebnis ---------- */
+.auswertung{max-width:860px;margin:0 auto;text-align:center}
+.auswertung .zahl{font-size:64px;font-weight:800;line-height:1;margin:10px 0}
+.auswertung .rang{display:inline-flex;align-items:center;gap:10px;font-size:26px;font-weight:800;color:var(--neon);margin-bottom:8px}
+.auswertung .rang.schwach{color:var(--text)}
+.kopierbox{text-align:left;margin:26px 0}
+.kopierbox pre{
+  white-space:pre-wrap;word-break:break-word;margin:0 0 12px;
+  background:#0a0a0a;border:1px solid var(--rand);border-radius:10px;padding:16px;
+  font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:15px;color:var(--text);
+}
+.kopiert{color:var(--neon);font-weight:700;margin-left:10px}
+.fehlerliste{display:grid;gap:14px;text-align:left;margin-top:14px}
+.fehler{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--flaeche);border:1px solid var(--rand);border-radius:12px;padding:14px}
+@media (max-width:700px){.fehler{grid-template-columns:1fr}}
+.fehler figure{margin:0}
+.fehler figure .bildrahmen{aspect-ratio:16/10}
+.fehler figcaption{font-size:15px;margin-top:6px;color:var(--text-leise)}
+.fehler figcaption strong{color:var(--text)}
+
+/* ---------- Katalog ---------- */
+.werkzeugleiste{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.werkzeugleiste input,.werkzeugleiste select{
+  background:var(--flaeche);border:1px solid var(--rand);border-radius:8px;
+  color:var(--text);font:inherit;font-size:16px;padding:10px 14px;
+}
+.werkzeugleiste input{flex:1 1 260px}
+.werkzeugleiste input:focus,.werkzeugleiste select:focus{outline:none;border-color:var(--neon)}
+.katalog{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:1000px){.katalog{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.katalog{grid-template-columns:1fr}}
+.schiff{background:var(--flaeche);border:1px solid var(--rand);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.schiff .bildrahmen{border:0;border-radius:0;aspect-ratio:16/9}
+.schiff .info{padding:14px 16px;display:flex;flex-direction:column;gap:2px;flex:1}
+.schiff .familie{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--neon-tief);font-weight:700}
+.schiff h3{margin:0}
+.schiff .daten{color:var(--text-leise);font-size:14px}
+.schiff .mehr{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.schiff .mehr button{
+  background:none;border:1px solid var(--rand);border-radius:999px;color:var(--text-leise);
+  font:inherit;font-size:13px;padding:3px 11px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+}
+.schiff .mehr button:hover{border-color:var(--neon);color:var(--neon)}
+.leer{color:var(--text-leise);text-align:center;padding:40px 0}
+
+/* ---------- Dialog ---------- */
+dialog{
+  background:var(--flaeche);color:var(--text);border:1px solid var(--rand);border-radius:14px;
+  padding:24px;max-width:min(560px,calc(100vw - 32px));width:100%;
+}
+dialog.gross{max-width:min(980px,calc(100vw - 32px))}
+dialog::backdrop{background:rgba(0,0,0,.7)}
+dialog h2{font-size:22px}
+dialog .knopfreihe{justify-content:flex-end;margin-top:20px}
+dialog .gruende{display:grid;gap:8px;margin-top:12px}
+dialog .gruende button{
+  text-align:left;background:var(--flaeche-hoch);border:1px solid var(--rand);border-radius:8px;
+  color:var(--text);font:inherit;padding:10px 14px;cursor:pointer;
+}
+dialog .gruende button:hover{border-color:var(--neon)}
+.galerie{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+@media (max-width:600px){.galerie{grid-template-columns:1fr}}
+
+/* ---------- Danke & Lizenzen ---------- */
+.textseite{max-width:860px}
+.textseite h2{margin-top:36px}
+.textseite p,.textseite li{color:var(--text-leise)}
+.textseite strong{color:var(--text)}
+.sammler{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (max-width:600px){.sammler{grid-template-columns:1fr}}
+.sammler li{background:var(--flaeche);border:1px solid var(--rand);border-radius:10px;padding:12px 16px;display:flex;justify-content:space-between;gap:12px;color:var(--text)}
+.sammler li span{color:var(--text-leise)}
+
+/* ---------- Fuß ---------- */
+footer{border-top:1px solid var(--rand);padding:40px 0 50px;text-align:center;margin-top:40px}
+.fusslinks{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.fankit{margin:22px auto 14px;width:120px;opacity:.85}
+.fan{color:var(--text-leise);font-size:13px;max-width:680px;margin:0 auto 14px;line-height:1.5}
+.recht{color:#7a7a7a;font-size:13px}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;scroll-behavior:auto !important}
+}

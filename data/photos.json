@@ -1,0 +1,28 @@
+{
+ "photos": [
+  {
+   "id": "hud-aegs-sabre-comet-1",
+   "kind": "hud",
+   "file": "img/hud/hud-aegs-sabre-comet-1.webp",
+   "author": "",
+   "sha1": "b202e047913c1367f0177e227eb90de6c7625224",
+   "ship": "aegs-sabre-comet"
+  },
+  {
+   "id": "hud-anvl-arrow-1",
+   "kind": "hud",
+   "file": "img/hud/hud-anvl-arrow-1.webp",
+   "author": "",
+   "sha1": "b89ba44c0bd59c527bf5277a59a0ca6034c3f612",
+   "ship": "anvl-arrow"
+  },
+  {
+   "id": "hud-constellation-1",
+   "kind": "hud",
+   "file": "img/hud/hud-constellation-1.webp",
+   "author": "",
+   "sha1": "70c61cbd8c2e46a04b7d8b76b2cd98feaa663d20",
+   "family": "Constellation"
+  }
+ ]
+}

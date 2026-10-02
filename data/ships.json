@@ -1,0 +1,4145 @@
+{
+ "game_version": "4.10.1-LIVE.12660092",
+ "ships": [
+  {
+   "id": "orig-100i",
+   "name": "100i",
+   "family": "100 Series",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Einsteiger",
+    "en": "Starter"
+   },
+   "length": 19,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-125a",
+   "name": "125a",
+   "family": "100 Series",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 19,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-135c",
+   "name": "135c",
+   "family": "100 Series",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 19,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-300i",
+   "name": "300i",
+   "family": "300 Series",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Luxus-Reisen",
+    "en": "Luxury Touring"
+   },
+   "length": 27,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-315p",
+   "name": "315p",
+   "family": "300 Series",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Pfadfinder",
+    "en": "Pathfinder"
+   },
+   "length": 27,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-325a",
+   "name": "325a",
+   "family": "300 Series",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Interceptor",
+    "en": "Interceptor"
+   },
+   "length": 27.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-350r",
+   "name": "350r",
+   "family": "300 Series",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Wettkampf",
+    "en": "competition"
+   },
+   "role": {
+    "de": "Rennsport",
+    "en": "Racing"
+   },
+   "length": 27,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-400i",
+   "name": "400i",
+   "family": "400i",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Forschungsreisen",
+    "en": "Expedition"
+   },
+   "length": 56,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-600i",
+   "name": "600i",
+   "family": "600i",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Forschungsreisen",
+    "en": "Expedition"
+   },
+   "length": 91.5,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-600i-touring",
+   "name": "600i Touring",
+   "family": "600i",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Luxus-Reisen",
+    "en": "Luxury Touring"
+   },
+   "length": 91.5,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-85x",
+   "name": "85X Limited",
+   "family": "85X",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Reisen",
+    "en": "Touring"
+   },
+   "length": 14,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-890jump",
+   "name": "890 Jump",
+   "family": "890 Jump",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 6,
+   "size": {
+    "de": "Kapitalklasse",
+    "en": "capital"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Luxus-Reisen",
+    "en": "Luxury Touring"
+   },
+   "length": 210,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-apollo-medivac",
+   "name": "Apollo Medivac",
+   "family": "Apollo",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Unterstützung",
+    "en": "Support"
+   },
+   "role": {
+    "de": "Medizin",
+    "en": "Medical"
+   },
+   "length": 73,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-apollo-triage",
+   "name": "Apollo Triage",
+   "family": "Apollo",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Unterstützung",
+    "en": "Support"
+   },
+   "role": {
+    "de": "Medizin",
+    "en": "Medical"
+   },
+   "length": 73,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "krig-p72-archimedes",
+   "name": "P-72 Archimedes",
+   "family": "Archimedes",
+   "manufacturer": "Kruger Intergalactic",
+   "manufacturer_code": "KRIG",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Wettkampf",
+    "en": "competition"
+   },
+   "role": {
+    "de": "Rennsport",
+    "en": "Racing"
+   },
+   "length": 12,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "crus-starfighter-inferno",
+   "name": "Ares Star Fighter Inferno",
+   "family": "Ares",
+   "manufacturer": "Crusader Industries",
+   "manufacturer_code": "CRUS",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 30,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "crus-starfighter-ion",
+   "name": "Ares Star Fighter Ion",
+   "family": "Ares",
+   "manufacturer": "Crusader Industries",
+   "manufacturer_code": "CRUS",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 30,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-arrow",
+   "name": "Arrow",
+   "family": "Arrow",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 17.25,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-asgard",
+   "name": "Asgard",
+   "family": "Asgard",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Landungsschiff",
+    "en": "Dropship"
+   },
+   "length": 48,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-aurora-gs-cl",
+   "name": "Aurora Mk I CL",
+   "family": "Aurora",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 19,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-aurora-gs-es",
+   "name": "Aurora Mk I ES",
+   "family": "Aurora",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Multi-Role",
+    "en": "Multi-Role"
+   },
+   "role": {
+    "de": "Einsteiger",
+    "en": "Starter"
+   },
+   "length": 19,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-aurora-gs-ln",
+   "name": "Aurora Mk I LN",
+   "family": "Aurora",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 19,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-aurora-gs-lx",
+   "name": "Aurora Mk I LX",
+   "family": "Aurora",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Pfadfinder",
+    "en": "Pathfinder"
+   },
+   "length": 19,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-aurora-gs-mr",
+   "name": "Aurora Mk I MR",
+   "family": "Aurora",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 19,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-aurora-gs-se",
+   "name": "Aurora Mk I SE",
+   "family": "Aurora",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 19,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-aurora-mk2",
+   "name": "Aurora Mk II",
+   "family": "Aurora",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Multi-Role",
+    "en": "Multi-Role"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 27.7,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-avenger-stalker",
+   "name": "Avenger Stalker",
+   "family": "Avenger",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Interceptor",
+    "en": "Interceptor"
+   },
+   "length": 20,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-avenger-titan",
+   "name": "Avenger Titan",
+   "family": "Avenger",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 20,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-avenger-titan-renegade",
+   "name": "Avenger Titan Renegade",
+   "family": "Avenger",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 20,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-avenger-warlock",
+   "name": "Avenger Warlock",
+   "family": "Avenger",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Abriegelung",
+    "en": "Interdiction"
+   },
+   "length": 20,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "glsn-basher",
+   "name": "Basher",
+   "family": "Basher",
+   "manufacturer": "Grey's Market",
+   "manufacturer_code": "GLSN",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 13.7,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "vncl-blade",
+   "name": "Blade",
+   "family": "Blade",
+   "manufacturer": "Esperia",
+   "manufacturer_code": "ESPR",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 20.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-buccaneer",
+   "name": "Buccaneer",
+   "family": "Buccaneer",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 16.75,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-carrack",
+   "name": "Carrack",
+   "family": "Carrack",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Forschungsreisen",
+    "en": "Expedition"
+   },
+   "length": 126,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-carrack-expedition",
+   "name": "Carrack Expedition",
+   "family": "Carrack",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Forschungsreisen",
+    "en": "Expedition"
+   },
+   "length": 126,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-caterpillar",
+   "name": "Caterpillar",
+   "family": "Caterpillar",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 111.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-caterpillar-pirate",
+   "name": "Caterpillar Pirate",
+   "family": "Caterpillar",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transport",
+    "en": "transport"
+   },
+   "role": {
+    "de": "Schwertransport",
+    "en": "Heavy Freight"
+   },
+   "length": 111.5,
+   "image_source": "cstone.space",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-clipper",
+   "name": "Clipper",
+   "family": "Clipper",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Generalist",
+    "en": "Generalist"
+   },
+   "length": 26.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-constellation-andromeda",
+   "name": "Constellation Andromeda",
+   "family": "Constellation",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Multi-Role",
+    "en": "Multi-Role"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 63.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-constellation-aquila",
+   "name": "Constellation Aquila",
+   "family": "Constellation",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Forschungsreisen",
+    "en": "Expedition"
+   },
+   "length": 63.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-constellation-phoenix",
+   "name": "Constellation Phoenix",
+   "family": "Constellation",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Luxus-Reisen",
+    "en": "Luxury Touring"
+   },
+   "length": 63.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-constellation-taurus",
+   "name": "Constellation Taurus",
+   "family": "Constellation",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 70,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-corsair",
+   "name": "Corsair",
+   "family": "Corsair",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Forschungsreisen",
+    "en": "Expedition"
+   },
+   "length": 53,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-cutlass-black",
+   "name": "Cutlass Black",
+   "family": "Cutlass",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Multi-Role",
+    "en": "Multi-Role"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 37.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-cutlass-blue",
+   "name": "Cutlass Blue",
+   "family": "Cutlass",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Abriegelung",
+    "en": "Interdiction"
+   },
+   "length": 37.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-cutlass-red",
+   "name": "Cutlass Red",
+   "family": "Cutlass",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Unterstützung",
+    "en": "Support"
+   },
+   "role": {
+    "de": "Medizin",
+    "en": "Medical"
+   },
+   "length": 37.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-cutlass-steel",
+   "name": "Cutlass Steel",
+   "family": "Cutlass",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Landungsschiff",
+    "en": "Dropship"
+   },
+   "length": 37.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-cutter",
+   "name": "Cutter",
+   "family": "Cutter",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Einsteiger",
+    "en": "Starter"
+   },
+   "length": 20,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-cutter-rambler",
+   "name": "Cutter Rambler",
+   "family": "Cutter",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Forschungsreisen",
+    "en": "Expedition"
+   },
+   "length": 20,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-cutter-scout",
+   "name": "Cutter Scout",
+   "family": "Cutter",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Pfadfinder",
+    "en": "Pathfinder"
+   },
+   "length": 20,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "banu-defender",
+   "name": "Defender",
+   "family": "Defender",
+   "manufacturer": "Banu Souli",
+   "manufacturer_code": "BANU",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 24.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-eclipse",
+   "name": "Eclipse",
+   "family": "Eclipse",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Tarnkappenbomber",
+    "en": "Stealth Bomber"
+   },
+   "length": 24.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-fortune",
+   "name": "Fortune",
+   "family": "Fortune",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gewerblich",
+    "en": "Industrial"
+   },
+   "role": {
+    "de": "Einfache Bergung",
+    "en": "Light Salvage"
+   },
+   "length": 26.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-freelancer",
+   "name": "Freelancer",
+   "family": "Freelancer",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 38,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-freelancer-dur",
+   "name": "Freelancer DUR",
+   "family": "Freelancer",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Forschungsreisen",
+    "en": "Expedition"
+   },
+   "length": 38,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-freelancer-max",
+   "name": "Freelancer MAX",
+   "family": "Freelancer",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 38,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-freelancer-mis",
+   "name": "Freelancer MIS",
+   "family": "Freelancer",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Kanonenboot",
+    "en": "Gunship"
+   },
+   "length": 38,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-fury",
+   "name": "Fury",
+   "family": "Fury",
+   "manufacturer": "Mirai",
+   "manufacturer_code": "MRAI",
+   "size_class": 1,
+   "size": {
+    "de": "Beiboot",
+    "en": "snub"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Beiboot Jäger",
+    "en": "Snub Fighter"
+   },
+   "length": 7,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-fury-lx",
+   "name": "Fury LX",
+   "family": "Fury",
+   "manufacturer": "Mirai",
+   "manufacturer_code": "MRAI",
+   "size_class": 1,
+   "size": {
+    "de": "Beiboot",
+    "en": "snub"
+   },
+   "career": {
+    "de": "Wettkampf",
+    "en": "competition"
+   },
+   "role": {
+    "de": "Rennsport",
+    "en": "Racing"
+   },
+   "length": 7,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-fury-miru",
+   "name": "Fury MX",
+   "family": "Fury",
+   "manufacturer": "Mirai",
+   "manufacturer_code": "MRAI",
+   "size_class": 1,
+   "size": {
+    "de": "Beiboot",
+    "en": "snub"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Beiboot Jäger",
+    "en": "Snub Fighter"
+   },
+   "length": 7,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-gladiator",
+   "name": "Gladiator",
+   "family": "Gladiator",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Bomber",
+    "en": "Bomber"
+   },
+   "length": 22.75,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-gladius",
+   "name": "Gladius",
+   "family": "Gladius",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 21,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-gladius-pir",
+   "name": "Gladius Pirate",
+   "family": "Gladius",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 21,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-gladius-valiant",
+   "name": "Gladius Valiant",
+   "family": "Gladius",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 21,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "vncl-glaive",
+   "name": "Glaive",
+   "family": "Glaive",
+   "manufacturer": "Esperia",
+   "manufacturer_code": "ESPR",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 33,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-golem",
+   "name": "Golem",
+   "family": "Golem",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gewerblich",
+    "en": "Industrial"
+   },
+   "role": {
+    "de": "Einsteiger",
+    "en": "Starter"
+   },
+   "length": 15.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-golem-ox",
+   "name": "Golem OX",
+   "family": "Golem",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gewerblich",
+    "en": "Industrial"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 15.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "mrai-guardian",
+   "name": "Guardian",
+   "family": "Guardian",
+   "manufacturer": "Mirai",
+   "manufacturer_code": "MRAI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 24.3,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "mrai-guardian-mx",
+   "name": "Guardian MX",
+   "family": "Guardian",
+   "manufacturer": "Mirai",
+   "manufacturer_code": "MRAI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 26,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "mrai-guardian-qi",
+   "name": "Guardian QI",
+   "family": "Guardian",
+   "manufacturer": "Mirai",
+   "manufacturer_code": "MRAI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Abriegelung",
+    "en": "Interdiction"
+   },
+   "length": 24.3,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-hammerhead",
+   "name": "Hammerhead",
+   "family": "Hammerhead",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schweres Kanonenboot",
+    "en": "Heavy Gunship"
+   },
+   "length": 120,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hawk",
+   "name": "Hawk",
+   "family": "Hawk",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 23,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-herald",
+   "name": "Herald",
+   "family": "Herald",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Datentransport",
+    "en": "Medium Data"
+   },
+   "length": 24.75,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "crus-starlifter-a2",
+   "name": "A2 Hercules Starlifter",
+   "family": "Hercules",
+   "manufacturer": "Crusader Industries",
+   "manufacturer_code": "CRUS",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Bomber",
+    "en": "Heavy Bomber"
+   },
+   "length": 94,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "crus-starlifter-c2",
+   "name": "C2 Hercules Starlifter",
+   "family": "Hercules",
+   "manufacturer": "Crusader Industries",
+   "manufacturer_code": "CRUS",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 94,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "crus-starlifter-m2",
+   "name": "M2 Hercules Starlifter",
+   "family": "Hercules",
+   "manufacturer": "Crusader Industries",
+   "manufacturer_code": "CRUS",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 94,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-hermes",
+   "name": "Hermes",
+   "family": "Hermes",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 73,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7a-mk1",
+   "name": "F7A Hornet Mk I",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 28.25,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7a-mk2",
+   "name": "F7A Hornet Mk II",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 22.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7c",
+   "name": "F7C Hornet Mk I",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 28.25,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7c-mk2",
+   "name": "F7C Hornet Mk II",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 22.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7c-wildfire",
+   "name": "F7C Hornet Wildfire Mk I",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 28.25,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7cm-heartseeker",
+   "name": "F7C-M Hornet Heartseeker Mk I",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 28.25,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7cm-mk2-heartseeker",
+   "name": "F7C-M Hornet Heartseeker Mk II",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 24,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7cm",
+   "name": "F7C-M Super Hornet Mk I",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 28.25,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7cm-mk2",
+   "name": "F7C-M Super Hornet Mk II",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 24,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7cr",
+   "name": "F7C-R Hornet Tracker Mk I",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Pfadfinder",
+    "en": "Pathfinder"
+   },
+   "length": 28.25,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7cr-mk2",
+   "name": "F7C-R Hornet Tracker Mk II",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Pfadfinder",
+    "en": "Pathfinder"
+   },
+   "length": 22.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7cs",
+   "name": "F7C-S Hornet Ghost Mk I",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Tarnkappenjäger",
+    "en": "Stealth Fighter"
+   },
+   "length": 28.25,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hornet-f7cs-mk2",
+   "name": "F7C-S Hornet Ghost Mk II",
+   "family": "Hornet",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Tarnkappenjäger",
+    "en": "Stealth Fighter"
+   },
+   "length": 22.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-hull-a",
+   "name": "Hull A",
+   "family": "Hull A",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 30,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-hull-b",
+   "name": "Hull B",
+   "family": "Hull B",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 71,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-hull-c",
+   "name": "Hull C",
+   "family": "Hull C",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Schwertransport",
+    "en": "Heavy Freight"
+   },
+   "length": 91.17,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-hurricane",
+   "name": "Hurricane",
+   "family": "Hurricane",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 24,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-idris-m",
+   "name": "Idris-M",
+   "family": "Idris",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 6,
+   "size": {
+    "de": "Kapitalklasse",
+    "en": "capital"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Fregatte",
+    "en": "Frigate"
+   },
+   "length": 243,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-idris-p",
+   "name": "Idris-P",
+   "family": "Idris",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 6,
+   "size": {
+    "de": "Kapitalklasse",
+    "en": "capital"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Fregatte",
+    "en": "Frigate"
+   },
+   "length": 243,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "crus-intrepid",
+   "name": "Intrepid",
+   "family": "Intrepid",
+   "manufacturer": "Crusader Industries",
+   "manufacturer_code": "CRUS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Starter",
+    "en": "Starter"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 23.07,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-ironclad",
+   "name": "Ironclad",
+   "family": "Ironclad",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Schwertransport",
+    "en": "Heavy Freight"
+   },
+   "length": 117,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-ironclad-assault",
+   "name": "Ironclad Assault",
+   "family": "Ironclad",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Heavy Dropship",
+    "en": "Heavy Dropship"
+   },
+   "length": 117,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "xian-scout",
+   "name": "Khartu-al",
+   "family": "Khartu-al",
+   "manufacturer": "Aopoa",
+   "manufacturer_code": "XNAA",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 32,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-lightning-f8",
+   "name": "F8A Lightning",
+   "family": "Lightning",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 26,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-lightning-f8c",
+   "name": "F8C Lightning",
+   "family": "Lightning",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 26,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-m50",
+   "name": "M50 Interceptor",
+   "family": "M50",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Wettkampf",
+    "en": "competition"
+   },
+   "role": {
+    "de": "Rennsport",
+    "en": "Racing"
+   },
+   "length": 11.5,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "orig-m80",
+   "name": "M80",
+   "family": "M80",
+   "manufacturer": "Origin Jumpworks",
+   "manufacturer_code": "ORIG",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 11.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-mantis",
+   "name": "Mantis",
+   "family": "Mantis",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Abriegelung",
+    "en": "Interdiction"
+   },
+   "length": 30,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "crus-star-runner",
+   "name": "Mercury Star Runner",
+   "family": "Mercury",
+   "manufacturer": "Crusader Industries",
+   "manufacturer_code": "CRUS",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 55,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "krig-p52-merlin",
+   "name": "P-52 Merlin",
+   "family": "Merlin",
+   "manufacturer": "Kruger Intergalactic",
+   "manufacturer_code": "KRIG",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Beiboot Jäger",
+    "en": "Snub Fighter"
+   },
+   "length": 12,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-meteor",
+   "name": "Meteor",
+   "family": "Meteor",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 30,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "argo-mole",
+   "name": "MOLE",
+   "family": "MOLE",
+   "manufacturer": "Argo Astronautics",
+   "manufacturer_code": "ARGO",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gewerblich",
+    "en": "Industrial"
+   },
+   "role": {
+    "de": "Medium Mining",
+    "en": "Medium Mining"
+   },
+   "length": 45,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "argo-moth",
+   "name": "MOTH",
+   "family": "MOTH",
+   "manufacturer": "Argo Astronautics",
+   "manufacturer_code": "ARGO",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gewerblich",
+    "en": "Industrial"
+   },
+   "role": {
+    "de": "Medium Salvage",
+    "en": "Medium Salvage"
+   },
+   "length": 0,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "argo-mpuv",
+   "name": "MPUV Cargo",
+   "family": "MPUV",
+   "manufacturer": "Argo Astronautics",
+   "manufacturer_code": "ARGO",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 10.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "argo-mpuv-transport",
+   "name": "MPUV Personnel",
+   "family": "MPUV",
+   "manufacturer": "Argo Astronautics",
+   "manufacturer_code": "ARGO",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Passagier",
+    "en": "Passenger"
+   },
+   "length": 10.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "argo-mpuv-1t",
+   "name": "MPUV Tractor",
+   "family": "MPUV",
+   "manufacturer": "Argo Astronautics",
+   "manufacturer_code": "ARGO",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 10.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "cnou-mustang-alpha",
+   "name": "Mustang Alpha",
+   "family": "Mustang",
+   "manufacturer": "Consolidated Outland",
+   "manufacturer_code": "CNOU",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Multi-Role",
+    "en": "Multi-Role"
+   },
+   "role": {
+    "de": "Einsteiger",
+    "en": "Starter"
+   },
+   "length": 21.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "cnou-mustang-beta",
+   "name": "Mustang Beta",
+   "family": "Mustang",
+   "manufacturer": "Consolidated Outland",
+   "manufacturer_code": "CNOU",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Pfadfinder",
+    "en": "Pathfinder"
+   },
+   "length": 21.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "cnou-mustang-delta",
+   "name": "Mustang Delta",
+   "family": "Mustang",
+   "manufacturer": "Consolidated Outland",
+   "manufacturer_code": "CNOU",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 21.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "cnou-mustang-gamma",
+   "name": "Mustang Gamma",
+   "family": "Mustang",
+   "manufacturer": "Consolidated Outland",
+   "manufacturer_code": "CNOU",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Wettkampf",
+    "en": "competition"
+   },
+   "role": {
+    "de": "Rennsport",
+    "en": "Racing"
+   },
+   "length": 21.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "cnou-mustang-omega",
+   "name": "Mustang Omega",
+   "family": "Mustang",
+   "manufacturer": "Consolidated Outland",
+   "manufacturer_code": "CNOU",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Wettkampf",
+    "en": "competition"
+   },
+   "role": {
+    "de": "Rennsport",
+    "en": "Racing"
+   },
+   "length": 21.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "cnou-nomad",
+   "name": "Nomad",
+   "family": "Nomad",
+   "manufacturer": "Consolidated Outland",
+   "manufacturer_code": "CNOU",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Einsteiger",
+    "en": "Starter"
+   },
+   "length": 27,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-paladin",
+   "name": "Paladin",
+   "family": "Paladin",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 4,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Kanonenboot",
+    "en": "Gunship"
+   },
+   "length": 53.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-perseus",
+   "name": "Perseus",
+   "family": "Perseus",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schweres Kanonenboot",
+    "en": "Heavy Gunship"
+   },
+   "length": 100,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-c8-pisces",
+   "name": "C8 Pisces",
+   "family": "Pisces",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Pfadfinder",
+    "en": "Pathfinder"
+   },
+   "length": 16,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-c8r-pisces",
+   "name": "C8R Pisces Rescue",
+   "family": "Pisces",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Unterstützung",
+    "en": "Support"
+   },
+   "role": {
+    "de": "Medizin",
+    "en": "Medical"
+   },
+   "length": 16,
+   "image_source": "",
+   "has_catalog_image": false
+  },
+  {
+   "id": "anvl-c8x-pisces-expedition",
+   "name": "C8X Pisces Expedition",
+   "family": "Pisces",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Pfadfinder",
+    "en": "Pathfinder"
+   },
+   "length": 16,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-pitbull",
+   "name": "Pitbull",
+   "family": "Pitbull",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Beiboot Jäger",
+    "en": "Snub Fighter"
+   },
+   "length": 6,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-polaris",
+   "name": "Polaris",
+   "family": "Polaris",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 6,
+   "size": {
+    "de": "Kapitalklasse",
+    "en": "capital"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Korvette",
+    "en": "Corvette"
+   },
+   "length": 181,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-prospector",
+   "name": "Prospector",
+   "family": "Prospector",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gewerblich",
+    "en": "Industrial"
+   },
+   "role": {
+    "de": "Light Mining",
+    "en": "Light Mining"
+   },
+   "length": 26.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "espr-prowler",
+   "name": "Prowler",
+   "family": "Prowler",
+   "manufacturer": "Esperia",
+   "manufacturer_code": "ESPR",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Landungsschiff",
+    "en": "Dropship"
+   },
+   "length": 34,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "espr-prowler-utility",
+   "name": "Prowler Utility",
+   "family": "Prowler",
+   "manufacturer": "Esperia",
+   "manufacturer_code": "ESPR",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 34,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "argo-raft",
+   "name": "RAFT",
+   "family": "RAFT",
+   "manufacturer": "Argo Astronautics",
+   "manufacturer_code": "ARGO",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 39.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "gama-railen",
+   "name": "Railen",
+   "family": "Railen",
+   "manufacturer": "Gatac Manufacture",
+   "manufacturer_code": "GAMA",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 67,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-razor",
+   "name": "Razor",
+   "family": "Razor",
+   "manufacturer": "Mirai",
+   "manufacturer_code": "MRAI",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Wettkampf",
+    "en": "competition"
+   },
+   "role": {
+    "de": "Rennsport",
+    "en": "Racing"
+   },
+   "length": 12.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-razor-ex",
+   "name": "Razor EX",
+   "family": "Razor",
+   "manufacturer": "Mirai",
+   "manufacturer_code": "MRAI",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Tarnkappenjäger",
+    "en": "Stealth Fighter"
+   },
+   "length": 12.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-razor-lx",
+   "name": "Razor LX",
+   "family": "Razor",
+   "manufacturer": "Mirai",
+   "manufacturer_code": "MRAI",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Wettkampf",
+    "en": "competition"
+   },
+   "role": {
+    "de": "Rennsport",
+    "en": "Racing"
+   },
+   "length": 12.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-reclaimer",
+   "name": "Reclaimer",
+   "family": "Reclaimer",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 6,
+   "size": {
+    "de": "Kapitalklasse",
+    "en": "capital"
+   },
+   "career": {
+    "de": "Gewerblich",
+    "en": "Industrial"
+   },
+   "role": {
+    "de": "Großbergung",
+    "en": "Heavy Salvage"
+   },
+   "length": 160,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-redeemer",
+   "name": "Redeemer",
+   "family": "Redeemer",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Kanonenboot",
+    "en": "Gunship"
+   },
+   "length": 51,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-reliant",
+   "name": "Reliant Kore",
+   "family": "Reliant",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Einsteiger",
+    "en": "Starter"
+   },
+   "length": 28.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-reliant-mako",
+   "name": "Reliant Mako",
+   "family": "Reliant",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Unterstützung",
+    "en": "Support"
+   },
+   "role": {
+    "de": "Berichterstattung",
+    "en": "Reporting"
+   },
+   "length": 28.5,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-reliant-sen",
+   "name": "Reliant Sen",
+   "family": "Reliant",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gewerblich",
+    "en": "Industrial"
+   },
+   "role": {
+    "de": "Einfache Forschung",
+    "en": "Light Science"
+   },
+   "length": 28.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-reliant-tana",
+   "name": "Reliant Tana",
+   "family": "Reliant",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 28.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-retaliator",
+   "name": "Retaliator",
+   "family": "Retaliator",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Bomber",
+    "en": "Heavy Bomber"
+   },
+   "length": 70.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-sabre",
+   "name": "Sabre",
+   "family": "Sabre",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Tarnkappenjäger",
+    "en": "Stealth Fighter"
+   },
+   "length": 24.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-sabre-comet",
+   "name": "Sabre Comet",
+   "family": "Sabre",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Tarnkappenjäger",
+    "en": "Stealth Fighter"
+   },
+   "length": 24.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-sabre-firebird",
+   "name": "Sabre Firebird",
+   "family": "Sabre",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Tarnkappenjäger",
+    "en": "Stealth Fighter"
+   },
+   "length": 24.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-sabre-peregrine",
+   "name": "Sabre Peregrine",
+   "family": "Sabre",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Wettkampf",
+    "en": "competition"
+   },
+   "role": {
+    "de": "Rennsport",
+    "en": "Racing"
+   },
+   "length": 24.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-sabre-raven",
+   "name": "Sabre Raven",
+   "family": "Sabre",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Abriegelung",
+    "en": "Interdiction"
+   },
+   "length": 24.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-sabre-raven-ex",
+   "name": "Sabre Raven EX",
+   "family": "Sabre",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 24.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-salvation",
+   "name": "Salvation",
+   "family": "Salvation",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gewerblich",
+    "en": "Industrial"
+   },
+   "role": {
+    "de": "Einfache Bergung",
+    "en": "Light Salvage"
+   },
+   "length": 14.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "xnaa-santokyai",
+   "name": "San'tok.yāi",
+   "family": "San'tok.yāi",
+   "manufacturer": "Aopoa",
+   "manufacturer_code": "XNAA",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 24,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-scorpius",
+   "name": "Scorpius",
+   "family": "Scorpius",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 32,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-scorpius-antares",
+   "name": "Scorpius Antares",
+   "family": "Scorpius",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 32,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "vncl-scythe",
+   "name": "Vanduul Scythe",
+   "family": "Scythe",
+   "manufacturer": "Esperia",
+   "manufacturer_code": "ESPR",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 33,
+   "image_source": "starcitizen.tools",
+   "has_catalog_image": true
+  },
+  {
+   "id": "glsn-shiv",
+   "name": "Shiv",
+   "family": "Shiv",
+   "manufacturer": "Grey's Market",
+   "manufacturer_code": "GLSN",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 37.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "crus-spirit-a1",
+   "name": "A1 Spirit",
+   "family": "Spirit",
+   "manufacturer": "Crusader Industries",
+   "manufacturer_code": "CRUS",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Bomber",
+    "en": "Bomber"
+   },
+   "length": 47.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "crus-spirit-c1",
+   "name": "C1 Spirit",
+   "family": "Spirit",
+   "manufacturer": "Crusader Industries",
+   "manufacturer_code": "CRUS",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Leichter Frachter",
+    "en": "Light Freight"
+   },
+   "length": 47.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "argo-srv",
+   "name": "SRV",
+   "family": "SRV",
+   "manufacturer": "Argo Astronautics",
+   "manufacturer_code": "ARGO",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Unterstützung",
+    "en": "Support"
+   },
+   "role": {
+    "de": "Bergung",
+    "en": "Recovery"
+   },
+   "length": 31.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-starfarer",
+   "name": "Starfarer",
+   "family": "Starfarer",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Unterstützung",
+    "en": "Support"
+   },
+   "role": {
+    "de": "Heavy Refueling",
+    "en": "Heavy Refueling"
+   },
+   "length": 102,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-starfarer-gemini",
+   "name": "Starfarer Gemini",
+   "family": "Starfarer",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Unterstützung",
+    "en": "Support"
+   },
+   "role": {
+    "de": "Heavy Refueling",
+    "en": "Heavy Refueling"
+   },
+   "length": 102,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-starlancer-max",
+   "name": "Starlancer MAX",
+   "family": "Starlancer",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 5,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Transport",
+    "en": "transport"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 90,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-starlancer-tac",
+   "name": "Starlancer TAC",
+   "family": "Starlancer",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Kanonenboot",
+    "en": "Gunship"
+   },
+   "length": 90,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "misc-starlite",
+   "name": "Starlite",
+   "family": "Starlite",
+   "manufacturer": "Musashi Industrial and Starflight Concern",
+   "manufacturer_code": "MISC",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Unterstützung",
+    "en": "Support"
+   },
+   "role": {
+    "de": "Light Refueling",
+    "en": "Light Refueling"
+   },
+   "length": 32,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "vncl-stinger",
+   "name": "Stinger",
+   "family": "Stinger",
+   "manufacturer": "Esperia",
+   "manufacturer_code": "ESPR",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 36,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "krig-s65-stingray",
+   "name": "S-65 Stingray",
+   "family": "Stingray",
+   "manufacturer": "Kruger Intergalactic",
+   "manufacturer_code": "KRIG",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Mittlerer Jäger",
+    "en": "Medium Fighter"
+   },
+   "length": 20.447,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "gama-syulen",
+   "name": "Syulen",
+   "family": "Syulen",
+   "manufacturer": "Gatac Manufacture",
+   "manufacturer_code": "GAMA",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Multi-Role",
+    "en": "Multi-Role"
+   },
+   "role": {
+    "de": "Einsteiger",
+    "en": "Starter"
+   },
+   "length": 28,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "espr-talon",
+   "name": "Talon",
+   "family": "Talon",
+   "manufacturer": "Esperia",
+   "manufacturer_code": "ESPR",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 24,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "espr-talon-shrike",
+   "name": "Talon Shrike",
+   "family": "Talon",
+   "manufacturer": "Esperia",
+   "manufacturer_code": "ESPR",
+   "size_class": 1,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 24,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-terrapin",
+   "name": "Terrapin",
+   "family": "Terrapin",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Unterstützung",
+    "en": "Support"
+   },
+   "role": {
+    "de": "Pfadfinder",
+    "en": "Pathfinder"
+   },
+   "length": 20,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-terrapin-medic",
+   "name": "Terrapin Medic",
+   "family": "Terrapin",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Unterstützung",
+    "en": "Support"
+   },
+   "role": {
+    "de": "Medizin",
+    "en": "Medical"
+   },
+   "length": 20,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-tiburon",
+   "name": "Tiburon",
+   "family": "Tiburon",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schweres Kanonenboot",
+    "en": "Heavy Gunship"
+   },
+   "length": 121,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "gama-tyilui",
+   "name": "Tyilui",
+   "family": "Tyilui",
+   "manufacturer": "Gatac Manufacture",
+   "manufacturer_code": "GAMA",
+   "size_class": 5,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Snub Carrier",
+    "en": "Snub Carrier"
+   },
+   "length": 67.25,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "anvl-valkyrie",
+   "name": "Valkyrie",
+   "family": "Valkyrie",
+   "manufacturer": "Anvil Aerospace",
+   "manufacturer_code": "ANVL",
+   "size_class": 4,
+   "size": {
+    "de": "Groß",
+    "en": "Large"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Landungsschiff",
+    "en": "Dropship"
+   },
+   "length": 48,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-vanguard-harbinger",
+   "name": "Vanguard Harbinger",
+   "family": "Vanguard",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Bomber",
+    "en": "Bomber"
+   },
+   "length": 48,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-vanguard-hoplite",
+   "name": "Vanguard Hoplite",
+   "family": "Vanguard",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Landungsschiff",
+    "en": "Dropship"
+   },
+   "length": 48,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-vanguard-sentinel",
+   "name": "Vanguard Sentinel",
+   "family": "Vanguard",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 48,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "aegs-vanguard",
+   "name": "Vanguard Warden",
+   "family": "Vanguard",
+   "manufacturer": "Aegis Dynamics",
+   "manufacturer_code": "AEGS",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Schwerer Jäger",
+    "en": "Heavy Fighter"
+   },
+   "length": 48,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "drak-vulture",
+   "name": "Vulture",
+   "family": "Vulture",
+   "manufacturer": "Drake Interplanetary",
+   "manufacturer_code": "DRAK",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gewerblich",
+    "en": "Industrial"
+   },
+   "role": {
+    "de": "Einfache Bergung",
+    "en": "Light Salvage"
+   },
+   "length": 34,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "krig-l21-wolf",
+   "name": "L-21 Wolf",
+   "family": "Wolf",
+   "manufacturer": "Kruger Intergalactic",
+   "manufacturer_code": "KRIG",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 21.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "krig-l22-alphawolf",
+   "name": "L-22 Alpha Wolf",
+   "family": "Wolf",
+   "manufacturer": "Kruger Intergalactic",
+   "manufacturer_code": "KRIG",
+   "size_class": 2,
+   "size": {
+    "de": "Klein",
+    "en": "Small"
+   },
+   "career": {
+    "de": "Gefecht",
+    "en": "Combat"
+   },
+   "role": {
+    "de": "Leichter Jäger",
+    "en": "Light Fighter"
+   },
+   "length": 21.5,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-zeus-cl",
+   "name": "Zeus Mk II CL",
+   "family": "Zeus",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Transporter",
+    "en": "Transporter"
+   },
+   "role": {
+    "de": "Mittlerer Frachter",
+    "en": "Medium Freight"
+   },
+   "length": 46,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  },
+  {
+   "id": "rsi-zeus-es",
+   "name": "Zeus Mk II ES",
+   "family": "Zeus",
+   "manufacturer": "Roberts Space Industries",
+   "manufacturer_code": "RSI",
+   "size_class": 3,
+   "size": {
+    "de": "Mittel",
+    "en": "Medium"
+   },
+   "career": {
+    "de": "Erkundung",
+    "en": "Exploration"
+   },
+   "role": {
+    "de": "Forschungsreisen",
+    "en": "Expedition"
+   },
+   "length": 46,
+   "image_source": "robertsspaceindustries.com",
+   "has_catalog_image": true
+  }
+ ]
+}
