@@ -26,6 +26,8 @@ function renderSizeFilter() {
 }
 
 // Bilder des Schiffs selbst plus Bilder seiner Familie ohne bekannte Variante.
+const GALLERY_ICONS = { outline: 'shapes', distance: 'telescope', silhouette: 'plane', hud: 'scan-eye' };
+
 function photosOf(ship, kind) {
   return catalogData.photos.filter(p => p.kind === kind &&
     (p.ship === ship.id || (!p.ship && p.familyName === ship.family)));
@@ -69,12 +71,12 @@ function renderCatalog() {
       [s.manufacturer, role, s.size[currentLang] || s.size.en, s.length ? t('catalog_length', { m: s.length }) : '']
         .filter(Boolean).join(' · ');
     const more = card.querySelector('.mehr');
-    for (const kind of ['hud', 'silhouette']) {
+    for (const kind of ['outline', 'distance', 'silhouette', 'hud']) {
       const photos = photosOf(s, kind);
       if (!photos.length) continue;
       const b = document.createElement('button');
       b.type = 'button';
-      b.innerHTML = `<span class="ic ic-${kind === 'hud' ? 'scan-eye' : 'plane'}" aria-hidden="true"></span>` +
+      b.innerHTML = `<span class="ic ic-${GALLERY_ICONS[kind]}" aria-hidden="true"></span>` +
         t('catalog_' + kind + '_images', { n: photos.length });
       b.addEventListener('click', () => openGallery(s, kind));
       more.appendChild(b);
@@ -98,7 +100,7 @@ function openGallery(ship, kind) {
     if (p.author) {
       const by = document.createElement('span');
       by.className = 'urheber';
-      by.textContent = t('photo_by', { name: p.author });
+      by.textContent = t(p.source === 'starcitizen.tools' ? 'photo_by_wiki' : 'photo_by', { name: p.author });
       fig.querySelector('.bildrahmen').appendChild(by);
     }
     const report = fig.querySelector('.melden');

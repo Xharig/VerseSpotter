@@ -5,18 +5,20 @@
 ## Seit v1.0.0
 
 ### Neu
+- Zwei neue Bildarten für 83 Schiffsfamilien: **Umriss** (nur die Form, von oben, unten und der Seite) und **Distanz** (das Schiff klein am Himmel, wie von weitem). Die Distanz-Idee kam von der_Positive_tee. Grundlage sind Fotos aus dem Spiel, die Weehamster im Star Citizen Wiki veröffentlicht hat (CC BY-SA 4.0). „Gemischt" nimmt jetzt alle Bildarten aus dem Spiel, der Katalog zeigt die neuen Bilder je Schiff.
 - Die Auswertung zeigt, wie lange du gebraucht hast (gesamt und im Schnitt pro Bild), und die Zeit steht auch im Ergebnis für Discord. Gezählt wird nur die Zeit vom Bild bis zur Antwort. Vorschlag von Shepardxl.
 - Das Ergebnis für Discord ist formatiert (fett, Zitatbalken), nennt den Gefechtsmodus ausgeschrieben und hat einen anklickbaren Link.
 
 ### Geändert
-- Die Bildarten stehen von leicht nach schwer: Einsteiger, Silhouette, Gemischt, HUD.
+- Die Bildarten stehen von leicht nach schwer: Einsteiger, Umriss, Distanz, Silhouette, Gemischt, HUD.
 
 ### Behoben
 - Auf dem Handy sprang der Weiter-Knopf nach einer Antwort mal in eine zweite Zeile und mal nicht, je nachdem, ob ein Variantenname angezeigt wurde. Der Kasten unter den Antworten ist jetzt immer gleich hoch. Gemeldet von zwaersch.
 - Nach einer neuen Version konnte der Browser noch alte Dateien der Seite zeigen. Jetzt lädt er sie nach jeder Änderung neu.
 
 ### Dank
-- zwaersch und Shepardxl
+- zwaersch, Shepardxl und der_Positive_tee
+- Weehamster für die Fotos im Star Citizen Wiki
 
 ## v1.0.0 - 2026-10-02
 

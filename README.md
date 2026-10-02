@@ -22,7 +22,7 @@ Ein Trainer im Browser, der funktioniert wie eine Fahrschul-Lern-App: Du siehst 
 
 ## Was es kann
 
-- **Vier Bildarten:** HUD-Hologramm, Silhouette im Flug, beides gemischt — und Schiffsbilder zum Aufwärmen
+- **Sechs Bildarten von leicht nach schwer:** Schiffsbilder zum Aufwärmen, Umriss, Distanz, Silhouette im Flug, alles gemischt und HUD-Hologramm
 - **Karteikasten:** jedes Schiff hat je Bildart fünf Fächer; Fehler kommen bald wieder, Bekanntes seltener
 - **Mitwachsende Schwierigkeit:** je besser du ein Schiff kennst, desto ähnlicher werden die falschen Antworten
 - **10, 20, 30 oder 40 Fragen**, auf Wunsch im **Gefechtsmodus** mit 5 Sekunden pro Bild
@@ -72,5 +72,6 @@ Offizielle Seite: **[robertsspaceindustries.com](https://robertsspaceindustries.
 
 - **Code:** GNU General Public License v3.0 — Volltext in [LICENSE](LICENSE)
 - **Bilder der Sammler** (`img/hud/`, `img/silhouette/`): CC BY-NC 4.0 — siehe [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
+- **Umriss- und Distanzbilder** (`img/outline/`, `img/distance/`): bearbeitet aus Fotos des Star Citizen Wiki, CC BY-SA 4.0 — siehe [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
 - **Schiffsbilder** (`img/catalog/`): Eigentum von Cloud Imperium, genutzt im Rahmen der Fan-Seiten-Regeln
 - **Schiffsdaten:** [Star Citizen Wiki API](https://api.star-citizen.wiki) · **Symbole:** [Lucide](https://lucide.dev) (ISC)

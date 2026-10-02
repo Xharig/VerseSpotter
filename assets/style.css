@@ -52,6 +52,8 @@ a:hover{text-decoration:underline}
 .ic-zap{--ic:url(icons/zap.svg)}
 .ic-crosshair{--ic:url(icons/crosshair.svg)}
 .ic-scan-eye{--ic:url(icons/scan-eye.svg)}
+.ic-shapes{--ic:url(icons/shapes.svg)}
+.ic-telescope{--ic:url(icons/telescope.svg)}
 .ic-rotate-ccw{--ic:url(icons/rotate-ccw.svg)}
 .ic-copy{--ic:url(icons/copy.svg)}
 .ic-flag{--ic:url(icons/flag.svg)}
@@ -194,8 +196,9 @@ h3{font-size:19px;font-weight:800;margin:0 0 8px}
 .bildrahmen img{width:100%;height:100%;object-fit:contain}
 .quiz .bildrahmen{max-height:56vh;min-height:220px}
 .bildrahmen .urheber{
-  position:absolute;right:10px;bottom:8px;font-size:13px;color:#ddd;
+  position:absolute;right:10px;top:8px;font-size:13px;color:#ddd;
   background:rgba(0,0,0,.6);padding:2px 9px;border-radius:999px;
+  max-width:calc(100% - 20px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
 }
 .bildrahmen .melden{
   position:absolute;left:10px;bottom:8px;font-size:13px;color:#ddd;

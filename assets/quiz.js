@@ -5,8 +5,11 @@
 const LENGTHS = [10, 20, 30, 40];
 const DEFAULT_LENGTH = 20;
 const COMBAT_SECONDS = 5;
-const MODES = ['beginner', 'silhouette', 'mixed', 'hud'];
-const MODE_ICONS = { mixed: 'crosshair', hud: 'scan-eye', silhouette: 'plane', beginner: 'graduation-cap' };
+const MODES = ['beginner', 'outline', 'distance', 'silhouette', 'mixed', 'hud'];
+const MODE_ICONS = {
+  beginner: 'graduation-cap', outline: 'shapes', distance: 'telescope',
+  silhouette: 'plane', mixed: 'crosshair', hud: 'scan-eye',
+};
 const PROGRESS_KEY = 'versespotter.progress';
 const SETTINGS_KEY = 'versespotter.settings';
 const BOX_WEIGHT = { 1: 16, 2: 8, 3: 4, 4: 2, 5: 1 };
@@ -220,7 +223,8 @@ function renderQuestion() {
   img.alt = t('image_alt');
   const author = document.getElementById('urheber');
   author.hidden = !q.image.author;
-  author.textContent = q.image.author ? t('photo_by', { name: q.image.author }) : '';
+  author.textContent = !q.image.author ? ''
+    : t(q.image.source === 'starcitizen.tools' ? 'photo_by_wiki' : 'photo_by', { name: q.image.author });
 
   const box = document.getElementById('antworten');
   box.innerHTML = '';

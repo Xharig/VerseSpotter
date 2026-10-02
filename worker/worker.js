@@ -27,11 +27,11 @@ const LANGS = ['de', 'en'];
 const PAGES = ['home', 'catalog', 'thanks'];
 const DEVICES = ['handy', 'pc'];
 const SOURCE_RE = /^[a-z0-9-]{2,20}$/;
-const MODES = ['mixed', 'hud', 'silhouette', 'beginner'];
+const MODES = ['beginner', 'outline', 'distance', 'silhouette', 'mixed', 'hud'];
 const LENGTHS = [10, 20, 30, 40];
 const RANKS = ['ace', 'spotter', 'cadet', 'recruit'];
 const REASONS = ['wrong_ship', 'name_visible', 'bad_quality', 'other'];
-const IMAGE_RE = /^(catalog:[a-z0-9-]{2,60}|(hud|silhouette)-[a-z0-9-]{2,70})$/;
+const IMAGE_RE = /^(catalog:[a-z0-9-]{2,60}|(hud|silhouette|outline|distance)-[a-z0-9-]{2,70})$/;
 const FAMILY_RE = /^[\p{L}\p{N} .'\-]{1,40}$/u;
 const FIELDS = {
   visit: ['t', 'l', 'p', 'd', 's', 'r'],

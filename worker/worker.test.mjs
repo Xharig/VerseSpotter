@@ -51,6 +51,19 @@ test('falscher Modus, falsche Länge und unbekannte Art werden abgelehnt', async
   await assert.rejects(check(req({ t: 'boom', l: 'de' })), (e) => e.text === 'Art');
 });
 
+test('Umriss und Distanz: Modus und Bildkennungen werden angenommen', async () => {
+  for (const m of ['outline', 'distance']) {
+    const ev = await check(req({ t: 'start', l: 'de', m, n: 20, c: 0 }));
+    assert.equal(ev.mode, m);
+  }
+  const ev = await check(req({
+    ...finish, m: 'mixed',
+    a: [['outline-aegs-gladius-port', 1, 'Gladius', 'Gladius'], ['distance-anvl-arrow-above', 0, 'Arrow', 'Gladius']],
+  }));
+  assert.equal(ev.answers.length, 2);
+  await assert.rejects(check(req({ t: 'report', l: 'de', b: 'umriss-aegs-gladius-port', g: 'other' })), (e) => e.text === 'b');
+});
+
 test('Ergebnis: Punktzahl muss zu den Antworten passen', async () => {
   const ev = await check(req(finish));
   assert.equal(ev.answers.length, 2);

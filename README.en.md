@@ -22,7 +22,7 @@ A trainer in your browser that works like a driving-theory app: you see an image
 
 ## What it does
 
-- **Four image types:** HUD hologram, silhouette in flight, both mixed — and ship renders to warm up
+- **Six image types from easy to hard:** ship renders to warm up, outline, distance, silhouette in flight, everything mixed and HUD hologram
 - **Spaced repetition:** every ship has five boxes per image type; misses come back soon, known ships less often
 - **Difficulty that grows with you:** the better you know a ship, the more similar the wrong answers get
 - **10, 20, 30 or 40 questions**, optionally in **combat mode** with 5 seconds per image
@@ -71,5 +71,6 @@ Official site: **[robertsspaceindustries.com](https://robertsspaceindustries.com
 
 - **Code:** GNU General Public License v3.0 — full text in [LICENSE](LICENSE)
 - **Collector images** (`img/hud/`, `img/silhouette/`): CC BY-NC 4.0 — see [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
+- **Outline and distance images** (`img/outline/`, `img/distance/`): adapted from Star Citizen Wiki photos, CC BY-SA 4.0 — see [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
 - **Ship renders** (`img/catalog/`): property of Cloud Imperium, used under the fan site rules
 - **Ship data:** [Star Citizen Wiki API](https://api.star-citizen.wiki) · **Icons:** [Lucide](https://lucide.dev) (ISC)

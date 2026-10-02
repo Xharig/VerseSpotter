@@ -6,7 +6,7 @@
 <title>Thanks &amp; licences — VerseSpotter</title>
 <meta name="description" content="The community members who collect the in-game images, plus licences and privacy.">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body data-page="thanks" data-title-key="page_title_thanks">
 <header id="kopf"></header>
@@ -22,16 +22,21 @@
       <ul class="sammler" id="sammler"></ul>
       <p id="sammler-leer" hidden data-t="thanks_none"></p>
 
+      <h2 data-t="thanks_wiki"></h2>
+      <ul class="sammler" id="wiki-fotografen"></ul>
+
       <h2 data-t="thanks_feedback"></h2>
       <ul class="sammler">
         <li>zwaersch<span data-t="dk_zwaersch"></span></li>
         <li>Shepardxl<span data-t="dk_shepardxl"></span></li>
+        <li>der_Positive_tee<span data-t="dk_positive_tee"></span></li>
       </ul>
 
       <h2 data-t="licences_title"></h2>
       <ul>
         <li data-t="licence_code"></li>
         <li data-t="licence_photos"></li>
+        <li id="lizenz-wiki"></li>
         <li data-t="licence_renders"></li>
         <li data-t="licence_data"></li>
         <li data-t="licence_icons"></li>
@@ -49,33 +54,46 @@
 </main>
 
 <footer id="fuss"></footer>
-<script src="assets/layout.js?v=3"></script>
-<script src="assets/texts.js?v=3"></script>
-<script src="assets/data.js?v=3"></script>
-<script src="assets/stats.js?v=3"></script>
+<script src="assets/layout.js?v=4"></script>
+<script src="assets/texts.js?v=4"></script>
+<script src="assets/data.js?v=4"></script>
+<script src="assets/stats.js?v=4"></script>
 <script>
-// Sammler aus den freigegebenen Bildern zählen, meiste Bilder zuerst.
+// Sammler aus den freigegebenen Bildern zählen, meiste Bilder zuerst. Wiki-Fotos
+// zählen getrennt, und zwar je Foto einmal (daraus entstehen Umriss und Distanz).
 let collectors = [];
-function renderCollectors() {
-  const list = document.getElementById('sammler');
+let photographers = [];
+function ranked(photos) {
+  const count = new Map();
+  for (const p of photos) if (p.author) count.set(p.author, (count.get(p.author) || 0) + 1);
+  return [...count.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+}
+function fillList(id, entries, label) {
+  const list = document.getElementById(id);
   list.innerHTML = '';
-  document.getElementById('sammler-leer').hidden = collectors.length > 0;
-  for (const [name, n] of collectors) {
+  for (const [name, n] of entries) {
     const li = document.createElement('li');
     li.textContent = name;
     const count = document.createElement('span');
-    count.textContent = n === 1 ? t('thanks_image_one') : t('thanks_images', { n });
+    count.textContent = label(n);
     li.appendChild(count);
     list.appendChild(li);
   }
 }
+function renderCollectors() {
+  document.getElementById('sammler-leer').hidden = collectors.length > 0;
+  fillList('sammler', collectors, n => n === 1 ? t('thanks_image_one') : t('thanks_images', { n }));
+  fillList('wiki-fotografen', photographers, n => t('thanks_photos', { n }));
+  const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  document.getElementById('lizenz-wiki').innerHTML =
+    t('licence_wiki', { authors: photographers.map(([name]) => esc(name)).join(', ') || 'Wiki' });
+}
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    const d = await loadJson('data/photos.json');
-    const count = new Map();
-    for (const p of d.photos || []) if (p.author) count.set(p.author, (count.get(p.author) || 0) + 1);
-    collectors = [...count.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-  } catch (e) { collectors = []; }
+    const photos = (await loadJson('data/photos.json')).photos || [];
+    collectors = ranked(photos.filter(p => p.source !== 'starcitizen.tools'));
+    photographers = ranked(photos.filter(p => p.source === 'starcitizen.tools' && p.kind === 'outline'));
+  } catch (e) { collectors = []; photographers = []; }
   renderCollectors();
   document.addEventListener('langchange', renderCollectors);
 });

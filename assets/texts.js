@@ -25,7 +25,11 @@ const TEXTS = {
   setup_title: { de: 'Wie willst du üben?', en: 'How do you want to train?' },
   mode_legend: { de: 'Bildart', en: 'Image type' },
   mode_mixed: { de: 'Gemischt', en: 'Mixed' },
-  mode_mixed_hint: { de: 'HUD und Silhouette durcheinander', en: 'HUD and silhouette shuffled' },
+  mode_mixed_hint: { de: 'Alle Bildarten aus dem Spiel durcheinander', en: 'All in-game image types shuffled' },
+  mode_outline: { de: 'Umriss', en: 'Outline' },
+  mode_outline_hint: { de: 'Nur die Form, von oben, unten und der Seite', en: 'Just the shape, from above, below and the side' },
+  mode_distance: { de: 'Distanz', en: 'Distance' },
+  mode_distance_hint: { de: 'Das Schiff klein am Himmel, wie von weitem', en: 'The ship small in the sky, as if far away' },
   mode_hud: { de: 'HUD', en: 'HUD' },
   mode_hud_hint: { de: 'Das Hologramm aus dem Cockpit', en: 'The hologram from the cockpit' },
   mode_silhouette: { de: 'Silhouette', en: 'Silhouette' },
@@ -71,6 +75,7 @@ const TEXTS = {
   quit: { de: 'Lauf abbrechen', en: 'Quit run' },
   seconds_left: { de: '{s} s', en: '{s} s' },
   photo_by: { de: 'Bild: {name}', en: 'Image: {name}' },
+  photo_by_wiki: { de: 'Foto: {name} · Star Citizen Wiki · CC BY-SA 4.0', en: 'Photo: {name} · Star Citizen Wiki · CC BY-SA 4.0' },
   report_button: { de: 'Bild melden', en: 'Report image' },
   report_title: { de: 'Was stimmt mit dem Bild nicht?', en: 'What is wrong with this image?' },
   report_wrong_ship: { de: 'Das ist ein anderes Schiff', en: 'This is a different ship' },
@@ -127,6 +132,10 @@ const TEXTS = {
   catalog_silhouette_images: { de: 'Silhouette ({n})', en: 'Silhouette ({n})' },
   catalog_gallery_hud: { de: '{name} im HUD', en: '{name} in the HUD' },
   catalog_gallery_silhouette: { de: '{name} als Silhouette', en: '{name} as a silhouette' },
+  catalog_outline_images: { de: 'Umriss ({n})', en: 'Outline ({n})' },
+  catalog_distance_images: { de: 'Distanz ({n})', en: 'Distance ({n})' },
+  catalog_gallery_outline: { de: '{name} als Umriss', en: '{name} as an outline' },
+  catalog_gallery_distance: { de: '{name} von weitem', en: '{name} from a distance' },
 
   // Danke & Lizenzen
   thanks_label: { de: 'Danke', en: 'Thanks' },
@@ -142,6 +151,7 @@ const TEXTS = {
   thanks_feedback: { de: 'Ideen und Fehlermeldungen', en: 'Ideas and bug reports' },
   dk_zwaersch: { de: 'Handy-Layout beim Weiter-Knopf', en: 'Phone layout of the Next button' },
   dk_shepardxl: { de: 'Benötigte Zeit im Ergebnis', en: 'Time taken in the results' },
+  dk_positive_tee: { de: 'Distanzbilder', en: 'Distance images' },
   licences_title: { de: 'Lizenzen', en: 'Licences' },
   licence_code: {
     de: '<strong>Programmcode:</strong> GPL-3.0. Der Quelltext liegt offen auf GitHub.',
@@ -151,6 +161,12 @@ const TEXTS = {
     de: '<strong>Bilder der Sammler:</strong> CC BY-NC 4.0 — weiterverwenden mit Namensnennung, nicht kommerziell.',
     en: '<strong>Collector images:</strong> CC BY-NC 4.0 — reuse with attribution, non-commercial.',
   },
+  licence_wiki: {
+    de: '<strong>Umriss- und Distanzbilder:</strong> bearbeitet (freigestellt, verkleinert, als Umriss eingefärbt) aus Fotos aus dem Spiel, die {authors} im <a href="https://starcitizen.tools/">Star Citizen Wiki</a> veröffentlicht haben. Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a>, die bearbeiteten Bilder stehen unter derselben Lizenz.',
+    en: '<strong>Outline and distance images:</strong> adapted (cut out, scaled down, filled as an outline) from in-game photos published by {authors} on the <a href="https://starcitizen.tools/">Star Citizen Wiki</a>. Licence <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; the adapted images are under the same licence.',
+  },
+  thanks_wiki: { de: 'Fotos aus dem Star Citizen Wiki', en: 'Photos from the Star Citizen Wiki' },
+  thanks_photos: { de: '{n} Fotos', en: '{n} photos' },
   licence_renders: {
     de: '<strong>Schiffsbilder im Katalog und im Einsteiger-Modus:</strong> Eigentum von Cloud Imperium, bezogen über die RSI Ship Matrix und das Star Citizen Wiki (starcitizen.tools) und genutzt im Rahmen der Fan-Seiten-Regeln.',
     en: '<strong>Ship renders in the catalogue and beginner mode:</strong> property of Cloud Imperium, sourced via the RSI Ship Matrix and the Star Citizen Wiki (starcitizen.tools) and used under the fan site rules.',

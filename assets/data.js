@@ -27,7 +27,7 @@ async function loadData() {
   const families = new Map();
   for (const s of ships) {
     if (!families.has(s.family)) {
-      families.set(s.family, { name: s.family, ships: [], images: { beginner: [], hud: [], silhouette: [] } });
+      families.set(s.family, { name: s.family, ships: [], images: { beginner: [], outline: [], distance: [], hud: [], silhouette: [] } });
     }
     const fam = families.get(s.family);
     fam.ships.push(s);
@@ -38,7 +38,10 @@ async function loadData() {
   for (const p of photos) {
     const fam = families.get(p.familyName);
     if (!fam.images[p.kind]) continue;
-    fam.images[p.kind].push({ id: p.id, src: p.file, ship: p.ship || null, kind: p.kind, author: p.author || '' });
+    fam.images[p.kind].push({
+      id: p.id, src: p.file, ship: p.ship || null, kind: p.kind, author: p.author || '',
+      source: p.source || '', licence: p.licence || '',
+    });
   }
 
   // Kennwerte je Familie für die Ähnlichkeit: häufigste Größe, Rolle und
@@ -63,8 +66,10 @@ function familiesWithImages(data, kinds) {
 }
 
 const MODE_KINDS = {
-  mixed: ['hud', 'silhouette'],
-  hud: ['hud'],
-  silhouette: ['silhouette'],
   beginner: ['beginner'],
+  outline: ['outline'],
+  distance: ['distance'],
+  silhouette: ['silhouette'],
+  mixed: ['outline', 'distance', 'silhouette', 'hud'],
+  hud: ['hud'],
 };

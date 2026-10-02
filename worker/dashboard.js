@@ -74,7 +74,7 @@ ${widths}
 (() => {
 'use strict';
 const SITE = '${SITE}';
-const MODES = { mixed: 'Gemischt', hud: 'HUD', silhouette: 'Silhouette', beginner: 'Einsteiger' };
+const MODES = { beginner: 'Einsteiger', outline: 'Umriss', distance: 'Distanz', silhouette: 'Silhouette', mixed: 'Gemischt', hud: 'HUD' };
 const RANKS = [['ace', '🎖️', 'Ass'], ['spotter', '✅', 'Spotter'], ['cadet', '🔸', 'Kadett'], ['recruit', '🔻', 'Rekrut']];
 const REASONS = { wrong_ship: 'anderes Schiff', name_visible: 'Name sichtbar', bad_quality: 'schlechte Qualität', other: 'anderes' };
 const SOURCES = { direkt: 'direkt', intern: 'intern', discord: 'Discord', versekit: 'VerseKit', xharig: 'xharig.com', reddit: 'Reddit', rsi: 'RSI', google: 'Google', bing: 'Bing', duckduckgo: 'DuckDuckGo', youtube: 'YouTube', github: 'GitHub', andere: 'andere' };
