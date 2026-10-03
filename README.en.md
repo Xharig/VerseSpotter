@@ -4,7 +4,7 @@
 
 # VerseSpotter
 
-**Recognise every ship in Star Citizen — by its HUD hologram and by its silhouette in flight**
+**Recognise every ship in Star Citizen — by its HUD hologram, by its outline and as a speck in the sky**
 
 [![Website](https://img.shields.io/badge/Website-versespotter.xharig.com-5fa522)](https://versespotter.xharig.com/)
 [![Licence](https://img.shields.io/badge/Licence-GPL--3.0-5fa522)](LICENSE)

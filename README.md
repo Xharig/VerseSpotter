@@ -4,7 +4,7 @@
 
 # VerseSpotter
 
-**Erkenne jedes Schiff in Star Citizen — am Hologramm im HUD und an der Silhouette im Flug**
+**Erkenne jedes Schiff in Star Citizen — am Hologramm im HUD, am Umriss und klein am Himmel**
 
 [![Webseite](https://img.shields.io/badge/Webseite-versespotter.xharig.com-5fa522)](https://versespotter.xharig.com/)
 [![Lizenz](https://img.shields.io/badge/Lizenz-GPL--3.0-5fa522)](LICENSE)

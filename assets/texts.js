@@ -6,8 +6,8 @@
 const TEXTS = {
   app_name: { de: 'VerseSpotter', en: 'VerseSpotter' },
   app_claim: {
-    de: 'Erkenne jedes Schiff — am Hologramm im HUD und an der Silhouette im Flug.',
-    en: 'Recognise every ship — by its HUD hologram and by its silhouette in flight.',
+    de: 'Erkenne jedes Schiff — am Hologramm im HUD, am Umriss und klein am Himmel.',
+    en: 'Recognise every ship — by its HUD hologram, by its outline and as a speck in the sky.',
   },
   page_title_home: { de: 'VerseSpotter — Schiffe erkennen lernen', en: 'VerseSpotter — learn to recognise Star Citizen ships' },
   page_title_catalog: { de: 'Schiffskatalog — VerseSpotter', en: 'Ship catalogue — VerseSpotter' },
