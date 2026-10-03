@@ -11,6 +11,7 @@
 - The result for Discord is formatted (bold, quote bar), spells out combat mode and has a clickable link.
 
 ### Changed
+- Each image type shows its own progress right under its tile: how many ships you have started, how many are mastered, and a bar that grows with every correct answer. Before, it stayed at 0 for a long time even while you were learning.
 - Image types are ordered from easy to hard: Beginner, Outline, Distance, Silhouette, Mixed, HUD.
 
 ### Fixed

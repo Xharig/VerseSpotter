@@ -42,10 +42,10 @@ const TEXTS = {
   combat_hint: { de: '{s} Sekunden pro Bild — wer zu langsam ist, liegt falsch', en: '{s} seconds per image — too slow counts as wrong' },
   start_button: { de: 'Training starten', en: 'Start training' },
   progress_title: { de: 'Dein Lernstand', en: 'Your progress' },
-  progress_line: { de: '{a} von {b} Schiffen sitzen', en: '{a} of {b} ships mastered' },
+  progress_mode: { de: '{s} angefangen · {m} von {b} sitzen', en: '{s} started · {m} of {b} mastered' },
   progress_note: {
-    de: 'Der Lernstand liegt nur in diesem Browser. Wer den Browserverlauf komplett löscht, fängt von vorn an.',
-    en: 'Your progress is stored in this browser only. Clearing all browsing data starts you from scratch.',
+    de: 'Der Balken unter jeder Bildart wächst mit jeder richtigen Antwort. Ein Schiff sitzt nach 4× richtig hintereinander. Der Lernstand liegt nur in diesem Browser. Wer den Browserverlauf komplett löscht, fängt von vorn an.',
+    en: 'The bar under each image type grows with every correct answer. A ship is mastered after 4 correct answers in a row. Your progress is stored in this browser only. Clearing all browsing data starts you from scratch.',
   },
   progress_reset: { de: 'Lernstand zurücksetzen', en: 'Reset progress' },
   reset_confirm_title: { de: 'Lernstand zurücksetzen?', en: 'Reset progress?' },

@@ -149,7 +149,10 @@ function renderSetup() {
       `<div class="option"><input type="radio" name="modus" id="modus-${mode}" value="${mode}"` +
       `${mode === s.mode ? ' checked' : ''}${ok ? '' : ' disabled'}>` +
       `<label for="modus-${mode}"><span class="titel"><span class="ic ic-${MODE_ICONS[mode]}" aria-hidden="true"></span>` +
-      `${t('mode_' + mode)}</span><span class="klein">${hint}</span></label></div>`);
+      `${t('mode_' + mode)}</span><span class="klein">${hint}</span>` +
+      (ok ? `<span class="stand" data-mode="${mode}"><span class="balken" role="progressbar" aria-valuemin="0" aria-valuemax="100"><span></span></span>` +
+        `<span class="klein stand-text"></span></span>` : '') +
+      `</label></div>`);
   }
 
   const lengths = document.getElementById('laengen');
@@ -162,7 +165,6 @@ function renderSetup() {
 
   document.getElementById('gefecht').checked = !!s.combat;
   document.getElementById('gefecht-hinweis').textContent = t('combat_hint', { s: COMBAT_SECONDS });
-  modes.querySelectorAll('input').forEach(i => i.addEventListener('change', renderProgress));
   renderProgress();
 }
 
@@ -171,25 +173,39 @@ function selectedMode() {
   return el ? el.value : 'beginner';
 }
 
-function renderProgress() {
-  const mode = selectedMode();
-  const kinds = MODE_KINDS[mode];
-  const progress = readStore(PROGRESS_KEY, {});
+// Lernstand je Bildart: angefangen = schon einmal gefragt, sitzt = letztes Fach.
+// Der Balken zählt jedes Fach mit, damit er sich mit jeder richtigen Antwort bewegt.
+function modeProgress(mode, progress) {
   let total = 0;
+  let started = 0;
   let mastered = 0;
+  let steps = 0;
   for (const fam of data.families.values()) {
-    for (const kind of kinds) {
+    for (const kind of MODE_KINDS[mode]) {
       if (!fam.images[kind].length) continue;
       total++;
-      if (boxOf(progress, kind, fam.name) >= MASTERED_BOX) mastered++;
+      const p = progress[progressKey(kind, fam.name)];
+      if (!p) continue;
+      started++;
+      if (p.box >= MASTERED_BOX) mastered++;
+      steps += p.box - 1;
     }
   }
-  const pct = total ? Math.round(mastered / total * 100) : 0;
-  document.getElementById('fortschritt-text').textContent = t('progress_line', { a: mastered, b: total });
-  const bar = document.getElementById('fortschritt-balken');
-  bar.setAttribute('aria-valuenow', String(pct));
-  bar.setAttribute('aria-label', t('progress_line', { a: mastered, b: total }));
-  bar.firstElementChild.style.width = pct + '%';
+  const pct = total ? Math.round(steps / (total * (MASTERED_BOX - 1)) * 100) : 0;
+  return { total, started, mastered, pct };
+}
+
+function renderProgress() {
+  const progress = readStore(PROGRESS_KEY, {});
+  document.querySelectorAll('#modi .stand').forEach(el => {
+    const s = modeProgress(el.dataset.mode, progress);
+    const line = t('progress_mode', { s: s.started, m: s.mastered, b: s.total });
+    el.querySelector('.stand-text').textContent = line;
+    const bar = el.querySelector('.balken');
+    bar.setAttribute('aria-valuenow', String(s.pct));
+    bar.setAttribute('aria-label', line);
+    bar.firstElementChild.style.width = s.pct + '%';
+  });
 }
 
 // ---------- Ablauf ----------

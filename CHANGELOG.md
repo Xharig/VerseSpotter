@@ -11,6 +11,7 @@
 - Das Ergebnis für Discord ist formatiert (fett, Zitatbalken), nennt den Gefechtsmodus ausgeschrieben und hat einen anklickbaren Link.
 
 ### Geändert
+- Jede Bildart zeigt ihren eigenen Lernstand direkt unter ihrer Kachel: wie viele Schiffe angefangen sind, wie viele sitzen, und einen Balken, der mit jeder richtigen Antwort wächst. Vorher stand dort lange 0, obwohl schon gelernt wurde.
 - Die Bildarten stehen von leicht nach schwer: Einsteiger, Umriss, Distanz, Silhouette, Gemischt, HUD.
 
 ### Behoben

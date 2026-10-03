@@ -177,7 +177,10 @@ h3{font-size:19px;font-weight:800;margin:0 0 8px}
 
 .fortschritt{max-width:860px;margin:30px auto 0}
 .balken{height:12px;background:var(--flaeche-hoch);border-radius:999px;overflow:hidden;border:1px solid var(--rand)}
-.balken > div{height:100%;background:var(--neon);width:0}
+.balken > div,.balken > span{display:block;height:100%;background:var(--neon);width:0}
+.option label .stand{margin-top:auto;padding-top:8px;display:flex;flex-direction:column;gap:5px}
+.option label .stand .balken{height:6px}
+.option label .stand-text{font-size:13px}
 .fortschritt .zeile{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
 .fortschritt .klein{color:var(--text-leise);font-size:14px}
 .textknopf{background:none;border:0;color:var(--text-leise);font:inherit;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:4px}
