@@ -7,6 +7,7 @@
 ### New
 - Two new image types for 83 ship families: **Outline** (just the shape, from above, below and the side) and **Distance** (the ship small in the sky, as if far away). The distance idea came from der_Positive_tee. They are based on in-game photos Weehamster published on the Star Citizen Wiki (CC BY-SA 4.0). "Mixed" now uses all in-game image types, and the catalogue shows the new images per ship.
 - The results show how long you took (in total and on average per image), and the time is also part of the result you copy for Discord. Only the time from image to answer counts. Suggested by Shepardxl.
+- The **HUD** image type is unlocked: 120 new in-game hologram images for 22 ship families, from the Aurora to the Vanguard. The catalogue shows them per ship.
 - The result for Discord is formatted (bold, quote bar), spells out combat mode and has a clickable link.
 
 ### Changed

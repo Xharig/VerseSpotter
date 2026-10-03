@@ -7,6 +7,7 @@
 ### Neu
 - Zwei neue Bildarten für 83 Schiffsfamilien: **Umriss** (nur die Form, von oben, unten und der Seite) und **Distanz** (das Schiff klein am Himmel, wie von weitem). Die Distanz-Idee kam von der_Positive_tee. Grundlage sind Fotos aus dem Spiel, die Weehamster im Star Citizen Wiki veröffentlicht hat (CC BY-SA 4.0). „Gemischt" nimmt jetzt alle Bildarten aus dem Spiel, der Katalog zeigt die neuen Bilder je Schiff.
 - Die Auswertung zeigt, wie lange du gebraucht hast (gesamt und im Schnitt pro Bild), und die Zeit steht auch im Ergebnis für Discord. Gezählt wird nur die Zeit vom Bild bis zur Antwort. Vorschlag von Shepardxl.
+- Die Bildart **HUD** ist freigeschaltet: 120 neue Hologramm-Bilder aus dem Spiel für 22 Schiffsfamilien, von der Aurora bis zur Vanguard. Der Katalog zeigt sie je Schiff.
 - Das Ergebnis für Discord ist formatiert (fett, Zitatbalken), nennt den Gefechtsmodus ausgeschrieben und hat einen anklickbaren Link.
 
 ### Geändert
