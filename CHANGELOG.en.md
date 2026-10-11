@@ -9,7 +9,7 @@
 - The results show how long you took (in total and on average per image), and the time is also part of the result you copy for Discord. Only the time from image to answer counts. Suggested by Shepardxl.
 - The **HUD** image type is unlocked: 120 new in-game hologram images for 22 ship families, from the Aurora to the Vanguard. The catalogue shows them per ship.
 - The result for Discord is formatted (bold, quote bar), spells out combat mode and has a clickable link.
-- The footer of every page links to the legal notice.
+- The footer of every page links to the legal notice and the privacy policy.
 
 ### Changed
 - Each image type shows its own progress right under its tile: how many ships you have started, how many are mastered, and a bar that grows with every correct answer. Before, it stayed at 0 for a long time even while you were learning.

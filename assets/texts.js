@@ -202,6 +202,7 @@ const TEXTS = {
   footer_versekit: { de: 'Verse-Kit — Baupläne live im Blick', en: 'Verse-Kit — blueprints live while you play' },
   footer_source: { de: 'Quelltext', en: 'Source code' },
   footer_imprint: { de: 'Impressum', en: 'Legal notice' },
+  footer_privacy: { de: 'Datenschutz', en: 'Privacy' },
   footer_by: { de: 'von Xharig', en: 'by Xharig' },
   footer_fan: {
     de: 'This is an unofficial Star Citizen fan site, not affiliated with the Cloud Imperium group of companies. All content on this site not authored by its host or users are property of their respective owners. Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC.',

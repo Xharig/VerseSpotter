@@ -9,7 +9,7 @@
 - Die Auswertung zeigt, wie lange du gebraucht hast (gesamt und im Schnitt pro Bild), und die Zeit steht auch im Ergebnis für Discord. Gezählt wird nur die Zeit vom Bild bis zur Antwort. Vorschlag von Shepardxl.
 - Die Bildart **HUD** ist freigeschaltet: 120 neue Hologramm-Bilder aus dem Spiel für 22 Schiffsfamilien, von der Aurora bis zur Vanguard. Der Katalog zeigt sie je Schiff.
 - Das Ergebnis für Discord ist formatiert (fett, Zitatbalken), nennt den Gefechtsmodus ausgeschrieben und hat einen anklickbaren Link.
-- Im Fuß jeder Seite steht ein Link zum Impressum.
+- Im Fuß jeder Seite stehen Links zu Impressum und Datenschutz.
 
 ### Geändert
 - Jede Bildart zeigt ihren eigenen Lernstand direkt unter ihrer Kachel: wie viele Schiffe angefangen sind, wie viele sitzen, und einen Balken, der mit jeder richtigen Antwort wächst. Vorher stand dort lange 0, obwohl schon gelernt wurde.
