@@ -37,6 +37,7 @@ const APP_VERSION = '1.0.0';
       '<a href="https://versekit.xharig.com/?von=versespotter" data-t="footer_versekit"></a>' +
       '<a href="danke.html" data-t="nav_thanks"></a>' +
       '<a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source"></a>' +
+      '<a href="https://xharig.com/impressum.html" data-t="footer_imprint"></a>' +
       '</div>' +
       '<img class="fankit" src="assets/made-by-the-community.png" alt="Star Citizen — Made by the Community" width="120">' +
       '<p class="fan" lang="en" data-t="footer_fan"></p>' +
