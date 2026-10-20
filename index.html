@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://versespotter.xharig.com/">
 <meta property="og:title" content="VerseSpotter — learn to recognise Star Citizen ships">
 <meta property="og:description" content="Identify ships by their HUD hologram, outline and from a distance. Free, open source, German and English.">
-<link rel="stylesheet" href="assets/style.css?v=6">
+<link rel="stylesheet" href="assets/style.css?v=7">
 </head>
 <body data-page="home" data-title-key="page_title_home">
 <header id="kopf"></header>
@@ -56,7 +56,7 @@
 
         <div class="fortschritt karte" id="fortschritt">
           <h3 data-t="progress_title"></h3>
-          <div class="zeile" style="margin-top:10px;margin-bottom:0">
+          <div class="zeile zeile-fuss">
             <span class="klein" data-t="progress_note"></span>
             <button type="button" class="textknopf" id="zuruecksetzen">
               <span class="ic ic-rotate-ccw" aria-hidden="true"></span><span data-t="progress_reset"></span>
@@ -66,7 +66,7 @@
 
         <div class="fortschritt karte">
           <h3 data-t="how_title"></h3>
-          <ul style="margin:0;padding-left:20px;color:var(--text-leise)">
+          <ul class="liste-leise">
             <li data-t="how_1"></li>
             <li data-t="how_2"></li>
             <li data-t="how_3"></li>
@@ -113,7 +113,7 @@
       <div class="zahl" id="ergebnis-zahl"></div>
       <div class="rang" id="ergebnis-rang"></div>
       <p class="zeit" id="ergebnis-zeit"><span class="ic ic-timer" aria-hidden="true"></span><span id="ergebnis-zeit-text"></span></p>
-      <p class="einleitung" style="margin:0 auto" id="ergebnis-text"></p>
+      <p class="einleitung einleitung-mitte" id="ergebnis-text"></p>
 
       <div class="kopierbox karte">
         <h3 data-t="share_title"></h3>
@@ -133,7 +133,7 @@
         </button>
       </div>
 
-      <h2 style="margin-top:40px" data-t="mistakes_title"></h2>
+      <h2 class="abstand-oben" data-t="mistakes_title"></h2>
       <div class="fehlerliste" id="fehlerliste"></div>
     </div>
   </section>
@@ -160,11 +160,11 @@
 </dialog>
 
 <footer id="fuss"></footer>
-<script src="assets/layout.js?v=6"></script>
-<script src="assets/texts.js?v=6"></script>
-<script src="assets/data.js?v=6"></script>
-<script src="assets/stats.js?v=6"></script>
-<script src="assets/report.js?v=6"></script>
-<script src="assets/quiz.js?v=6"></script>
+<script src="assets/layout.js?v=7"></script>
+<script src="assets/texts.js?v=7"></script>
+<script src="assets/data.js?v=7"></script>
+<script src="assets/stats.js?v=7"></script>
+<script src="assets/report.js?v=7"></script>
+<script src="assets/quiz.js?v=7"></script>
 </body>
 </html>
