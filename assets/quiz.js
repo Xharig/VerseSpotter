@@ -385,7 +385,7 @@ function shareText(score, total, pct, rank, mistakes, ms) {
     `> ⏱️ ${t('result_time', { time: formatTime(ms), avg: formatTime(total ? ms / total : 0) })}\n` +
     `> 🎯 ${t('share_mode')}: ${t('mode_' + run.mode)}${combat}\n` +
     `> ${mistakes.length ? '❌' : '✅'} ${t('share_wrong')}: ${wrong}\n` +
-    `-# [${SITE_URL}](<https://${SITE_URL}>)`;
+    `-# [${SITE_URL}](<https://${SITE_URL}/${currentLang === 'en' ? 'en/' : ''}>)`;
 }
 
 function finishRun() {
@@ -515,12 +515,6 @@ function bind() {
       e.preventDefault();
       next();
     }
-  });
-
-  document.addEventListener('langchange', () => {
-    if (!data) return;
-    if (!document.getElementById('ansicht-start').hidden) renderSetup();
-    if (!document.getElementById('ansicht-ergebnis').hidden && run && run.result) renderResult();
   });
 }
 

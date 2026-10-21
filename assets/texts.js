@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only
-// Alle sichtbaren Texte, deutsch und englisch. Elemente im HTML tragen
-// data-t="schluessel" (Inhalt), data-t-title, data-t-aria oder
-// data-t-placeholder (Attribute). t() liefert Texte für Skripte.
+// All visible texts, German and English. Elements in the HTML carry
+// data-t="key" (content) or data-t-title, data-t-aria, data-t-placeholder,
+// data-t-alt (attributes); tools/build_pages.py writes the texts into the
+// German pages and the English pages under en/. t() returns texts for scripts.
 
 const TEXTS = {
   app_name: { de: 'VerseSpotter', en: 'VerseSpotter' },
@@ -9,9 +10,21 @@ const TEXTS = {
     de: 'Erkenne jedes Schiff — am Hologramm im HUD, am Umriss und klein am Himmel.',
     en: 'Recognise every ship — by its HUD hologram, by its outline and as a speck in the sky.',
   },
-  page_title_home: { de: 'VerseSpotter — Schiffe erkennen lernen', en: 'VerseSpotter — learn to recognise Star Citizen ships' },
+  page_title_home: { de: 'VerseSpotter — Star-Citizen-Schiffe erkennen lernen', en: 'VerseSpotter — learn to recognise Star Citizen ships' },
   page_title_catalog: { de: 'Schiffskatalog — VerseSpotter', en: 'Ship catalogue — VerseSpotter' },
   page_title_thanks: { de: 'Danke & Lizenzen — VerseSpotter', en: 'Thanks & licences — VerseSpotter' },
+  page_desc_home: {
+    de: 'Kostenloses Training für Star Citizen: Schiffe am Hologramm im HUD, am Umriss und aus der Distanz erkennen. Mit Karteikasten-Wiederholung und drei Antworten, auf Deutsch und Englisch.',
+    en: 'Free Star Citizen ship recognition trainer: identify ships by their HUD hologram, outline and from a distance. Spaced repetition, three answers, German and English.',
+  },
+  page_desc_catalog: {
+    de: 'Alle flugfähigen Raumschiffe aus Star Citizen mit Bildern, HUD-Hologrammen, Umrissen und Distanzbildern — erst nachschlagen, dann trainieren.',
+    en: 'Every flight-ready Star Citizen spaceship with renders, HUD holograms, outlines and distance shots — study before you train.',
+  },
+  page_desc_thanks: {
+    de: 'Die Community-Mitglieder, die die Bilder aus dem Spiel sammeln, dazu Lizenzen und Datenschutz.',
+    en: 'The community members who collect the in-game images, plus licences and privacy.',
+  },
 
   nav_all_tools: { de: 'xharig.com', en: 'xharig.com' },
   nav_all_tools_hint: { de: 'Alle Werkzeuge von Xharig', en: 'All tools by Xharig' },
@@ -19,6 +32,10 @@ const TEXTS = {
   nav_catalog: { de: 'Schiffskatalog', en: 'Ship catalogue' },
   nav_thanks: { de: 'Danke & Lizenzen', en: 'Thanks & licences' },
   lang_switch: { de: 'Sprache', en: 'Language' },
+  // Language bar: text and link are shown in the other language.
+  lang_hint_text: { de: 'Diese Seite gibt es auch auf Deutsch.', en: 'This page is also available in English.' },
+  lang_hint_link: { de: 'Zur deutschen Fassung →', en: 'English version →' },
+  lang_hint_close: { de: 'Hinweis schließen', en: 'Close notice' },
 
   // Start
   setup_label: { de: 'Training', en: 'Training' },
@@ -214,8 +231,8 @@ const TEXTS = {
   },
 };
 
-const LANG_KEY = 'versespotter.lang';
-let currentLang = 'de';
+// The page language is fixed per address (assets/lang.js).
+const currentLang = PAGE_LANG;
 
 function t(key, vars) {
   const entry = TEXTS[key];
@@ -226,46 +243,42 @@ function t(key, vars) {
   return s;
 }
 
-function readStoredLang() {
-  try { return localStorage.getItem(LANG_KEY); } catch (e) { return null; }
-}
-
-function initialLang() {
-  const stored = readStoredLang();
-  if (stored === 'de' || stored === 'en') return stored;
-  const browser = ((navigator.languages && navigator.languages[0]) || navigator.language || 'de').toLowerCase();
-  return browser.startsWith('de') ? 'de' : 'en';
-}
-
-function applyTexts(root) {
-  const scope = root || document;
-  scope.querySelectorAll('[data-t]').forEach(el => { el.innerHTML = t(el.dataset.t); });
-  scope.querySelectorAll('[data-t-title]').forEach(el => { el.title = t(el.dataset.tTitle); });
-  scope.querySelectorAll('[data-t-aria]').forEach(el => { el.setAttribute('aria-label', t(el.dataset.tAria)); });
-  scope.querySelectorAll('[data-t-placeholder]').forEach(el => { el.placeholder = t(el.dataset.tPlaceholder); });
-  scope.querySelectorAll('[data-t-alt]').forEach(el => { el.alt = t(el.dataset.tAlt); });
-}
-
-function setLang(lang, store) {
-  currentLang = lang === 'en' ? 'en' : 'de';
-  document.documentElement.lang = currentLang;
-  if (store) {
-    try { localStorage.setItem(LANG_KEY, currentLang); } catch (e) { /* ohne Speicher bleibt es bei der Sitzung */ }
-  }
-  document.querySelectorAll('.sprache button').forEach(b => {
-    const on = b.dataset.lang === currentLang;
-    b.classList.toggle('an', on);
-    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+// Language links switch the address and remember the choice; the hash
+// (e.g. #datenschutz) goes along.
+function bindLangLinks() {
+  document.querySelectorAll('.sprache a[data-lang]').forEach(a => {
+    a.addEventListener('click', e => {
+      storeLang(a.dataset.lang);
+      if (a.dataset.lang === PAGE_LANG) {
+        e.preventDefault();
+      } else if (location.hash) {
+        e.preventDefault();
+        location.href = a.href + location.hash;
+      }
+    });
   });
-  const titleKey = document.body.dataset.titleKey;
-  if (titleKey) document.title = t(titleKey);
-  applyTexts();
-  document.dispatchEvent(new CustomEvent('langchange'));
+}
+
+// Without a stored choice, a bar offers the other version when the browser
+// prefers it. Following it or closing it counts as a choice.
+function showLangHint() {
+  const bar = document.getElementById('hinweis-sprache');
+  const other = PAGE_LANG === 'de' ? 'en' : 'de';
+  const browser = ((navigator.languages && navigator.languages[0]) || navigator.language || 'de').toLowerCase();
+  if (!bar || LANG_CHOICE || (browser.startsWith('de') ? 'de' : 'en') !== other) return;
+  document.getElementById('hinweis-sprache-text').textContent = TEXTS.lang_hint_text[other];
+  const link = document.getElementById('hinweis-sprache-link');
+  link.textContent = TEXTS.lang_hint_link[other];
+  link.addEventListener('click', () => storeLang(other));
+  document.getElementById('hinweis-sprache-zu').addEventListener('click', () => {
+    storeLang(PAGE_LANG);
+    bar.hidden = true;
+  });
+  bar.hidden = false;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.sprache button').forEach(b => {
-    b.addEventListener('click', () => setLang(b.dataset.lang, true));
-  });
-  setLang(initialLang(), false);
+  if (LANG_REDIRECT) return;
+  bindLangLinks();
+  showLangHint();
 });

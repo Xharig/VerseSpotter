@@ -34,5 +34,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     photographers = ranked(photos.filter(p => p.source === 'starcitizen.tools' && p.kind === 'outline'));
   } catch (e) { collectors = []; photographers = []; }
   renderCollectors();
-  document.addEventListener('langchange', renderCollectors);
 });

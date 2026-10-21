@@ -5,7 +5,7 @@
 const MIN_FAMILIES_PER_MODE = 20;
 
 async function loadJson(url) {
-  const resp = await fetch(url, { cache: 'no-cache' });
+  const resp = await fetch(SITE_ROOT + url, { cache: 'no-cache' });
   if (!resp.ok) throw new Error(url + ': ' + resp.status);
   return resp.json();
 }
@@ -32,14 +32,14 @@ async function loadData() {
     const fam = families.get(s.family);
     fam.ships.push(s);
     if (s.has_catalog_image) {
-      fam.images.beginner.push({ id: 'catalog:' + s.id, src: `img/catalog/${s.id}.webp`, ship: s.id, kind: 'beginner' });
+      fam.images.beginner.push({ id: 'catalog:' + s.id, src: `${SITE_ROOT}img/catalog/${s.id}.webp`, ship: s.id, kind: 'beginner' });
     }
   }
   for (const p of photos) {
     const fam = families.get(p.familyName);
     if (!fam.images[p.kind]) continue;
     fam.images[p.kind].push({
-      id: p.id, src: p.file, ship: p.ship || null, kind: p.kind, author: p.author || '',
+      id: p.id, src: SITE_ROOT + p.file, ship: p.ship || null, kind: p.kind, author: p.author || '',
       source: p.source || '', licence: p.licence || '',
     });
   }

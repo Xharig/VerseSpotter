@@ -1,65 +1,115 @@
 <!DOCTYPE html>
+<!-- German page and source of en/danke.html. Texts, the head block, header and footer
+     are written by tools/build_pages.py from assets/texts.js: run it after every change. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0d0d0d">
 <meta name="color-scheme" content="dark">
-<title>Thanks &amp; licences — VerseSpotter</title>
-<meta name="description" content="The community members who collect the in-game images, plus licences and privacy.">
+<!-- head:begin (tools/build_pages.py) -->
+<title>Danke &amp; Lizenzen — VerseSpotter</title>
+<meta name="description" content="Die Community-Mitglieder, die die Bilder aus dem Spiel sammeln, dazu Lizenzen und Datenschutz.">
+<link rel="canonical" href="https://versespotter.xharig.com/danke.html">
+<link rel="alternate" hreflang="de" href="https://versespotter.xharig.com/danke.html">
+<link rel="alternate" hreflang="en" href="https://versespotter.xharig.com/en/danke.html">
+<link rel="alternate" hreflang="x-default" href="https://versespotter.xharig.com/en/danke.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VerseSpotter">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://versespotter.xharig.com/danke.html">
+<meta property="og:title" content="Danke &amp; Lizenzen — VerseSpotter">
+<meta property="og:description" content="Die Community-Mitglieder, die die Bilder aus dem Spiel sammeln, dazu Lizenzen und Datenschutz.">
+<!-- head:end -->
+<script src="assets/lang.js?v=8"></script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/style.css?v=7">
+<link rel="stylesheet" href="assets/style.css?v=8">
 </head>
-<body data-page="thanks" data-title-key="page_title_thanks">
-<header id="kopf"></header>
+<body data-page="thanks">
+<header id="kopf">
+<div class="mitte kopf">
+  <a class="logo" href="./"><img src="assets/logo.svg" alt="" width="38" height="38"><span class="marke" data-t="app_name">VerseSpotter</span></a>
+  <nav data-t-aria="app_name" aria-label="VerseSpotter">
+    <a class="alle" href="https://xharig.com/" data-t-title="nav_all_tools_hint" title="Alle Werkzeuge von Xharig"><span class="ic ic-layout-grid" aria-hidden="true"></span><span class="txt" data-t="nav_all_tools">xharig.com</span></a>
+    <a href="./"><span class="ic ic-crosshair" aria-hidden="true"></span><span class="txt" data-t="nav_train">Training</span></a>
+    <a href="katalog.html"><span class="ic ic-book-open" aria-hidden="true"></span><span class="txt" data-t="nav_catalog">Schiffskatalog</span></a>
+    <a href="danke.html" aria-current="page"><span class="ic ic-heart-handshake" aria-hidden="true"></span><span class="txt" data-t="nav_thanks">Danke &amp; Lizenzen</span></a>
+    <div class="sprache" role="group" data-t-aria="lang_switch" aria-label="Sprache">
+      <a href="danke.html" data-lang="de" hreflang="de" lang="de" class="an" aria-current="true">DE</a>
+      <a href="en/danke.html" data-lang="en" hreflang="en" lang="en">EN</a>
+    </div>
+  </nav>
+</div>
+<div class="hinweis-sprache" id="hinweis-sprache" hidden>
+  <div class="mitte">
+    <span id="hinweis-sprache-text" lang="en"></span>
+    <a id="hinweis-sprache-link" href="en/danke.html" hreflang="en" lang="en"></a>
+    <button type="button" id="hinweis-sprache-zu" data-t-aria="lang_hint_close" aria-label="Hinweis schließen" data-t-title="lang_hint_close" title="Hinweis schließen">×</button>
+  </div>
+</div>
+</header>
 
 <main>
   <section>
     <div class="mitte textseite">
-      <div class="label" data-t="thanks_label"></div>
-      <h1 data-t="thanks_title"></h1>
-      <p class="einleitung" data-t="thanks_intro"></p>
+      <div class="label" data-t="thanks_label">Danke</div>
+      <h1 data-t="thanks_title">Danke &amp; Lizenzen</h1>
+      <p class="einleitung" data-t="thanks_intro">Die Bilder aus dem Spiel sammelt die Community. Ohne sie gäbe es kein Training im HUD und keine Silhouetten.</p>
 
-      <h2 data-t="thanks_collectors"></h2>
+      <h2 data-t="thanks_collectors">Bildersammler</h2>
       <ul class="sammler" id="sammler"></ul>
-      <p id="sammler-leer" hidden data-t="thanks_none"></p>
+      <p id="sammler-leer" hidden data-t="thanks_none">Die ersten Bilder sind unterwegs.</p>
 
-      <h2 data-t="thanks_wiki"></h2>
+      <h2 data-t="thanks_wiki">Fotos aus dem Star Citizen Wiki</h2>
       <ul class="sammler" id="wiki-fotografen"></ul>
 
-      <h2 data-t="thanks_feedback"></h2>
+      <h2 data-t="thanks_feedback">Ideen und Fehlermeldungen</h2>
       <ul class="sammler">
-        <li>zwaersch<span data-t="dk_zwaersch"></span></li>
-        <li>Shepardxl<span data-t="dk_shepardxl"></span></li>
-        <li>der_Positive_tee<span data-t="dk_positive_tee"></span></li>
+        <li>zwaersch<span data-t="dk_zwaersch">Handy-Layout beim Weiter-Knopf</span></li>
+        <li>Shepardxl<span data-t="dk_shepardxl">Benötigte Zeit im Ergebnis</span></li>
+        <li>der_Positive_tee<span data-t="dk_positive_tee">Distanzbilder</span></li>
       </ul>
 
-      <h2 data-t="licences_title"></h2>
+      <h2 data-t="licences_title">Lizenzen</h2>
       <ul>
-        <li data-t="licence_code"></li>
-        <li data-t="licence_photos"></li>
+        <li data-t="licence_code"><strong>Programmcode:</strong> GPL-3.0. Der Quelltext liegt offen auf GitHub.</li>
+        <li data-t="licence_photos"><strong>Bilder der Sammler:</strong> CC BY-NC 4.0 — weiterverwenden mit Namensnennung, nicht kommerziell.</li>
         <li id="lizenz-wiki"></li>
-        <li data-t="licence_renders"></li>
-        <li data-t="licence_data"></li>
-        <li data-t="licence_icons"></li>
+        <li data-t="licence_renders"><strong>Schiffsbilder im Katalog und im Einsteiger-Modus:</strong> Eigentum von Cloud Imperium, bezogen über die RSI Ship Matrix und das Star Citizen Wiki (starcitizen.tools) und genutzt im Rahmen der Fan-Seiten-Regeln.</li>
+        <li data-t="licence_data"><strong>Schiffsdaten:</strong> Star Citizen Wiki API (api.star-citizen.wiki).</li>
+        <li data-t="licence_icons"><strong>Symbole:</strong> Lucide, ISC-Lizenz, © Lucide Icons and Contributors.</li>
       </ul>
 
-      <h2 id="datenschutz" data-t="privacy_title"></h2>
+      <h2 id="datenschutz" data-t="privacy_title">Datenschutz</h2>
       <ul>
-        <li data-t="privacy_1"></li>
-        <li data-t="privacy_2"></li>
-        <li data-t="privacy_3"></li>
-        <li data-t="privacy_4"></li>
+        <li data-t="privacy_1">Die Seite setzt keine Cookies und speichert keine IP-Adressen.</li>
+        <li data-t="privacy_2">Dein Lernstand liegt nur in deinem Browser (localStorage) und verlässt ihn nie.</li>
+        <li data-t="privacy_3">Gezählt wird ohne Kennung, nur „wie viele": Seitenaufrufe, gestartete und beendete Läufe, Ergebnisse, welche Schiffe verwechselt werden, gemeldete Bilder, Sprache, Gerätetyp (Handy oder PC), die Seite, von der du kommst, und das Land, das Cloudflare aus der Anfrage ableitet. Daraus lässt sich niemand wiedererkennen.</li>
+        <li data-t="privacy_4">Die Seite liegt bei GitHub Pages, die Zählung läuft über Cloudflare.</li>
       </ul>
     </div>
   </section>
 </main>
 
-<footer id="fuss"></footer>
-<script src="assets/layout.js?v=7"></script>
-<script src="assets/texts.js?v=7"></script>
-<script src="assets/data.js?v=7"></script>
-<script src="assets/stats.js?v=7"></script>
-<script src="assets/thanks.js?v=7"></script>
+<footer id="fuss">
+<div class="mitte">
+  <div class="fusslinks">
+    <a href="https://xharig.com/" data-t="footer_all_tools">Alle Werkzeuge auf xharig.com</a>
+    <a href="https://versekit.xharig.com/?von=versespotter" data-t="footer_versekit">Verse-Kit — Baupläne live im Blick</a>
+    <a href="danke.html" data-t="nav_thanks">Danke &amp; Lizenzen</a>
+    <a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source">Quelltext</a>
+    <a href="https://xharig.com/impressum.html" data-t="footer_imprint">Impressum</a>
+    <a href="https://xharig.com/datenschutz.html" data-t="footer_privacy">Datenschutz</a>
+  </div>
+  <img class="fankit" src="assets/made-by-the-community.png" alt="Star Citizen — Made by the Community" width="120">
+  <p class="fan" lang="en" data-t="footer_fan">This is an unofficial Star Citizen fan site, not affiliated with the Cloud Imperium group of companies. All content on this site not authored by its host or users are property of their respective owners. Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC.</p>
+  <p class="recht"><span data-t="app_name">VerseSpotter</span> v1.0.0 · GPL-3.0 · <span data-t="footer_by">von Xharig</span></p>
+</div>
+</footer>
+<script src="assets/texts.js?v=8"></script>
+<script src="assets/data.js?v=8"></script>
+<script src="assets/stats.js?v=8"></script>
+<script src="assets/thanks.js?v=8"></script>
 </body>
 </html>

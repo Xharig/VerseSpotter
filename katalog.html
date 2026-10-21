@@ -1,35 +1,72 @@
 <!DOCTYPE html>
+<!-- German page and source of en/katalog.html. Texts, the head block, header and footer
+     are written by tools/build_pages.py from assets/texts.js: run it after every change. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0d0d0d">
 <meta name="color-scheme" content="dark">
-<title>Ship catalogue — VerseSpotter</title>
-<meta name="description" content="Every flight-ready Star Citizen spaceship with renders, HUD holograms, outlines and distance shots — study before you train.">
+<!-- head:begin (tools/build_pages.py) -->
+<title>Schiffskatalog — VerseSpotter</title>
+<meta name="description" content="Alle flugfähigen Raumschiffe aus Star Citizen mit Bildern, HUD-Hologrammen, Umrissen und Distanzbildern — erst nachschlagen, dann trainieren.">
+<link rel="canonical" href="https://versespotter.xharig.com/katalog.html">
+<link rel="alternate" hreflang="de" href="https://versespotter.xharig.com/katalog.html">
+<link rel="alternate" hreflang="en" href="https://versespotter.xharig.com/en/katalog.html">
+<link rel="alternate" hreflang="x-default" href="https://versespotter.xharig.com/en/katalog.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VerseSpotter">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://versespotter.xharig.com/katalog.html">
+<meta property="og:title" content="Schiffskatalog — VerseSpotter">
+<meta property="og:description" content="Alle flugfähigen Raumschiffe aus Star Citizen mit Bildern, HUD-Hologrammen, Umrissen und Distanzbildern — erst nachschlagen, dann trainieren.">
+<!-- head:end -->
+<script src="assets/lang.js?v=8"></script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/style.css?v=7">
+<link rel="stylesheet" href="assets/style.css?v=8">
 </head>
-<body data-page="catalog" data-title-key="page_title_catalog">
-<header id="kopf"></header>
+<body data-page="catalog">
+<header id="kopf">
+<div class="mitte kopf">
+  <a class="logo" href="./"><img src="assets/logo.svg" alt="" width="38" height="38"><span class="marke" data-t="app_name">VerseSpotter</span></a>
+  <nav data-t-aria="app_name" aria-label="VerseSpotter">
+    <a class="alle" href="https://xharig.com/" data-t-title="nav_all_tools_hint" title="Alle Werkzeuge von Xharig"><span class="ic ic-layout-grid" aria-hidden="true"></span><span class="txt" data-t="nav_all_tools">xharig.com</span></a>
+    <a href="./"><span class="ic ic-crosshair" aria-hidden="true"></span><span class="txt" data-t="nav_train">Training</span></a>
+    <a href="katalog.html" aria-current="page"><span class="ic ic-book-open" aria-hidden="true"></span><span class="txt" data-t="nav_catalog">Schiffskatalog</span></a>
+    <a href="danke.html"><span class="ic ic-heart-handshake" aria-hidden="true"></span><span class="txt" data-t="nav_thanks">Danke &amp; Lizenzen</span></a>
+    <div class="sprache" role="group" data-t-aria="lang_switch" aria-label="Sprache">
+      <a href="katalog.html" data-lang="de" hreflang="de" lang="de" class="an" aria-current="true">DE</a>
+      <a href="en/katalog.html" data-lang="en" hreflang="en" lang="en">EN</a>
+    </div>
+  </nav>
+</div>
+<div class="hinweis-sprache" id="hinweis-sprache" hidden>
+  <div class="mitte">
+    <span id="hinweis-sprache-text" lang="en"></span>
+    <a id="hinweis-sprache-link" href="en/katalog.html" hreflang="en" lang="en"></a>
+    <button type="button" id="hinweis-sprache-zu" data-t-aria="lang_hint_close" aria-label="Hinweis schließen" data-t-title="lang_hint_close" title="Hinweis schließen">×</button>
+  </div>
+</div>
+</header>
 
 <main>
   <section>
     <div class="mitte">
-      <div class="label" data-t="catalog_label"></div>
-      <h1 data-t="catalog_title"></h1>
-      <p class="einleitung" data-t="catalog_intro"></p>
+      <div class="label" data-t="catalog_label">Nachschlagen</div>
+      <h1 data-t="catalog_title">Schiffskatalog</h1>
+      <p class="einleitung" data-t="catalog_intro">Alle flugfähigen Raumschiffe — erst in Ruhe ansehen, dann im Training testen. Die Bilder aus dem Spiel kommen nach und nach dazu.</p>
 
       <div class="werkzeugleiste">
-        <label class="sr" for="suche" data-t="catalog_search_label"></label>
-        <input type="search" id="suche" data-t-placeholder="catalog_search" autocomplete="off">
-        <label class="sr" for="groesse" data-t="catalog_filter_label"></label>
+        <label class="sr" for="suche" data-t="catalog_search_label">Suche</label>
+        <input type="search" id="suche" data-t-placeholder="catalog_search" placeholder="Schiff oder Hersteller suchen …" autocomplete="off">
+        <label class="sr" for="groesse" data-t="catalog_filter_label">Größe</label>
         <select id="groesse"></select>
       </div>
       <p class="einleitung anzahl" id="anzahl" aria-live="polite"></p>
       <div class="katalog" id="katalog"></div>
-      <p class="leer" id="leer" hidden data-t="catalog_empty"></p>
-      <p class="leer" id="ladefehler" hidden data-t="load_error"></p>
+      <p class="leer" id="leer" hidden data-t="catalog_empty">Kein Schiff gefunden.</p>
+      <p class="leer" id="ladefehler" hidden data-t="load_error">Die Schiffsdaten ließen sich nicht laden. Bitte die Seite neu laden.</p>
     </div>
   </section>
 </main>
@@ -38,25 +75,38 @@
   <h2 id="galerie-titel"></h2>
   <div class="galerie" id="galerie"></div>
   <div class="knopfreihe">
-    <button type="button" class="knopf" id="galerie-zu" data-t="close"></button>
+    <button type="button" class="knopf" id="galerie-zu" data-t="close">Schließen</button>
   </div>
 </dialog>
 
 <dialog id="dlg-melden">
-  <h2 data-t="report_title"></h2>
+  <h2 data-t="report_title">Was stimmt mit dem Bild nicht?</h2>
   <div class="gruende" id="gruende"></div>
-  <p id="melden-danke" hidden role="status"><span data-t="report_thanks"></span> <a id="melden-github" href="#" target="_blank" rel="noopener" data-t="report_details"></a></p>
+  <p id="melden-danke" hidden role="status"><span data-t="report_thanks">Danke! Das Bild wird geprüft.</span> <a id="melden-github" href="#" target="_blank" rel="noopener" data-t="report_details">Mehr erzählen auf GitHub</a></p>
   <div class="knopfreihe">
-    <button type="button" class="knopf" id="melden-zu" data-t="close"></button>
+    <button type="button" class="knopf" id="melden-zu" data-t="close">Schließen</button>
   </div>
 </dialog>
 
-<footer id="fuss"></footer>
-<script src="assets/layout.js?v=7"></script>
-<script src="assets/texts.js?v=7"></script>
-<script src="assets/data.js?v=7"></script>
-<script src="assets/stats.js?v=7"></script>
-<script src="assets/report.js?v=7"></script>
-<script src="assets/catalog.js?v=7"></script>
+<footer id="fuss">
+<div class="mitte">
+  <div class="fusslinks">
+    <a href="https://xharig.com/" data-t="footer_all_tools">Alle Werkzeuge auf xharig.com</a>
+    <a href="https://versekit.xharig.com/?von=versespotter" data-t="footer_versekit">Verse-Kit — Baupläne live im Blick</a>
+    <a href="danke.html" data-t="nav_thanks">Danke &amp; Lizenzen</a>
+    <a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source">Quelltext</a>
+    <a href="https://xharig.com/impressum.html" data-t="footer_imprint">Impressum</a>
+    <a href="https://xharig.com/datenschutz.html" data-t="footer_privacy">Datenschutz</a>
+  </div>
+  <img class="fankit" src="assets/made-by-the-community.png" alt="Star Citizen — Made by the Community" width="120">
+  <p class="fan" lang="en" data-t="footer_fan">This is an unofficial Star Citizen fan site, not affiliated with the Cloud Imperium group of companies. All content on this site not authored by its host or users are property of their respective owners. Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC.</p>
+  <p class="recht"><span data-t="app_name">VerseSpotter</span> v1.0.0 · GPL-3.0 · <span data-t="footer_by">von Xharig</span></p>
+</div>
+</footer>
+<script src="assets/texts.js?v=8"></script>
+<script src="assets/data.js?v=8"></script>
+<script src="assets/stats.js?v=8"></script>
+<script src="assets/report.js?v=8"></script>
+<script src="assets/catalog.js?v=8"></script>
 </body>
 </html>

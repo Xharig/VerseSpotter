@@ -14,6 +14,7 @@
 ### Changed
 - Each image type shows its own progress right under its tile: how many ships you have started, how many are mastered, and a bar that grows with every correct answer. Before, it stayed at 0 for a long time even while you were learning.
 - Image types are ordered from easy to hard: Beginner, Outline, Distance, Silhouette, Mixed, HUD.
+- The English version has its own address: versespotter.xharig.com/en/. The German one stays at the main address. This lets search engines find the site in both languages. The language buttons switch the address and remember your choice; if your browser prefers the other language, a small notice offers it instead of switching automatically.
 
 ### Fixed
 - On phones the Next button sometimes jumped to a second line after answering, depending on whether a variant name was shown. The box below the answers now always has the same height. Reported by zwaersch.

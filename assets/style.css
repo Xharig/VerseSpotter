@@ -95,11 +95,19 @@ header{
 .kopf nav a:hover,.kopf nav a[aria-current=page]{color:var(--neon);text-decoration:none}
 .kopf nav a.alle{padding-right:22px;border-right:1px solid var(--rand)}
 .sprache{display:flex;border:1px solid var(--rand);border-radius:999px;overflow:hidden}
-.sprache button{
-  background:none;border:0;color:var(--text-leise);
-  font:inherit;font-size:14px;padding:5px 13px;cursor:pointer;
+.kopf nav .sprache a{color:var(--text-leise);font-size:14px;padding:5px 13px}
+.kopf nav .sprache a:hover{color:var(--neon)}
+.kopf nav .sprache a.an{background:var(--neon);color:#0a0a0a;font-weight:700}
+
+/* Offers the other language version (assets/texts.js) */
+.hinweis-sprache{border-top:1px solid var(--rand);font-size:15px}
+.hinweis-sprache .mitte{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.hinweis-sprache a{font-weight:700}
+.hinweis-sprache button{
+  margin-left:auto;background:none;border:0;color:var(--text-leise);
+  font:inherit;font-size:20px;line-height:1;padding:2px 6px;cursor:pointer;
 }
-.sprache button.an{background:var(--neon);color:#0a0a0a;font-weight:700}
+.hinweis-sprache button:hover{color:var(--neon)}
 @media (max-width:700px){
   .kopf nav{gap:14px}
   .kopf nav a.alle{padding-right:14px}

@@ -56,7 +56,7 @@ function renderCatalog() {
     const frame = card.querySelector('.bildrahmen');
     if (s.has_catalog_image) {
       const img = document.createElement('img');
-      img.src = `img/catalog/${s.id}.webp`;
+      img.src = `${SITE_ROOT}img/catalog/${s.id}.webp`;
       img.alt = s.name;
       img.loading = 'lazy';
       img.width = 960;
@@ -95,7 +95,7 @@ function openGallery(ship, kind) {
     fig.style.margin = '0';
     fig.innerHTML = '<div class="bildrahmen"><img alt=""><button type="button" class="melden"></button></div>';
     const img = fig.querySelector('img');
-    img.src = p.file;
+    img.src = SITE_ROOT + p.file;
     img.alt = t('catalog_gallery_' + kind, { name: ship.name });
     if (p.author) {
       const by = document.createElement('span');
@@ -123,8 +123,4 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
   renderSizeFilter();
   renderCatalog();
-  document.addEventListener('langchange', () => {
-    renderSizeFilter();
-    renderCatalog();
-  });
 });

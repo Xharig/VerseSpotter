@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- Generated from ../index.html by tools/build_pages.py. Do not edit; change ../index.html and run the script. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d0d0d">
+<meta name="color-scheme" content="dark">
+<!-- head:begin (tools/build_pages.py) -->
+<title>VerseSpotter — learn to recognise Star Citizen ships</title>
+<meta name="description" content="Free Star Citizen ship recognition trainer: identify ships by their HUD hologram, outline and from a distance. Spaced repetition, three answers, German and English.">
+<link rel="canonical" href="https://versespotter.xharig.com/en/">
+<link rel="alternate" hreflang="de" href="https://versespotter.xharig.com/">
+<link rel="alternate" hreflang="en" href="https://versespotter.xharig.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://versespotter.xharig.com/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VerseSpotter">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:url" content="https://versespotter.xharig.com/en/">
+<meta property="og:title" content="VerseSpotter — learn to recognise Star Citizen ships">
+<meta property="og:description" content="Free Star Citizen ship recognition trainer: identify ships by their HUD hologram, outline and from a distance. Spaced repetition, three answers, German and English.">
+<!-- head:end -->
+<script src="../assets/lang.js?v=8"></script>
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css?v=8">
+</head>
+<body data-page="home">
+<header id="kopf">
+<div class="mitte kopf">
+  <a class="logo" href="./"><img src="../assets/logo.svg" alt="" width="38" height="38"><span class="marke" data-t="app_name">VerseSpotter</span></a>
+  <nav data-t-aria="app_name" aria-label="VerseSpotter">
+    <a class="alle" href="https://xharig.com/en/" data-t-title="nav_all_tools_hint" title="All tools by Xharig"><span class="ic ic-layout-grid" aria-hidden="true"></span><span class="txt" data-t="nav_all_tools">xharig.com</span></a>
+    <a href="./" aria-current="page"><span class="ic ic-crosshair" aria-hidden="true"></span><span class="txt" data-t="nav_train">Training</span></a>
+    <a href="katalog.html"><span class="ic ic-book-open" aria-hidden="true"></span><span class="txt" data-t="nav_catalog">Ship catalogue</span></a>
+    <a href="danke.html"><span class="ic ic-heart-handshake" aria-hidden="true"></span><span class="txt" data-t="nav_thanks">Thanks &amp; licences</span></a>
+    <div class="sprache" role="group" data-t-aria="lang_switch" aria-label="Language">
+      <a href="../" data-lang="de" hreflang="de" lang="de">DE</a>
+      <a href="./" data-lang="en" hreflang="en" lang="en" class="an" aria-current="true">EN</a>
+    </div>
+  </nav>
+</div>
+<div class="hinweis-sprache" id="hinweis-sprache" hidden>
+  <div class="mitte">
+    <span id="hinweis-sprache-text" lang="de"></span>
+    <a id="hinweis-sprache-link" href="../" hreflang="de" lang="de"></a>
+    <button type="button" id="hinweis-sprache-zu" data-t-aria="lang_hint_close" aria-label="Close notice" data-t-title="lang_hint_close" title="Close notice">×</button>
+  </div>
+</div>
+</header>
+
+<main>
+  <!-- Start: Einstellungen und Lernstand -->
+  <div id="ansicht-start">
+    <div class="hero">
+      <div class="kreis a"></div>
+      <div class="kreis b"></div>
+      <div class="mitte">
+        <img class="zeichen" src="../assets/logo.svg" alt="" width="140" height="140">
+        <h1 data-t="app_name">VerseSpotter</h1>
+        <p class="unter" data-t="app_claim">Recognise every ship — by its HUD hologram, by its outline and as a speck in the sky.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="mitte">
+        <form class="wahl" id="wahl">
+          <fieldset>
+            <legend data-t="mode_legend">Image type</legend>
+            <div class="optionen modi" id="modi"></div>
+          </fieldset>
+          <fieldset>
+            <legend data-t="length_legend">Questions per run</legend>
+            <div class="optionen laengen" id="laengen"></div>
+          </fieldset>
+          <label class="schalter">
+            <span class="text">
+              <strong><span class="ic ic-zap" aria-hidden="true"></span><span data-t="combat_title">Combat mode</span></strong>
+              <span id="gefecht-hinweis"></span>
+            </span>
+            <input type="checkbox" id="gefecht" role="switch">
+          </label>
+          <div class="knopfreihe">
+            <button type="submit" class="knopf voll" id="start">
+              <span class="ic ic-crosshair" aria-hidden="true"></span><span data-t="start_button">Start training</span>
+            </button>
+          </div>
+        </form>
+
+        <div class="fortschritt karte" id="fortschritt">
+          <h3 data-t="progress_title">Your progress</h3>
+          <div class="zeile zeile-fuss">
+            <span class="klein" data-t="progress_note">The bar under each image type grows with every correct answer. A ship is mastered after 4 correct answers in a row. Your progress is stored in this browser only. Clearing all browsing data starts you from scratch.</span>
+            <button type="button" class="textknopf" id="zuruecksetzen">
+              <span class="ic ic-rotate-ccw" aria-hidden="true"></span><span data-t="progress_reset">Reset progress</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="fortschritt karte">
+          <h3 data-t="how_title">How it works</h3>
+          <ul class="liste-leise">
+            <li data-t="how_1">You see an image and pick one of three ships.</li>
+            <li data-t="how_2">What you got wrong comes back soon. What you know comes up less often.</li>
+            <li data-t="how_3">The better you know a ship, the more similar the wrong answers get.</li>
+            <li data-t="how_keys">Keyboard: 1, 2, 3 to answer, Enter to continue.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Laufendes Training -->
+  <section id="ansicht-quiz" hidden>
+    <div class="mitte quiz">
+      <div class="quiz-kopf">
+        <span class="zaehler" id="zaehler" aria-live="polite"></span>
+        <span class="uhr" id="uhr" hidden><span class="ic ic-timer" aria-hidden="true"></span><span id="uhr-text"></span></span>
+      </div>
+      <div class="bildrahmen" id="bildrahmen">
+        <img id="bild" src="" alt="">
+        <button type="button" class="melden" id="melden">
+          <span class="ic ic-flag" aria-hidden="true"></span><span data-t="report_button">Report image</span>
+        </button>
+        <span class="urheber" id="urheber" hidden></span>
+      </div>
+      <div class="zeitleiste" id="zeitleiste" hidden><div></div></div>
+      <h2 class="frage" id="frage" data-t="question_text">Which ship is this?</h2>
+      <div class="antworten" id="antworten" role="group" aria-labelledby="frage"></div>
+      <div class="rueckmeldung" id="rueckmeldung" hidden aria-live="assertive">
+        <span class="ergebnis"><span class="ic" id="rueck-symbol" aria-hidden="true"></span><span id="rueck-text"></span><span class="zusatz" id="rueck-zusatz"></span></span>
+        <button type="button" class="knopf voll" id="weiter">
+          <span id="weiter-text"></span><span class="ic ic-arrow-right" aria-hidden="true"></span>
+        </button>
+      </div>
+      <button type="button" class="textknopf abbrechen" id="abbrechen">
+        <span class="ic ic-x" aria-hidden="true"></span><span data-t="quit">Quit run</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Auswertung -->
+  <section id="ansicht-ergebnis" hidden>
+    <div class="mitte auswertung">
+      <div class="label" data-t="result_label">Results</div>
+      <div class="zahl" id="ergebnis-zahl"></div>
+      <div class="rang" id="ergebnis-rang"></div>
+      <p class="zeit" id="ergebnis-zeit"><span class="ic ic-timer" aria-hidden="true"></span><span id="ergebnis-zeit-text"></span></p>
+      <p class="einleitung einleitung-mitte" id="ergebnis-text"></p>
+
+      <div class="kopierbox karte">
+        <h3 data-t="share_title">Share your result</h3>
+        <pre id="kopiertext"></pre>
+        <button type="button" class="knopf" id="kopieren">
+          <span class="ic ic-copy" aria-hidden="true"></span><span data-t="share_copy">Copy for Discord</span>
+        </button>
+        <span class="kopiert" id="kopiert" role="status"></span>
+      </div>
+
+      <div class="knopfreihe">
+        <button type="button" class="knopf voll" id="nochmal">
+          <span class="ic ic-rotate-ccw" aria-hidden="true"></span><span data-t="again">Another run</span>
+        </button>
+        <button type="button" class="knopf" id="zur-wahl">
+          <span class="ic ic-house" aria-hidden="true"></span><span data-t="back_setup">Settings</span>
+        </button>
+      </div>
+
+      <h2 class="abstand-oben" data-t="mistakes_title">What you missed</h2>
+      <div class="fehlerliste" id="fehlerliste"></div>
+    </div>
+  </section>
+
+  <p class="mitte leer" id="ladefehler" hidden data-t="load_error">Could not load the ship data. Please reload the page.</p>
+</main>
+
+<dialog id="dlg-reset">
+  <h2 data-t="reset_confirm_title">Reset progress?</h2>
+  <p data-t="reset_confirm_text">All ships go back to the first box. This cannot be undone.</p>
+  <div class="knopfreihe">
+    <button type="button" class="knopf" id="reset-nein" data-t="cancel">Cancel</button>
+    <button type="button" class="knopf voll" id="reset-ja" data-t="reset_yes">Reset</button>
+  </div>
+</dialog>
+
+<dialog id="dlg-melden">
+  <h2 data-t="report_title">What is wrong with this image?</h2>
+  <div class="gruende" id="gruende"></div>
+  <p id="melden-danke" hidden role="status"><span data-t="report_thanks">Thanks! The image will be checked.</span> <a id="melden-github" href="#" target="_blank" rel="noopener" data-t="report_details">Tell us more on GitHub</a></p>
+  <div class="knopfreihe">
+    <button type="button" class="knopf" id="melden-zu" data-t="close">Close</button>
+  </div>
+</dialog>
+
+<footer id="fuss">
+<div class="mitte">
+  <div class="fusslinks">
+    <a href="https://xharig.com/en/" data-t="footer_all_tools">All tools on xharig.com</a>
+    <a href="https://versekit.xharig.com/en/?von=versespotter" data-t="footer_versekit">Verse-Kit — blueprints live while you play</a>
+    <a href="danke.html" data-t="nav_thanks">Thanks &amp; licences</a>
+    <a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source">Source code</a>
+    <a href="https://xharig.com/impressum.html" data-t="footer_imprint">Legal notice</a>
+    <a href="https://xharig.com/datenschutz.html" data-t="footer_privacy">Privacy</a>
+  </div>
+  <img class="fankit" src="../assets/made-by-the-community.png" alt="Star Citizen — Made by the Community" width="120">
+  <p class="fan" lang="en" data-t="footer_fan">This is an unofficial Star Citizen fan site, not affiliated with the Cloud Imperium group of companies. All content on this site not authored by its host or users are property of their respective owners. Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC.</p>
+  <p class="recht"><span data-t="app_name">VerseSpotter</span> v1.0.0 · GPL-3.0 · <span data-t="footer_by">by Xharig</span></p>
+</div>
+</footer>
+<script src="../assets/texts.js?v=8"></script>
+<script src="../assets/data.js?v=8"></script>
+<script src="../assets/stats.js?v=8"></script>
+<script src="../assets/report.js?v=8"></script>
+<script src="../assets/quiz.js?v=8"></script>
+</body>
+</html>

@@ -14,6 +14,7 @@
 ### Geändert
 - Jede Bildart zeigt ihren eigenen Lernstand direkt unter ihrer Kachel: wie viele Schiffe angefangen sind, wie viele sitzen, und einen Balken, der mit jeder richtigen Antwort wächst. Vorher stand dort lange 0, obwohl schon gelernt wurde.
 - Die Bildarten stehen von leicht nach schwer: Einsteiger, Umriss, Distanz, Silhouette, Gemischt, HUD.
+- Die englische Fassung hat eine eigene Adresse: versespotter.xharig.com/en/. Die deutsche bleibt unter der Hauptadresse. So finden Suchmaschinen die Seite in beiden Sprachen. Die Sprachknöpfe wechseln die Adresse und merken sich die Wahl. Bevorzugt dein Browser die andere Sprache, zeigt ein kleiner Hinweis die passende Fassung an, statt automatisch umzuschalten.
 
 ### Behoben
 - Auf dem Handy sprang der Weiter-Knopf nach einer Antwort mal in eine zweite Zeile und mal nicht, je nachdem, ob ein Variantenname angezeigt wurde. Der Kasten unter den Antworten ist jetzt immer gleich hoch. Gemeldet von zwaersch.
