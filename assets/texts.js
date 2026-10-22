@@ -216,7 +216,21 @@ const TEXTS = {
 
   // Fuß
   footer_all_tools: { de: 'Alle Werkzeuge auf xharig.com', en: 'All tools on xharig.com' },
-  footer_versekit: { de: 'Verse-Kit — Baupläne live im Blick', en: 'Verse-Kit — blueprints live while you play' },
+  footer_versekit: { de: 'VerseKit — Baupläne live im Blick', en: 'VerseKit — blueprints live while you play' },
+  footer_ref_before: {
+    de: 'Neu in Star Citizen? Meldest du dich mit meinem Empfehlungscode',
+    en: 'New to Star Citizen? Sign up with my referral code',
+  },
+  footer_ref_after: {
+    de: 'an, bekommst du nach dem Kauf eines Spielpakets 50.000 UEC Startguthaben im Spiel dazu.',
+    en: 'and you get 50,000 UEC of in-game credit after buying a game package.',
+  },
+  footer_ref_pass: {
+    de: 'Gib den Code gern an Freunde weiter, die neu anfangen, sie bekommen dieselben 50.000 UEC.',
+    en: 'Feel free to pass the code on to friends who are just starting, they get the same 50,000 UEC.',
+  },
+  footer_ref_button: { de: 'Mit meinem Code anmelden', en: 'Sign up with my code' },
+  footer_ref_share: { de: 'Link weitergeben', en: 'Pass the link on' },
   footer_source: { de: 'Quelltext', en: 'Source code' },
   footer_imprint: { de: 'Impressum', en: 'Legal notice' },
   footer_privacy: { de: 'Datenschutz', en: 'Privacy' },

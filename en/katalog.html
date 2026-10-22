@@ -23,7 +23,7 @@
 <!-- head:end -->
 <script src="../assets/lang.js?v=8"></script>
 <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/style.css?v=8">
+<link rel="stylesheet" href="../assets/style.css?v=9">
 </head>
 <body data-page="catalog">
 <header id="kopf">
@@ -89,9 +89,19 @@
 
 <footer id="fuss">
 <div class="mitte">
+  <div class="einladen">
+    <p><span data-t="footer_ref_before">New to Star Citizen? Sign up with my referral code</span> <code translate="no">STAR-YC7L-S4W2</code> <span data-t="footer_ref_after">and you get 50,000 UEC of in-game credit after buying a game package.</span></p>
+    <p data-t="footer_ref_pass">Feel free to pass the code on to friends who are just starting, they get the same 50,000 UEC.</p>
+    <div class="knopfreihe">
+      <a class="knopf" href="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_ref_button">Sign up with my code</a>
+      <button type="button" class="knopf zweit" id="ref-teilen" data-code="STAR-YC7L-S4W2" data-link="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_ref_share">Pass the link on</button>
+    </div>
+    <p class="ref-meldung" id="ref-meldung" aria-live="polite"></p>
+    <script src="../assets/teilen.js?v=1"></script>
+  </div>
   <div class="fusslinks">
     <a href="https://xharig.com/en/" data-t="footer_all_tools">All tools on xharig.com</a>
-    <a href="https://versekit.xharig.com/en/?von=versespotter" data-t="footer_versekit">Verse-Kit — blueprints live while you play</a>
+    <a href="https://versekit.xharig.com/en/?von=versespotter" data-t="footer_versekit">VerseKit — blueprints live while you play</a>
     <a href="danke.html" data-t="nav_thanks">Thanks &amp; licences</a>
     <a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source">Source code</a>
     <a href="https://xharig.com/impressum.html" data-t="footer_imprint">Legal notice</a>
@@ -102,7 +112,7 @@
   <p class="recht"><span data-t="app_name">VerseSpotter</span> v1.0.0 · GPL-3.0 · <span data-t="footer_by">by Xharig</span></p>
 </div>
 </footer>
-<script src="../assets/texts.js?v=8"></script>
+<script src="../assets/texts.js?v=9"></script>
 <script src="../assets/data.js?v=8"></script>
 <script src="../assets/stats.js?v=8"></script>
 <script src="../assets/report.js?v=8"></script>

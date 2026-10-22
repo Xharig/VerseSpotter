@@ -30,6 +30,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://versespotter.xharig.com/"
 APP_VERSION = "1.0.0"
+REFERRAL_CODE = "STAR-YC7L-S4W2"
 LANGS = ("de", "en")
 
 # file -> (data-page, title key, description key)
@@ -272,6 +273,20 @@ def footer(lang):
     return "\n".join([
         "",
         '<div class="mitte">',
+        '  <div class="einladen">',
+        '    <p><span data-t="footer_ref_before"></span> <code translate="no">%s</code>'
+        ' <span data-t="footer_ref_after"></span></p>' % REFERRAL_CODE,
+        '    <p data-t="footer_ref_pass"></p>',
+        '    <div class="knopfreihe">',
+        '      <a class="knopf" href="https://robertsspaceindustries.com/enlist?referral=%s"'
+        ' data-t="footer_ref_button"></a>' % REFERRAL_CODE,
+        '      <button type="button" class="knopf zweit" id="ref-teilen" data-code="%s"'
+        ' data-link="https://robertsspaceindustries.com/enlist?referral=%s"'
+        ' data-t="footer_ref_share"></button>' % (REFERRAL_CODE, REFERRAL_CODE),
+        "    </div>",
+        '    <p class="ref-meldung" id="ref-meldung" aria-live="polite"></p>',
+        '    <script src="assets/teilen.js?v=1"></script>',
+        "  </div>",
         '  <div class="fusslinks">',
         '    <a href="%s" data-t="footer_all_tools"></a>' % EXTERNAL["xharig"][lang],
         '    <a href="%s" data-t="footer_versekit"></a>' % html.escape(EXTERNAL["versekit"][lang]),

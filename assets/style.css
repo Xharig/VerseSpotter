@@ -335,6 +335,12 @@ dialog .gruende button:hover{border-color:var(--neon)}
 
 /* ---------- Fuß ---------- */
 footer{border-top:1px solid var(--rand);padding:40px 0 50px;text-align:center;margin-top:40px}
+.einladen{max-width:620px;margin:0 auto 30px;padding:18px 20px;border:1px solid var(--rand);border-radius:10px;background:var(--flaeche)}
+.einladen p{margin:0 0 14px;color:var(--text-leise)}
+.einladen code{white-space:nowrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95em;color:var(--text)}
+.einladen .knopf.zweit{border-color:var(--rand);color:var(--text)}
+.einladen .knopf.zweit:hover{border-color:var(--neon);color:var(--neon);background:none}
+.einladen .ref-meldung{margin:10px 0 0;min-height:1.6em;font-size:15px;color:var(--neon);overflow-wrap:anywhere}
 .fusslinks{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
 .fankit{margin:22px auto 14px;width:120px;opacity:.85}
 .fan{color:var(--text-leise);font-size:13px;max-width:680px;margin:0 auto 14px;line-height:1.5}

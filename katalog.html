@@ -24,7 +24,7 @@
 <!-- head:end -->
 <script src="assets/lang.js?v=8"></script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/style.css?v=8">
+<link rel="stylesheet" href="assets/style.css?v=9">
 </head>
 <body data-page="catalog">
 <header id="kopf">
@@ -90,9 +90,19 @@
 
 <footer id="fuss">
 <div class="mitte">
+  <div class="einladen">
+    <p><span data-t="footer_ref_before">Neu in Star Citizen? Meldest du dich mit meinem Empfehlungscode</span> <code translate="no">STAR-YC7L-S4W2</code> <span data-t="footer_ref_after">an, bekommst du nach dem Kauf eines Spielpakets 50.000 UEC Startguthaben im Spiel dazu.</span></p>
+    <p data-t="footer_ref_pass">Gib den Code gern an Freunde weiter, die neu anfangen, sie bekommen dieselben 50.000 UEC.</p>
+    <div class="knopfreihe">
+      <a class="knopf" href="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_ref_button">Mit meinem Code anmelden</a>
+      <button type="button" class="knopf zweit" id="ref-teilen" data-code="STAR-YC7L-S4W2" data-link="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_ref_share">Link weitergeben</button>
+    </div>
+    <p class="ref-meldung" id="ref-meldung" aria-live="polite"></p>
+    <script src="assets/teilen.js?v=1"></script>
+  </div>
   <div class="fusslinks">
     <a href="https://xharig.com/" data-t="footer_all_tools">Alle Werkzeuge auf xharig.com</a>
-    <a href="https://versekit.xharig.com/?von=versespotter" data-t="footer_versekit">Verse-Kit — Baupläne live im Blick</a>
+    <a href="https://versekit.xharig.com/?von=versespotter" data-t="footer_versekit">VerseKit — Baupläne live im Blick</a>
     <a href="danke.html" data-t="nav_thanks">Danke &amp; Lizenzen</a>
     <a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source">Quelltext</a>
     <a href="https://xharig.com/impressum.html" data-t="footer_imprint">Impressum</a>
@@ -103,7 +113,7 @@
   <p class="recht"><span data-t="app_name">VerseSpotter</span> v1.0.0 · GPL-3.0 · <span data-t="footer_by">von Xharig</span></p>
 </div>
 </footer>
-<script src="assets/texts.js?v=8"></script>
+<script src="assets/texts.js?v=9"></script>
 <script src="assets/data.js?v=8"></script>
 <script src="assets/stats.js?v=8"></script>
 <script src="assets/report.js?v=8"></script>
