@@ -33,5 +33,5 @@ const sample = {
 const mock = `<script>window.fetch = async () => new Response(${JSON.stringify(JSON.stringify(sample))});</script>`;
 const html = dashboardHtml('probe')
   .replace('<head>', '<head>' + mock)
-  .replace('<b>VerseSpotter</b> Statistik', '<b>VerseSpotter</b> Statistik — PROBEDATEN');
+  .replace('<span>VerseSpotter Statistik</span>', '<span>VerseSpotter Statistik (Probedaten)</span>');
 writeFileSync(process.argv[2], html);

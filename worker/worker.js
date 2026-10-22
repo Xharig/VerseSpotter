@@ -298,8 +298,8 @@ async function stats(request, env, verify) {
     headers: {
       'content-type': 'text/html; charset=utf-8',
       'content-security-policy':
-        `default-src 'none'; script-src 'nonce-${nonce}'; style-src 'nonce-${nonce}'; ` +
-        `connect-src 'self'; img-src ${SITE_ORIGIN} data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'`,
+        `default-src 'none'; script-src 'nonce-${nonce}'; style-src 'nonce-${nonce}' ${SITE_ORIGIN}; ` +
+        `font-src ${SITE_ORIGIN}; connect-src 'self'; img-src ${SITE_ORIGIN} data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'`,
       ...SECURITY,
     },
   });

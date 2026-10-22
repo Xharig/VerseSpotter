@@ -128,6 +128,19 @@ test('Übersicht: gültiges Zeichen mit fremder Mail kommt nicht hinein', async 
   assert.equal(own.status, 200);
 });
 
+test('Übersicht: strenge CSP, Stil und Schrift nur von der eigenen Seite', async () => {
+  const env = { DB: {}, ERLAUBTE_MAIL: 'ich@example.org' };
+  const r = await worker.fetch(new Request('https://statistik-versespotter.xharig.com/'), env, {},
+    async () => ({ email: 'ich@example.org' }));
+  const csp = r.headers.get('content-security-policy');
+  assert.match(csp, /default-src 'none'/);
+  assert.match(csp, /style-src 'nonce-[0-9a-f]+' https:\/\/versespotter\.xharig\.com;/);
+  assert.match(csp, /font-src https:\/\/versespotter\.xharig\.com;/);
+  assert.doesNotMatch(csp, /unsafe-|\*/);
+  const html = await r.text();
+  assert.doesNotMatch(html, /\sstyle="|\sonclick=/);
+});
+
 test('Übersicht: Skript im Dashboard ist gültiges JavaScript', () => {
   const html = dashboardHtml('abc');
   const script = html.split('<script nonce="abc">')[1].split('</script>')[0];

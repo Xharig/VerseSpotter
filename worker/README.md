@@ -10,6 +10,8 @@ node --test worker.test.mjs
 
 Probeansicht der Übersicht mit ausgedachten Daten: `node dashboard_probe.mjs probe.html`
 
+Das Aussehen der Übersicht kommt aus `assets/basis.css` der Seite (`dashboard.js` lädt sie von `versespotter.xharig.com`; dafür erlaubt die Content-Security-Policy Stilblatt und Schrift von dort). Ändert sich `basis.css` (Cache-Zähler `?v=`), muss `BASIS` oben in `dashboard.js` mitgezählt werden.
+
 ## Einrichten
 
 1. Datenbank anlegen und die ausgegebene Kennung in `wrangler.toml` bei `database_id` eintragen:
