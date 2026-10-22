@@ -31,7 +31,7 @@ export function dashboardHtml(nonce) {
    kommen aus den Variablen dort (--grund, --linie, --neon …). */
 :root {
   --balken: var(--neon);
-  --balken-schlecht: #ff6b5e;
+  --balken-verwechselt: #8fa3bf;
   --rand: var(--linie);
 }
 [hidden] { display:none !important; }
@@ -98,7 +98,7 @@ main { flex:1; padding-bottom:72px; }
 .bar .track { background:var(--linie); border-radius:4px; height:10px; overflow:hidden; }
 .bar .fill { background:var(--balken); height:100%; border-radius:4px; }
 .bar .fill.bad {
-  background:repeating-linear-gradient(135deg, var(--balken-schlecht) 0 6px, #7d3a35 6px 10px);
+  background:repeating-linear-gradient(135deg, var(--balken-verwechselt) 0 5px, var(--linie-hell) 5px 9px);
 }
 .bar .n { color:var(--leise); font-size:15px; font-variant-numeric:tabular-nums; min-width:56px; text-align:right; white-space:nowrap; }
 @media (min-width:641px) { .breit .bar { grid-template-columns:minmax(160px,26%) minmax(0,1fr) auto; } }
@@ -166,7 +166,7 @@ ${widths}
           <option value="400">gesamt</option>
         </select>
       </label>
-      <button id="discord" type="button" class="knopf voll"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>Für Discord kopieren</button>
+      <button id="discord" type="button" class="knopf"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>Für Discord kopieren</button>
       <span id="kopiert" class="ok" role="status"></span>
       <span class="stand" id="stand">lädt …</span>
     </div>
@@ -193,7 +193,8 @@ let current = null;
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; };
 const sum = (rows) => rows.reduce((a, r) => a + r.n, 0);
 const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
-const countryName = (c) => { try { return c === 'XX' ? 'unbekannt' : COUNTRY.of(c); } catch (e) { return c; } };
+const germanDate = (iso) => { const m = /^(\\d{4})-(\\d{2})-(\\d{2})$/.exec(iso); return m ? m[3] + '.' + m[2] + '.' + m[1] : iso; };
+const countryName =(c) => { try { return c === 'XX' ? 'unbekannt' : COUNTRY.of(c); } catch (e) { return c; } };
 
 function group(rows, merkmal) {
   const m = new Map();
@@ -250,7 +251,7 @@ function render(d) {
   const s = summary(d);
   const box = document.getElementById('inhalt');
   box.innerHTML = '';
-  document.getElementById('stand').textContent = 'Zähler seit ' + d.seit;
+  document.getElementById('stand').textContent = 'Zähler seit ' + germanDate(d.seit);
 
   const k = card('Überblick', true);
   const kp = el('div', 'kpis');
@@ -271,7 +272,7 @@ function render(d) {
   bars(card('Modi (gestartet)'), group(d.zaehler, 'start'), (x) => MODES[x] || x);
   bars(card('Lauflänge'), group(d.zaehler, 'laenge'), (x) => x + ' Fragen');
   bars(card('Ränge'), group(d.zaehler, 'rang'), (x) => (RANKS.find((r) => r[0] === x) || [x, '', x])[2]);
-  bars(card('Sprache'), group(d.zaehler, 'sprache'), (x) => x.toUpperCase());
+  bars(card('Sprache'), group(d.zaehler, 'sprache'), (x) => ({ de: 'Deutsch', en: 'Englisch' })[x] || x.toUpperCase());
   bars(card('Gerät'), group(d.zaehler, 'geraet'), (x) => x === 'handy' ? 'Handy' : 'PC');
   bars(card('Ergebnis kopiert je Modus'), group(d.zaehler, 'kopiert'), (x) => MODES[x] || x);
 
