@@ -198,6 +198,10 @@ const TEXTS = {
     de: '<strong>Symbole:</strong> Lucide, ISC-Lizenz, © Lucide Icons and Contributors.',
     en: '<strong>Icons:</strong> Lucide, ISC licence, © Lucide Icons and Contributors.',
   },
+  licence_font: {
+    de: '<strong>Schrift:</strong> Xharig Sans, eine Teilmenge von Lato (© Łukasz Dziedzic), SIL Open Font License 1.1.',
+    en: '<strong>Font:</strong> Xharig Sans, a subset of Lato (© Łukasz Dziedzic), SIL Open Font License 1.1.',
+  },
   privacy_title: { de: 'Datenschutz', en: 'Privacy' },
   privacy_1: {
     de: 'Die Seite setzt keine Cookies und speichert keine IP-Adressen.',
