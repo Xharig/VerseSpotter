@@ -1,14 +1,21 @@
 <div align="center">
 
-<img src="assets/logo.svg" alt="VerseSpotter Logo" width="160">
+<img src="assets/logo.svg" alt="VerseSpotter Logo" width="128">
 
 # VerseSpotter
 
-**Erkenne jedes Schiff in Star Citizen — am Hologramm im HUD, am Umriss und klein am Himmel**
+**Erkenne jedes Schiff in Star Citizen: am Hologramm im HUD, am Umriss und klein am Himmel**
 
-[![Webseite](https://img.shields.io/badge/Webseite-versespotter.xharig.com-5fa522)](https://versespotter.xharig.com/)
-[![Lizenz](https://img.shields.io/badge/Lizenz-GPL--3.0-5fa522)](LICENSE)
-[![Bilder](https://img.shields.io/badge/Bilder-CC%20BY--NC%204.0-5fa522)](LICENSE-IMAGES.md)
+<sub>im Browser · am PC und am Handy · kostenlos · ohne Anmeldung, ohne Installation</sub>
+
+[![Webseite](https://img.shields.io/badge/Webseite-versespotter.xharig.com-9ce430?labelColor=161c28)](https://versespotter.xharig.com/)
+[![Lizenz](https://img.shields.io/badge/Lizenz-GPL--3.0-9ce430?labelColor=161c28)](LICENSE)
+[![Bilder](https://img.shields.io/badge/Bilder-CC%20BY--NC%204.0-9ce430?labelColor=161c28)](LICENSE-IMAGES.md)
+[![Discord](https://img.shields.io/badge/Discord-beitreten-9ce430?labelColor=161c28&logo=discord&logoColor=9ce430)](https://xharig.com/discord)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Kaffee%20spendieren-9ce430?labelColor=161c28&logo=kofi&logoColor=9ce430)](https://ko-fi.com/xharig)
+<br>
+[![Browser](https://img.shields.io/badge/L%C3%A4uft%20im-Browser-34415a?labelColor=161c28)](https://versespotter.xharig.com/)
+[![Star Citizen](https://img.shields.io/badge/Star%20Citizen-kompatibel-34415a?labelColor=161c28)](https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2)
 
 **Deutsch** · [English](https://github.com/Xharig/VerseSpotter/blob/main/README.en.md)
 
@@ -16,11 +23,11 @@
 
 ---
 
-Ein Trainer im Browser, der funktioniert wie eine Fahrschul-Lern-App: Du siehst ein Bild, wählst aus drei Schiffen und bekommst am Ende eine Auswertung. Was du falsch hattest, kommt bald wieder — was sitzt, seltener.
+<img src="assets/readme-kopf.png" alt="VerseSpotter am PC und am Handy" width="100%">
 
-**→ Direkt loslegen: [versespotter.xharig.com](https://versespotter.xharig.com/)** — keine Anmeldung, keine Installation, Deutsch und Englisch.
+Ein Trainer im Browser, der funktioniert wie eine Fahrschul-Lern-App: Du siehst ein Bild, wählst aus drei Schiffen und bekommst am Ende eine Auswertung. Was du falsch hattest, kommt bald wieder, was sitzt, seltener.
 
-## Was es kann
+## Was VerseSpotter kann
 
 - **Sechs Bildarten von leicht nach schwer:** Schiffsbilder zum Aufwärmen, Umriss, Distanz, Silhouette im Flug, alles gemischt und HUD-Hologramm
 - **Karteikasten:** jedes Schiff hat je Bildart fünf Fächer; Fehler kommen bald wieder, Bekanntes seltener
@@ -30,18 +37,34 @@ Ein Trainer im Browser, der funktioniert wie eine Fahrschul-Lern-App: Du siehst 
 - **Schiffskatalog** mit allen flugfähigen Raumschiffen zum Nachschlagen
 - **Bedienbar mit Maus oder Tastatur** (1, 2, 3 und Enter), am Handy und bei 200 % Zoom
 
-## Bilder beitragen
+## Loslegen
 
-Die HUD- und Silhouettenbilder stammen aus der Community. Jedes Bild nennt seinen Sammler, alle stehen auf der Seite **Danke & Lizenzen**. Ein falsches Bild entdeckt? Unter jedem Bild gibt es **„Bild melden"**.
+**[versespotter.xharig.com](https://versespotter.xharig.com/)** öffnen und anfangen. Keine Anmeldung, keine Installation, Deutsch und Englisch. Dein Lernstand bleibt in deinem Browser.
 
-## Datenschutz
+**[Discord](https://xharig.com/discord)** · **[Fehler oder Wunsch melden](https://github.com/Xharig/VerseSpotter/issues)** · **[Was ist neu](https://github.com/Xharig/VerseSpotter/blob/main/CHANGELOG.md)**
 
-Keine Cookies, keine IP-Adressen, keine Anmeldung. Der Lernstand liegt nur im eigenen Browser. Gezählt wird ohne Kennung, nur „wie viele" — Einzelheiten auf der Seite [Danke & Lizenzen](https://versespotter.xharig.com/danke.html#datenschutz).
+## Einzelheiten
+
+<details>
+<summary><b>Bilder beitragen</b></summary>
+
+Die HUD- und Silhouettenbilder stammen aus der Community. Jedes Bild nennt seinen Sammler, alle stehen auf der Seite **Danke & Lizenzen**. Ein falsches Bild entdeckt? Unter jedem Bild gibt es **„Bild melden“**.
+
+</details>
+
+<details>
+<summary><b>Datenschutz</b></summary>
+
+Keine Cookies, keine IP-Adressen, keine Anmeldung. Der Lernstand liegt nur im eigenen Browser. Gezählt wird ohne Kennung, nur „wie viele“. Einzelheiten auf der Seite [Danke & Lizenzen](https://versespotter.xharig.com/danke.html#datenschutz).
+
+</details>
+
+**Neu in Star Citizen?** Meldest du dich mit meinem Empfehlungscode [`STAR-YC7L-S4W2`](https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2) an, bekommst du nach dem Kauf eines Spielpakets 50.000 UEC Startguthaben im Spiel dazu.
 
 ## Star Citizen Fan Content
 
 <p align="center">
-  <img alt="Star Citizen — Made by the Community" src="assets/made-by-the-community.png" width="150" height="150">
+  <img alt="Star Citizen: Made by the Community" src="assets/made-by-the-community.png" width="150" height="150">
 </p>
 
 > This is an unofficial Star Citizen fan site, not affiliated with the Cloud Imperium group of
@@ -58,7 +81,7 @@ Dieses Projekt verwendet Material aus dem offiziellen
 Verwendung durch Fans veröffentlicht und darf nur nach den Bedingungen des
 **Fankit Agreement**, des **Fan Style Guide** und der
 [Roberts Space Industries Terms of Service](https://robertsspaceindustries.com/tos) verwendet
-werden — dort besonders der Abschnitt über nutzergenerierte Inhalte (UGC).
+werden, dort besonders nach dem Abschnitt über nutzergenerierte Inhalte (UGC).
 
 > **Star Citizen®, Roberts Space Industries® und Cloud Imperium® sind eingetragene Marken der
 > Cloud Imperium Rights LLC.**
@@ -70,8 +93,25 @@ Offizielle Seite: **[robertsspaceindustries.com](https://robertsspaceindustries.
 
 ## Lizenz
 
-- **Code:** GNU General Public License v3.0 — Volltext in [LICENSE](LICENSE)
-- **Bilder der Sammler** (`img/hud/`, `img/silhouette/`): CC BY-NC 4.0 — siehe [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
-- **Umriss- und Distanzbilder** (`img/outline/`, `img/distance/`): bearbeitet aus Fotos des Star Citizen Wiki, CC BY-SA 4.0 — siehe [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
+- **Code:** GNU General Public License v3.0, Volltext in [LICENSE](LICENSE)
+- **Bilder der Sammler** (`img/hud/`, `img/silhouette/`): CC BY-NC 4.0, siehe [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
+- **Umriss- und Distanzbilder** (`img/outline/`, `img/distance/`): bearbeitet aus Fotos des Star Citizen Wiki, CC BY-SA 4.0, siehe [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
 - **Schiffsbilder** (`img/catalog/`): Eigentum von Cloud Imperium, genutzt im Rahmen der Fan-Seiten-Regeln
-- **Schiffsdaten:** [Star Citizen Wiki API](https://api.star-citizen.wiki) · **Symbole:** [Lucide](https://lucide.dev) (ISC)
+
+Kurz: Den Code darfst du nutzen, verändern und weitergeben, solange der Quellcode unter derselben Lizenz mitkommt. Für die Bilder gelten ihre eigenen Lizenzen oben.
+
+## Dank
+
+- **Die Sammler der HUD- und Silhouettenbilder**: jedes Bild nennt seinen Sammler, alle stehen auf der Seite [Danke & Lizenzen](https://versespotter.xharig.com/danke.html).
+- **[Star Citizen Wiki](https://api.star-citizen.wiki)**: Schiffsdaten und die Fotos für Umriss und Distanz.
+- **[Lucide](https://lucide.dev)**: die Symbole (ISC).
+
+<div align="center">
+
+[![Xharig](https://github.com/Xharig.png?size=80)](https://github.com/Xharig)
+
+**Xharig**: Entwicklung und Gestaltung dieses Projekts
+
+<sub>Gefällt Dir das Werkzeug? <a href="https://ko-fi.com/xharig">Ko-fi</a> ☕</sub>
+
+</div>
