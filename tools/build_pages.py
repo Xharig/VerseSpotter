@@ -22,6 +22,7 @@ links to a file that does not exist.
 """
 
 import html
+import json
 import os
 import re
 import sys
@@ -162,12 +163,47 @@ def url(page, lang):
 
 # ---------- generated parts ----------
 
+def structured_data(lang, desc):
+    """schema.org description of the trainer, read by search engines only."""
+    data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "VerseSpotter",
+                "url": SITE,
+                "inLanguage": ["de", "en"],
+            },
+            {
+                "@type": "WebApplication",
+                "name": "VerseSpotter",
+                "url": url("home", lang),
+                "description": desc,
+                "applicationCategory": "GameApplication",
+                "operatingSystem": "Any (web browser)",
+                "browserRequirements": "Requires JavaScript",
+                "inLanguage": ["de", "en"],
+                "isAccessibleForFree": True,
+                "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+                "keywords": "Star Citizen, ship recognition, ship identification, "
+                            "HUD hologram, silhouette, spaced repetition, quiz",
+                "author": {"@type": "Person", "name": "Xharig", "url": "https://xharig.com/"},
+                "sameAs": ["https://github.com/Xharig/VerseSpotter"],
+            },
+        ],
+    }
+    text = json.dumps(data, ensure_ascii=False, indent=1).replace("</", "<\\/")
+    return '<script type="application/ld+json">\n%s\n</script>' % text
+
+
 def head_block(page, lang, texts):
     _, title_key, desc_key = PAGES[PAGE_FILE[page]]
     where = PAGE_FILE[page] + " head"
+    raw_desc = _text(texts, desc_key, lang, where)
     title = html.escape(_text(texts, title_key, lang, where))
-    desc = html.escape(_text(texts, desc_key, lang, where))
+    desc = html.escape(raw_desc)
     locale, other = ("de_DE", "en_US") if lang == "de" else ("en_US", "de_DE")
+    extra = [structured_data(lang, raw_desc)] if page == "home" else []
     return "\n".join([
         "<!-- head:begin (tools/build_pages.py) -->",
         "<title>%s</title>" % title,
@@ -183,6 +219,7 @@ def head_block(page, lang, texts):
         '<meta property="og:url" content="%s">' % url(page, lang),
         '<meta property="og:title" content="%s">' % title,
         '<meta property="og:description" content="%s">' % desc,
+    ] + extra + [
         "<!-- head:end -->",
     ])
 
