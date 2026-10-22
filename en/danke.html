@@ -4,10 +4,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0d0d0d">
+<meta name="theme-color" content="#10141c">
 <meta name="color-scheme" content="dark">
 <!-- head:begin (tools/build_pages.py) -->
-<title>Thanks &amp; licences — VerseSpotter</title>
+<title>Thanks &amp; licences | VerseSpotter</title>
 <meta name="description" content="The community members who collect the in-game images, plus licences and privacy.">
 <link rel="canonical" href="https://versespotter.xharig.com/en/danke.html">
 <link rel="alternate" hreflang="de" href="https://versespotter.xharig.com/danke.html">
@@ -18,22 +18,35 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="de_DE">
 <meta property="og:url" content="https://versespotter.xharig.com/en/danke.html">
-<meta property="og:title" content="Thanks &amp; licences — VerseSpotter">
+<meta property="og:title" content="Thanks &amp; licences | VerseSpotter">
 <meta property="og:description" content="The community members who collect the in-game images, plus licences and privacy.">
 <!-- head:end -->
 <script src="../assets/lang.js?v=8"></script>
 <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/style.css?v=9">
+<link rel="preload" href="../assets/schrift/lato-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/schrift/lato-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/basis.css?v=1">
+<link rel="stylesheet" href="../assets/style.css?v=10">
 </head>
 <body data-page="thanks">
-<header id="kopf">
+<a class="springen" href="#inhalt" data-t="skip_link">Skip to content</a>
+<header id="kopf" class="kopfleiste">
 <div class="mitte kopf">
-  <a class="logo" href="./"><img src="../assets/logo.svg" alt="" width="38" height="38"><span class="marke" data-t="app_name">VerseSpotter</span></a>
+  <a class="marke" href="./"><img src="../assets/logo.svg" alt="" width="36" height="36"><span data-t="app_name">VerseSpotter</span></a>
   <nav data-t-aria="app_name" aria-label="VerseSpotter">
-    <a class="alle" href="https://xharig.com/en/" data-t-title="nav_all_tools_hint" title="All tools by Xharig"><span class="ic ic-layout-grid" aria-hidden="true"></span><span class="txt" data-t="nav_all_tools">xharig.com</span></a>
-    <a href="./"><span class="ic ic-crosshair" aria-hidden="true"></span><span class="txt" data-t="nav_train">Training</span></a>
-    <a href="katalog.html"><span class="ic ic-book-open" aria-hidden="true"></span><span class="txt" data-t="nav_catalog">Ship catalogue</span></a>
-    <a href="danke.html" aria-current="page"><span class="ic ic-heart-handshake" aria-hidden="true"></span><span class="txt" data-t="nav_thanks">Thanks &amp; licences</span></a>
+    <a class="weg" href="./" data-t="nav_train">Training</a>
+    <a class="weg" href="katalog.html" data-t="nav_catalog">Ship catalogue</a>
+    <a class="weg" href="danke.html" aria-current="page" data-t="nav_thanks">Thanks &amp; licences</a>
+    <details class="menue">
+      <summary data-t="nav_menu">Menu</summary>
+      <div class="menue-liste">
+      <a href="./" data-t="nav_train">Training</a>
+      <a href="katalog.html" data-t="nav_catalog">Ship catalogue</a>
+      <a href="danke.html" aria-current="page" data-t="nav_thanks">Thanks &amp; licences</a>
+        <a href="https://xharig.com/en/" data-t="footer_all_tools">All tools on xharig.com</a>
+      </div>
+    </details>
+    <a class="alle" href="https://xharig.com/en/" data-t-title="nav_all_tools_hint" title="All tools by Xharig" data-t-aria="nav_all_tools_hint" aria-label="All tools by Xharig"><svg class="ic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg><span data-t="nav_all_tools">xharig.com</span></a>
     <div class="sprache" role="group" data-t-aria="lang_switch" aria-label="Language">
       <a href="../danke.html" data-lang="de" hreflang="de" lang="de">DE</a>
       <a href="danke.html" data-lang="en" hreflang="en" lang="en" class="an" aria-current="true">EN</a>
@@ -44,12 +57,12 @@
   <div class="mitte">
     <span id="hinweis-sprache-text" lang="de"></span>
     <a id="hinweis-sprache-link" href="../danke.html" hreflang="de" lang="de"></a>
-    <button type="button" id="hinweis-sprache-zu" data-t-aria="lang_hint_close" aria-label="Close notice" data-t-title="lang_hint_close" title="Close notice">×</button>
+    <button type="button" id="hinweis-sprache-zu" data-t-aria="lang_hint_close" aria-label="Close notice" data-t-title="lang_hint_close" title="Close notice"><svg class="ic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
   </div>
 </div>
 </header>
 
-<main>
+<main id="inhalt">
   <section>
     <div class="mitte textseite">
       <div class="label" data-t="thanks_label">Thanks</div>
@@ -73,7 +86,7 @@
       <h2 data-t="licences_title">Licences</h2>
       <ul>
         <li data-t="licence_code"><strong>Code:</strong> GPL-3.0. The source is openly available on GitHub.</li>
-        <li data-t="licence_photos"><strong>Collector images:</strong> CC BY-NC 4.0 — reuse with attribution, non-commercial.</li>
+        <li data-t="licence_photos"><strong>Collector images:</strong> CC BY-NC 4.0, reuse with attribution, non-commercial.</li>
         <li id="lizenz-wiki"></li>
         <li data-t="licence_renders"><strong>Ship renders in the catalogue and beginner mode:</strong> property of Cloud Imperium, sourced via the RSI Ship Matrix and the Star Citizen Wiki (starcitizen.tools) and used under the fan site rules.</li>
         <li data-t="licence_data"><strong>Ship data:</strong> Star Citizen Wiki API (api.star-citizen.wiki).</li>
@@ -93,27 +106,42 @@
 
 <footer id="fuss">
 <div class="mitte">
-  <div class="einladen">
+  <div class="einladen winkel">
     <p><span data-t="footer_ref_before">New to Star Citizen? Sign up with my referral code</span> <code translate="no">STAR-YC7L-S4W2</code> <span data-t="footer_ref_after">and you get 50,000 UEC of in-game credit after buying a game package.</span></p>
     <p data-t="footer_ref_pass">Feel free to pass the code on to friends who are just starting, they get the same 50,000 UEC.</p>
     <div class="knopfreihe">
       <a class="knopf" href="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_ref_button">Sign up with my code</a>
-      <button type="button" class="knopf zweit" id="ref-teilen" data-code="STAR-YC7L-S4W2" data-link="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_ref_share">Pass the link on</button>
+      <button type="button" class="knopf" id="ref-teilen" data-code="STAR-YC7L-S4W2" data-link="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_ref_share">Pass the link on</button>
     </div>
     <p class="ref-meldung" id="ref-meldung" aria-live="polite"></p>
     <script src="../assets/teilen.js?v=1"></script>
   </div>
-  <div class="fusslinks">
-    <a href="https://xharig.com/en/" data-t="footer_all_tools">All tools on xharig.com</a>
-    <a href="https://versekit.xharig.com/en/?von=versespotter" data-t="footer_versekit">VerseKit — blueprints live while you play</a>
-    <a href="danke.html" data-t="nav_thanks">Thanks &amp; licences</a>
-    <a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source">Source code</a>
-    <a href="https://xharig.com/impressum.html" data-t="footer_imprint">Legal notice</a>
-    <a href="https://xharig.com/datenschutz.html" data-t="footer_privacy">Privacy</a>
+  <div class="fuss-raster">
+    <div>
+      <p class="fuss-titel" data-t="app_name">VerseSpotter</p>
+      <a href="./" data-t="nav_train">Training</a>
+      <a href="katalog.html" data-t="nav_catalog">Ship catalogue</a>
+      <a href="danke.html" data-t="nav_thanks">Thanks &amp; licences</a>
+      <a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source">Source code</a>
+    </div>
+    <div>
+      <p class="fuss-titel" data-t="footer_title_community">Community</p>
+      <a href="https://xharig.com/discord" translate="no">Discord</a>
+      <a href="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_join">Try Star Citizen</a>
+    </div>
+    <div>
+      <p class="fuss-titel" data-t="footer_title_more">More from Xharig</p>
+      <a href="https://xharig.com/en/" data-t="footer_all_tools">All tools on xharig.com</a>
+      <a href="https://versekit.xharig.com/en/?von=versespotter" data-t="footer_versekit">VerseKit: blueprints live while you play</a>
+      <a href="https://xharig.com/impressum.html" data-t="footer_imprint">Legal notice</a>
+      <a href="https://xharig.com/datenschutz.html" data-t="footer_privacy">Privacy</a>
+    </div>
   </div>
-  <img class="fankit" src="../assets/made-by-the-community.png" alt="Star Citizen — Made by the Community" width="120">
-  <p class="fan" lang="en" data-t="footer_fan">This is an unofficial Star Citizen fan site, not affiliated with the Cloud Imperium group of companies. All content on this site not authored by its host or users are property of their respective owners. Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC.</p>
-  <p class="recht"><span data-t="app_name">VerseSpotter</span> v1.0.0 · GPL-3.0 · <span data-t="footer_by">by Xharig</span></p>
+  <div class="fuss-fan">
+    <img class="fankit" src="../assets/made-by-the-community-240.png" alt="Star Citizen: Made by the Community" width="120" height="120" loading="lazy">
+    <p class="fan" lang="en" data-t="footer_fan">This is an unofficial Star Citizen fan site, not affiliated with the Cloud Imperium group of companies. All content on this site not authored by its host or users are property of their respective owners. Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC.</p>
+  </div>
+  <p class="recht"><span data-t="app_name">VerseSpotter</span> v1.0.0, GPL-3.0, <span data-t="footer_by">by Xharig</span></p>
 </div>
 </footer>
 <script src="../assets/texts.js?v=9"></script>

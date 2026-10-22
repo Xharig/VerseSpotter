@@ -1,45 +1,24 @@
 /* ---------------------------------------------------------------
-   Gemeinsames Aussehen aller Seiten.
-   Marke: Neon #9ce430 auf dunklem Grund, Akzent nie flächig.
-   Keine fremden Schriften, keine CDNs.
+   VerseSpotter: the parts only this site has (trainer, catalogue,
+   thanks page). Colours, type, buttons, header, menu and footer come
+   from basis.css, the shared base of every Xharig site, loaded first.
+   The names below are the trainer's own; they point at the shared
+   colours so the trainer keeps working unchanged.
    --------------------------------------------------------------- */
 :root{
-  --neon:#9ce430;
-  --neon-tief:#5fa522;
-  --grund:#0d0d0d;
-  --flaeche:#141414;
-  --flaeche-hoch:#1c1c1c;
-  --rand:#242424;
-  --text:#e8e8e8;
-  --text-leise:#a3a3a3;
-  --gut:#9ce430;
+  --rand:var(--linie);
+  --text-leise:var(--leise);
+  --flaeche-hoch:var(--hover);
+  --neon-tief:var(--neon);
+  --gut:var(--neon);
   --schlecht:#ff6b5e;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:Calibri,"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
-  background:var(--grund);
-  background-image:radial-gradient(1200px 700px at 50% -10%, #1c1c1c 0%, #0d0d0d 55%, #0a0a0a 100%);
-  background-attachment:fixed;
-  color:var(--text);
-  line-height:1.6;
-  font-size:17px;
-  min-height:100vh;
-  display:flex;flex-direction:column;
-}
+body{min-height:100vh;display:flex;flex-direction:column}
 main{flex:1}
-img{max-width:100%;display:block}
-a{color:var(--neon);text-decoration:none}
-a:hover{text-decoration:underline}
-.mitte{max-width:1120px;margin:0 auto;padding:0 22px}
-@media (max-width:600px){.mitte{padding:0 16px}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 [hidden]{display:none !important}
-
-/* Sichtbarer Tastaturfokus auf allem, was bedienbar ist */
-:focus-visible{outline:3px solid var(--neon);outline-offset:3px;border-radius:6px}
+/* Inline Lucide icons in the shared header. */
+.ic-svg{width:1.15em;height:1.15em;flex:none}
 
 /* Lucide-Symbole als Maske: Farbe kommt aus currentColor */
 .ic{
@@ -75,81 +54,33 @@ a:hover{text-decoration:underline}
 .ic-trash-2{--ic:url(icons/trash-2.svg)}
 .ic-layout-grid{--ic:url(icons/layout-grid.svg)}
 
-/* Signatur der Marke: dünne Umriss-Kreise, teils aus dem Rand ragend */
-.kreis{position:absolute;border:2px solid var(--neon);border-radius:50%;pointer-events:none}
-
-/* ---------- Kopf ---------- */
-header{
-  position:sticky;top:0;z-index:20;
-  background:rgba(10,10,10,.85);
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--rand);
-}
-.kopf{display:flex;align-items:center;gap:14px;height:64px}
-.kopf .logo{display:flex;align-items:center;gap:12px;color:var(--text)}
-.kopf .logo:hover{text-decoration:none}
-.kopf .logo img{width:38px;height:38px}
-.marke{font-weight:800;letter-spacing:.5px;font-size:20px}
-.kopf nav{margin-left:auto;display:flex;align-items:center;gap:22px}
-.kopf nav a{color:var(--text-leise);font-size:15px;display:flex;align-items:center;gap:6px}
-.kopf nav a:hover,.kopf nav a[aria-current=page]{color:var(--neon);text-decoration:none}
-.kopf nav a.alle{padding-right:22px;border-right:1px solid var(--rand)}
-.sprache{display:flex;border:1px solid var(--rand);border-radius:999px;overflow:hidden}
-.kopf nav .sprache a{color:var(--text-leise);font-size:14px;padding:5px 13px}
-.kopf nav .sprache a:hover{color:var(--neon)}
-.kopf nav .sprache a.an{background:var(--neon);color:#0a0a0a;font-weight:700}
-
-/* Offers the other language version (assets/texts.js) */
-.hinweis-sprache{border-top:1px solid var(--rand);font-size:15px}
-.hinweis-sprache .mitte{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
-.hinweis-sprache a{font-weight:700}
-.hinweis-sprache button{
-  margin-left:auto;background:none;border:0;color:var(--text-leise);
-  font:inherit;font-size:20px;line-height:1;padding:2px 6px;cursor:pointer;
-}
-.hinweis-sprache button:hover{color:var(--neon)}
-@media (max-width:700px){
-  .kopf nav{gap:14px}
-  .kopf nav a.alle{padding-right:14px}
-  .kopf nav a .txt{display:none}
-  .kopf nav a .ic{width:1.35em;height:1.35em}
-  .marke{font-size:18px}
-}
-@media (max-width:420px){.kopf .marke{display:none}}
-
-/* ---------- Knöpfe ---------- */
-.knopf{
-  display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  padding:12px 24px;border-radius:8px;cursor:pointer;
-  font:inherit;font-weight:700;font-size:17px;border:2px solid var(--neon);
-  background:none;color:var(--neon);
-}
-.knopf:hover{background:rgba(156,228,48,.10);text-decoration:none}
-.knopf.voll{background:var(--neon);color:#0a0a0a}
-.knopf.voll:hover{background:#aef03d}
+/* ---------- Buttons ----------
+   Shape and colours from basis.css; the trainer centres its rows. */
+.knopf{justify-content:center}
 .knopf:disabled{opacity:.45;cursor:not-allowed}
-.knopfreihe{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.wahl .knopfreihe,.auswertung .knopfreihe{justify-content:center}
 
-/* ---------- Abschnitte ---------- */
-section{padding:46px 0;position:relative}
-.label{
-  text-transform:uppercase;letter-spacing:6px;font-size:12px;
-  color:var(--neon-tief);font-weight:700;margin-bottom:10px;
-}
-h1{font-size:48px;font-weight:800;margin:0 0 8px;letter-spacing:.5px;line-height:1.15}
-h2{font-size:30px;font-weight:800;margin:0 0 12px;line-height:1.2}
-h3{font-size:19px;font-weight:800;margin:0 0 8px}
-.einleitung{color:var(--text-leise);max-width:760px;margin:0 0 26px}
-@media (max-width:700px){h1{font-size:34px}h2{font-size:25px}}
+/* ---------- Sections ----------
+   The trainer is one column, so its sections sit closer than on the
+   other sites and are not separated by lines. */
+section{padding:46px 0;position:relative;border-top:0}
+.label{font-size:15px;color:var(--leise);margin-bottom:10px}
+h1{font-size:48px;font-weight:700;margin:0 0 8px;letter-spacing:-.02em;line-height:1.1}
+h2{font-size:30px;font-weight:700;margin:0 0 12px;line-height:1.2}
+h3{font-size:19px;font-weight:700;margin:0 0 8px}
+.einleitung{color:var(--text-leise);max-width:760px;margin:0 0 26px;font-size:17px}
+@media (max-width:700px){h1{font-size:36px}h2{font-size:25px}}
 
-.karte{background:var(--flaeche);border:1px solid var(--rand);border-radius:12px;padding:22px}
+.karte{background:var(--flaeche);border:1px solid var(--rand);border-radius:var(--rund);padding:22px}
 
-/* ---------- Kopfbereich ---------- */
-.hero{position:relative;overflow:hidden;padding:56px 0 30px;text-align:center}
-.hero .kreis.a{width:520px;height:520px;top:-230px;left:-170px;opacity:.10}
-.hero .kreis.b{width:300px;height:300px;top:120px;right:-110px;opacity:.12}
-.hero img.zeichen{width:140px;height:140px;margin:0 auto 18px}
-.hero .unter{font-size:20px;max-width:720px;margin:0 auto}
+/* ---------- Start ----------
+   Left-aligned like the other Xharig sites, in the same column as the
+   settings below it. */
+.hero{position:relative;padding:56px 0 8px;text-align:left}
+.hero .mitte{max-width:908px}
+.hero img.zeichen{width:88px;height:88px;margin:0 0 18px -4px}
+.hero .unter{font-size:20px;color:var(--leise);max-width:34em;margin:0}
+@media (max-width:640px){.hero{padding-top:36px}.hero img.zeichen{display:none}}
 
 /* ---------- Einstellungen vor dem Lauf ---------- */
 .wahl{display:grid;gap:22px;max-width:860px;margin:0 auto}
@@ -163,7 +94,7 @@ h3{font-size:19px;font-weight:800;margin:0 0 8px}
 .option input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
 .option label{
   display:flex;flex-direction:column;gap:4px;height:100%;
-  background:var(--flaeche);border:2px solid var(--rand);border-radius:10px;
+  background:var(--flaeche);border:2px solid var(--rand);border-radius:var(--rund);
   padding:14px 16px;cursor:pointer;
 }
 .option label .titel{font-weight:800;display:flex;align-items:center;gap:8px}
@@ -174,14 +105,18 @@ h3{font-size:19px;font-weight:800;margin:0 0 8px}
 .option input:disabled + label{opacity:.45;cursor:not-allowed}
 .laengen .option label{align-items:center;font-weight:800;font-size:20px;padding:12px}
 
-.schalter{display:flex;align-items:center;gap:14px;background:var(--flaeche);border:1px solid var(--rand);border-radius:10px;padding:14px 16px}
+/* The trainer's switch is a whole row; basis.css draws a smaller one, whose
+   knob is switched off here. */
+.wahl .schalter{display:flex;align-items:center;gap:14px;background:var(--flaeche);border:1px solid var(--rand);border-radius:var(--rund);padding:14px 16px;color:var(--text);font-size:inherit}
+.wahl .schalter:hover{border-color:var(--neon)}
+.schalter input::before{content:none}
 .schalter .text{flex:1}
 .schalter .text strong{display:flex;align-items:center;gap:8px}
 .schalter .text > span{color:var(--text-leise);font-size:14px}
-.schalter input{appearance:none;width:52px;height:30px;border-radius:999px;background:#333;position:relative;cursor:pointer;flex:none;margin:0}
+.schalter input{appearance:none;width:52px;height:30px;border-radius:999px;border:0;background:var(--linie-hell);position:relative;cursor:pointer;flex:none;margin:0}
 .schalter input::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#ddd;transition:left .15s}
 .schalter input:checked{background:var(--neon)}
-.schalter input:checked::after{left:25px;background:#0a0a0a}
+.schalter input:checked::after{left:25px;background:var(--grund)}
 
 .fortschritt{max-width:860px;margin:30px auto 0}
 .balken{height:12px;background:var(--flaeche-hoch);border-radius:999px;overflow:hidden;border:1px solid var(--rand)}
@@ -193,6 +128,7 @@ h3{font-size:19px;font-weight:800;margin:0 0 8px}
 .fortschritt .klein{color:var(--text-leise);font-size:14px}
 .textknopf{background:none;border:0;color:var(--text-leise);font:inherit;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:4px}
 .textknopf:hover{color:var(--neon)}
+@media (max-width:860px){.textknopf{min-height:44px;padding:0 6px}}
 
 /* ---------- Quiz ---------- */
 .quiz{max-width:860px;margin:0 auto}
@@ -201,8 +137,8 @@ h3{font-size:19px;font-weight:800;margin:0 0 8px}
 .quiz-kopf .uhr{display:flex;align-items:center;gap:6px;color:var(--neon);font-weight:800}
 .quiz-kopf .uhr.knapp{color:var(--schlecht)}
 .bildrahmen{
-  position:relative;aspect-ratio:16/10;background:#06080b;border:1px solid var(--rand);
-  border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  position:relative;aspect-ratio:16/10;background:var(--feld);border:1px solid var(--rand);
+  border-radius:var(--rund);overflow:hidden;display:flex;align-items:center;justify-content:center;
 }
 .bildrahmen img{width:100%;height:100%;object-fit:contain}
 .quiz .bildrahmen{max-height:56vh;min-height:220px}
@@ -224,13 +160,13 @@ h3{font-size:19px;font-weight:800;margin:0 0 8px}
 @media (max-width:700px){.antworten{grid-template-columns:1fr}}
 .antwort{
   display:flex;align-items:center;gap:12px;text-align:left;
-  background:var(--flaeche);border:2px solid var(--rand);border-radius:10px;
+  background:var(--flaeche);border:2px solid var(--rand);border-radius:var(--rund);
   color:var(--text);font:inherit;font-size:18px;font-weight:700;padding:14px 16px;cursor:pointer;
   min-height:64px;
 }
 .antwort:hover:not(:disabled){border-color:var(--neon)}
 .antwort .taste{
-  flex:none;width:30px;height:30px;border-radius:7px;border:1px solid #3a3a3a;
+  flex:none;width:30px;height:30px;border-radius:6px;border:1px solid var(--linie-hell);
   display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--text-leise);
 }
 .antwort .name{flex:1}
@@ -242,7 +178,7 @@ h3{font-size:19px;font-weight:800;margin:0 0 8px}
 .antwort:disabled{cursor:default}
 .rueckmeldung{
   margin-top:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:space-between;
-  background:var(--flaeche);border:1px solid var(--rand);border-radius:10px;padding:14px 16px;
+  background:var(--flaeche);border:1px solid var(--rand);border-radius:var(--rund);padding:14px 16px;
 }
 .rueckmeldung .ergebnis{display:flex;flex-wrap:wrap;align-items:center;column-gap:10px;row-gap:2px;font-size:18px;font-weight:800;flex:1;min-width:0}
 .rueckmeldung.gut .ergebnis{color:var(--gut)}
@@ -268,12 +204,12 @@ h3{font-size:19px;font-weight:800;margin:0 0 8px}
 .kopierbox{text-align:left;margin:26px 0}
 .kopierbox pre{
   white-space:pre-wrap;word-break:break-word;margin:0 0 12px;
-  background:#0a0a0a;border:1px solid var(--rand);border-radius:10px;padding:16px;
+  background:var(--feld);border:1px solid var(--rand);border-radius:var(--rund);padding:16px;
   font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:15px;color:var(--text);
 }
 .kopiert{color:var(--neon);font-weight:700;margin-left:10px}
 .fehlerliste{display:grid;gap:14px;text-align:left;margin-top:14px}
-.fehler{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--flaeche);border:1px solid var(--rand);border-radius:12px;padding:14px}
+.fehler{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--flaeche);border:1px solid var(--rand);border-radius:var(--rund);padding:14px}
 @media (max-width:700px){.fehler{grid-template-columns:1fr}}
 .fehler figure{margin:0}
 .fehler figure .bildrahmen{aspect-ratio:16/10}
@@ -291,10 +227,10 @@ h3{font-size:19px;font-weight:800;margin:0 0 8px}
 .katalog{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 @media (max-width:1000px){.katalog{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:600px){.katalog{grid-template-columns:1fr}}
-.schiff{background:var(--flaeche);border:1px solid var(--rand);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.schiff{background:var(--flaeche);border:1px solid var(--rand);border-radius:var(--rund);overflow:hidden;display:flex;flex-direction:column}
 .schiff .bildrahmen{border:0;border-radius:0;aspect-ratio:16/9}
 .schiff .info{padding:14px 16px;display:flex;flex-direction:column;gap:2px;flex:1}
-.schiff .familie{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--neon-tief);font-weight:700}
+.schiff .familie{font-size:14px;color:var(--neon);font-weight:700}
 .schiff h3{margin:0}
 .schiff .daten{color:var(--text-leise);font-size:14px}
 .schiff .mehr{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
@@ -307,7 +243,7 @@ h3{font-size:19px;font-weight:800;margin:0 0 8px}
 
 /* ---------- Dialog ---------- */
 dialog{
-  background:var(--flaeche);color:var(--text);border:1px solid var(--rand);border-radius:14px;
+  background:var(--flaeche);color:var(--text);border:1px solid var(--rand);border-radius:var(--rund);
   padding:24px;max-width:min(560px,calc(100vw - 32px));width:100%;
 }
 dialog.gross{max-width:min(980px,calc(100vw - 32px))}
@@ -330,21 +266,17 @@ dialog .gruende button:hover{border-color:var(--neon)}
 .textseite strong{color:var(--text)}
 .sammler{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 @media (max-width:600px){.sammler{grid-template-columns:1fr}}
-.sammler li{background:var(--flaeche);border:1px solid var(--rand);border-radius:10px;padding:12px 16px;display:flex;justify-content:space-between;gap:12px;color:var(--text)}
+.sammler li{background:var(--flaeche);border:1px solid var(--rand);border-radius:var(--rund);padding:12px 16px;display:flex;justify-content:space-between;gap:12px;color:var(--text)}
 .sammler li span{color:var(--text-leise)}
 
-/* ---------- Fuß ---------- */
-footer{border-top:1px solid var(--rand);padding:40px 0 50px;text-align:center;margin-top:40px}
-.einladen{max-width:620px;margin:0 auto 30px;padding:18px 20px;border:1px solid var(--rand);border-radius:10px;background:var(--flaeche)}
+/* ---------- Footer ----------
+   Layout from basis.css; here the referral box sits on top of it. */
+footer{margin-top:40px}
+.einladen{max-width:760px;margin:0 0 44px;padding:24px 26px;background:var(--flaeche)}
 .einladen p{margin:0 0 14px;color:var(--text-leise)}
-.einladen code{white-space:nowrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95em;color:var(--text)}
-.einladen .knopf.zweit{border-color:var(--rand);color:var(--text)}
-.einladen .knopf.zweit:hover{border-color:var(--neon);color:var(--neon);background:none}
-.einladen .ref-meldung{margin:10px 0 0;min-height:1.6em;font-size:15px;color:var(--neon);overflow-wrap:anywhere}
-.fusslinks{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
-.fankit{margin:22px auto 14px;width:120px;opacity:.85}
-.fan{color:var(--text-leise);font-size:13px;max-width:680px;margin:0 auto 14px;line-height:1.5}
-.recht{color:#7a7a7a;font-size:13px}
+.einladen code{white-space:nowrap;font-size:.95em;color:var(--neon)}
+.einladen .ref-meldung{margin:12px 0 0;min-height:1.5em;font-size:15px;color:var(--neon);overflow-wrap:anywhere}
+@media (max-width:640px){.einladen{padding:20px}}
 
 /* Formerly inline styles: the CSP allows no style="…" (style-src 'self'). */
 .zeile.zeile-fuss{margin-top:10px;margin-bottom:0}

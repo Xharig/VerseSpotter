@@ -7,19 +7,19 @@
 const TEXTS = {
   app_name: { de: 'VerseSpotter', en: 'VerseSpotter' },
   app_claim: {
-    de: 'Erkenne jedes Schiff — am Hologramm im HUD, am Umriss und klein am Himmel.',
-    en: 'Recognise every ship — by its HUD hologram, by its outline and as a speck in the sky.',
+    de: 'Erkenne jedes Schiff: am Hologramm im HUD, am Umriss und klein am Himmel.',
+    en: 'Recognise every ship: by its HUD hologram, by its outline and as a speck in the sky.',
   },
-  page_title_home: { de: 'VerseSpotter — Star-Citizen-Schiffe erkennen lernen', en: 'VerseSpotter — learn to recognise Star Citizen ships' },
-  page_title_catalog: { de: 'Schiffskatalog — VerseSpotter', en: 'Ship catalogue — VerseSpotter' },
-  page_title_thanks: { de: 'Danke & Lizenzen — VerseSpotter', en: 'Thanks & licences — VerseSpotter' },
+  page_title_home: { de: 'VerseSpotter: Star-Citizen-Schiffe erkennen lernen', en: 'VerseSpotter: learn to recognise Star Citizen ships' },
+  page_title_catalog: { de: 'Schiffskatalog | VerseSpotter', en: 'Ship catalogue | VerseSpotter' },
+  page_title_thanks: { de: 'Danke & Lizenzen | VerseSpotter', en: 'Thanks & licences | VerseSpotter' },
   page_desc_home: {
     de: 'Kostenloses Training für Star Citizen: Schiffe am Hologramm im HUD, am Umriss und aus der Distanz erkennen. Mit Karteikasten-Wiederholung und drei Antworten, auf Deutsch und Englisch.',
     en: 'Free Star Citizen ship recognition trainer: identify ships by their HUD hologram, outline and from a distance. Spaced repetition, three answers, German and English.',
   },
   page_desc_catalog: {
-    de: 'Alle flugfähigen Raumschiffe aus Star Citizen mit Bildern, HUD-Hologrammen, Umrissen und Distanzbildern — erst nachschlagen, dann trainieren.',
-    en: 'Every flight-ready Star Citizen spaceship with renders, HUD holograms, outlines and distance shots — study before you train.',
+    de: 'Alle flugfähigen Raumschiffe aus Star Citizen mit Bildern, HUD-Hologrammen, Umrissen und Distanzbildern. Erst nachschlagen, dann trainieren.',
+    en: 'Every flight-ready Star Citizen spaceship with renders, HUD holograms, outlines and distance shots. Study before you train.',
   },
   page_desc_thanks: {
     de: 'Die Community-Mitglieder, die die Bilder aus dem Spiel sammeln, dazu Lizenzen und Datenschutz.',
@@ -31,10 +31,12 @@ const TEXTS = {
   nav_train: { de: 'Training', en: 'Training' },
   nav_catalog: { de: 'Schiffskatalog', en: 'Ship catalogue' },
   nav_thanks: { de: 'Danke & Lizenzen', en: 'Thanks & licences' },
+  nav_menu: { de: 'Menü', en: 'Menu' },
+  skip_link: { de: 'Zum Inhalt springen', en: 'Skip to content' },
   lang_switch: { de: 'Sprache', en: 'Language' },
   // Language bar: text and link are shown in the other language.
   lang_hint_text: { de: 'Diese Seite gibt es auch auf Deutsch.', en: 'This page is also available in English.' },
-  lang_hint_link: { de: 'Zur deutschen Fassung →', en: 'English version →' },
+  lang_hint_link: { de: 'Zur deutschen Fassung', en: 'English version' },
   lang_hint_close: { de: 'Hinweis schließen', en: 'Close notice' },
 
   // Start
@@ -56,7 +58,7 @@ const TEXTS = {
   mode_locked: { de: 'Noch zu wenig Bilder ({n} von {min} Schiffen)', en: 'Not enough images yet ({n} of {min} ships)' },
   length_legend: { de: 'Fragen pro Lauf', en: 'Questions per run' },
   combat_title: { de: 'Gefechtsmodus', en: 'Combat mode' },
-  combat_hint: { de: '{s} Sekunden pro Bild — wer zu langsam ist, liegt falsch', en: '{s} seconds per image — too slow counts as wrong' },
+  combat_hint: { de: '{s} Sekunden pro Bild. Wer zu langsam ist, liegt falsch', en: '{s} seconds per image. Too slow counts as wrong' },
   start_button: { de: 'Training starten', en: 'Start training' },
   progress_title: { de: 'Dein Lernstand', en: 'Your progress' },
   progress_mode: { de: '{s} angefangen · {m} von {b} sitzen', en: '{s} started · {m} of {b} mastered' },
@@ -111,7 +113,7 @@ const TEXTS = {
   rank_ace_text: { de: 'Fehlerfrei. Dir entgeht kein Schiff.', en: 'Flawless. No ship gets past you.' },
   rank_spotter_text: { de: 'Bestanden. Du erkennst die Schiffe zuverlässig.', en: 'Passed. You recognise ships reliably.' },
   rank_cadet_text: { de: 'Guter Anfang. Die Fehler unten kommen im nächsten Lauf wieder.', en: 'Good start. The misses below come back in your next run.' },
-  rank_recruit_text: { de: 'Weiter üben — schau dir die Fehler unten an.', en: 'Keep practising — have a look at the misses below.' },
+  rank_recruit_text: { de: 'Weiter üben, schau dir die Fehler unten an.', en: 'Keep practising, have a look at the misses below.' },
   share_title: { de: 'Ergebnis teilen', en: 'Share your result' },
   share_copy: { de: 'Für Discord kopieren', en: 'Copy for Discord' },
   share_copied: { de: 'Kopiert', en: 'Copied' },
@@ -121,7 +123,7 @@ const TEXTS = {
   share_combat: { de: 'Gefechtsmodus ({s} s pro Bild)', en: 'Combat mode ({s} s per image)' },
   result_time: { de: 'Zeit: {time} · im Schnitt {avg} pro Bild', en: 'Time: {time} · {avg} per image on average' },
   mistakes_title: { de: 'Das hattest du falsch', en: 'What you missed' },
-  mistakes_none: { de: 'Keine Fehler — stark!', en: 'No mistakes — great job!' },
+  mistakes_none: { de: 'Keine Fehler. Stark!', en: 'No mistakes. Great job!' },
   mistake_shown: { de: 'Gezeigt: {name}', en: 'Shown: {name}' },
   mistake_chosen: { de: 'Deine Antwort: {name}', en: 'Your answer: {name}' },
   mistake_timeout: { de: 'Deine Antwort: keine (Zeit abgelaufen)', en: 'Your answer: none (time ran out)' },
@@ -133,8 +135,8 @@ const TEXTS = {
   catalog_label: { de: 'Nachschlagen', en: 'Look it up' },
   catalog_title: { de: 'Schiffskatalog', en: 'Ship catalogue' },
   catalog_intro: {
-    de: 'Alle flugfähigen Raumschiffe — erst in Ruhe ansehen, dann im Training testen. Die Bilder aus dem Spiel kommen nach und nach dazu.',
-    en: 'Every flight-ready spaceship — study them first, then test yourself in training. In-game images are added over time.',
+    de: 'Alle flugfähigen Raumschiffe: erst in Ruhe ansehen, dann im Training testen. Die Bilder aus dem Spiel kommen nach und nach dazu.',
+    en: 'Every flight-ready spaceship: study them first, then test yourself in training. In-game images are added over time.',
   },
   catalog_search: { de: 'Schiff oder Hersteller suchen …', en: 'Search ship or manufacturer …' },
   catalog_search_label: { de: 'Suche', en: 'Search' },
@@ -175,8 +177,8 @@ const TEXTS = {
     en: '<strong>Code:</strong> GPL-3.0. The source is openly available on GitHub.',
   },
   licence_photos: {
-    de: '<strong>Bilder der Sammler:</strong> CC BY-NC 4.0 — weiterverwenden mit Namensnennung, nicht kommerziell.',
-    en: '<strong>Collector images:</strong> CC BY-NC 4.0 — reuse with attribution, non-commercial.',
+    de: '<strong>Bilder der Sammler:</strong> CC BY-NC 4.0, weiterverwenden mit Namensnennung, nicht kommerziell.',
+    en: '<strong>Collector images:</strong> CC BY-NC 4.0, reuse with attribution, non-commercial.',
   },
   licence_wiki: {
     de: '<strong>Umriss- und Distanzbilder:</strong> bearbeitet (freigestellt, verkleinert, als Umriss eingefärbt) aus Fotos aus dem Spiel, die {authors} im <a href="https://starcitizen.tools/">Star Citizen Wiki</a> veröffentlicht haben. Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a>, die bearbeiteten Bilder stehen unter derselben Lizenz.',
@@ -216,7 +218,10 @@ const TEXTS = {
 
   // Fuß
   footer_all_tools: { de: 'Alle Werkzeuge auf xharig.com', en: 'All tools on xharig.com' },
-  footer_versekit: { de: 'VerseKit — Baupläne live im Blick', en: 'VerseKit — blueprints live while you play' },
+  footer_title_more: { de: 'Mehr von Xharig', en: 'More from Xharig' },
+  footer_title_community: { de: 'Gemeinschaft', en: 'Community' },
+  footer_join: { de: 'Lust auf Star Citizen', en: 'Try Star Citizen' },
+  footer_versekit: { de: 'VerseKit: Baupläne live im Blick', en: 'VerseKit: blueprints live while you play' },
   footer_ref_before: {
     de: 'Neu in Star Citizen? Meldest du dich mit meinem Empfehlungscode',
     en: 'New to Star Citizen? Sign up with my referral code',

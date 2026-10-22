@@ -225,11 +225,25 @@ def head_block(page, lang, texts):
     ])
 
 
+# Lucide icons drawn inline in the header (the shared header of all Xharig
+# sites, see assets/basis.css).
+ICON_GRID = ('<svg class="ic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"'
+             ' stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+             '<rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/>'
+             '<rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>')
+ICON_X = ('<svg class="ic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"'
+          ' stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+          '<path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>')
+REFERRAL_LINK = "https://robertsspaceindustries.com/enlist?referral=%s" % REFERRAL_CODE
+
+
 def header(page, lang):
-    def nav(target, key, icon):
+    """The header every Xharig site shares: mark, page links (folded into a
+    menu on narrow screens), xharig.com, language switch."""
+    def nav(target, key, css):
         current = ' aria-current="page"' if target == page else ""
-        return ('    <a href="%s"%s><span class="ic ic-%s" aria-hidden="true"></span>'
-                '<span class="txt" data-t="%s"></span></a>' % (href(target, lang, lang), current, icon, key))
+        return ('    %s<a%s href="%s"%s data-t="%s"></a>'
+                % ("  " if not css else "", css, href(target, lang, lang), current, key))
 
     def switch(target_lang):
         on = ' class="an" aria-current="true"' if target_lang == lang else ""
@@ -241,15 +255,23 @@ def header(page, lang):
     return "\n".join([
         "",
         '<div class="mitte kopf">',
-        '  <a class="logo" href="%s"><img src="assets/logo.svg" alt="" width="38" height="38">'
-        '<span class="marke" data-t="app_name"></span></a>' % href("home", lang, lang),
+        '  <a class="marke" href="%s"><img src="assets/logo.svg" alt="" width="36" height="36">'
+        '<span data-t="app_name"></span></a>' % href("home", lang, lang),
         '  <nav data-t-aria="app_name">',
-        '    <a class="alle" href="%s" data-t-title="nav_all_tools_hint">'
-        '<span class="ic ic-layout-grid" aria-hidden="true"></span>'
-        '<span class="txt" data-t="nav_all_tools"></span></a>' % EXTERNAL["xharig"][lang],
-        nav("home", "nav_train", "crosshair"),
-        nav("catalog", "nav_catalog", "book-open"),
-        nav("thanks", "nav_thanks", "heart-handshake"),
+        nav("home", "nav_train", ' class="weg"'),
+        nav("catalog", "nav_catalog", ' class="weg"'),
+        nav("thanks", "nav_thanks", ' class="weg"'),
+        '    <details class="menue">',
+        '      <summary data-t="nav_menu"></summary>',
+        '      <div class="menue-liste">',
+        nav("home", "nav_train", ""),
+        nav("catalog", "nav_catalog", ""),
+        nav("thanks", "nav_thanks", ""),
+        '        <a href="%s" data-t="footer_all_tools"></a>' % EXTERNAL["xharig"][lang],
+        "      </div>",
+        "    </details>",
+        '    <a class="alle" href="%s" data-t-title="nav_all_tools_hint" data-t-aria="nav_all_tools_hint">'
+        '%s<span data-t="nav_all_tools"></span></a>' % (EXTERNAL["xharig"][lang], ICON_GRID),
         '    <div class="sprache" role="group" data-t-aria="lang_switch">',
         switch("de"),
         switch("en"),
@@ -262,7 +284,7 @@ def header(page, lang):
         '    <a id="hinweis-sprache-link" href="%s" hreflang="%s" lang="%s"></a>'
         % (href(page, other, lang), other, other),
         '    <button type="button" id="hinweis-sprache-zu" data-t-aria="lang_hint_close"'
-        ' data-t-title="lang_hint_close">×</button>',
+        ' data-t-title="lang_hint_close">%s</button>' % ICON_X,
         "  </div>",
         "</div>",
         "",
@@ -270,35 +292,50 @@ def header(page, lang):
 
 
 def footer(lang):
+    """The footer every Xharig site shares: three columns, fan kit notice;
+    here with the referral box on top."""
     return "\n".join([
         "",
         '<div class="mitte">',
-        '  <div class="einladen">',
+        '  <div class="einladen winkel">',
         '    <p><span data-t="footer_ref_before"></span> <code translate="no">%s</code>'
         ' <span data-t="footer_ref_after"></span></p>' % REFERRAL_CODE,
         '    <p data-t="footer_ref_pass"></p>',
         '    <div class="knopfreihe">',
-        '      <a class="knopf" href="https://robertsspaceindustries.com/enlist?referral=%s"'
-        ' data-t="footer_ref_button"></a>' % REFERRAL_CODE,
-        '      <button type="button" class="knopf zweit" id="ref-teilen" data-code="%s"'
-        ' data-link="https://robertsspaceindustries.com/enlist?referral=%s"'
-        ' data-t="footer_ref_share"></button>' % (REFERRAL_CODE, REFERRAL_CODE),
+        '      <a class="knopf" href="%s" data-t="footer_ref_button"></a>' % REFERRAL_LINK,
+        '      <button type="button" class="knopf" id="ref-teilen" data-code="%s"'
+        ' data-link="%s" data-t="footer_ref_share"></button>' % (REFERRAL_CODE, REFERRAL_LINK),
         "    </div>",
         '    <p class="ref-meldung" id="ref-meldung" aria-live="polite"></p>',
         '    <script src="assets/teilen.js?v=1"></script>',
         "  </div>",
-        '  <div class="fusslinks">',
-        '    <a href="%s" data-t="footer_all_tools"></a>' % EXTERNAL["xharig"][lang],
-        '    <a href="%s" data-t="footer_versekit"></a>' % html.escape(EXTERNAL["versekit"][lang]),
-        '    <a href="%s" data-t="nav_thanks"></a>' % href("thanks", lang, lang),
-        '    <a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source"></a>',
-        '    <a href="https://xharig.com/impressum.html" data-t="footer_imprint"></a>',
-        '    <a href="https://xharig.com/datenschutz.html" data-t="footer_privacy"></a>',
+        '  <div class="fuss-raster">',
+        "    <div>",
+        '      <p class="fuss-titel" data-t="app_name"></p>',
+        '      <a href="%s" data-t="nav_train"></a>' % href("home", lang, lang),
+        '      <a href="%s" data-t="nav_catalog"></a>' % href("catalog", lang, lang),
+        '      <a href="%s" data-t="nav_thanks"></a>' % href("thanks", lang, lang),
+        '      <a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source"></a>',
+        "    </div>",
+        "    <div>",
+        '      <p class="fuss-titel" data-t="footer_title_community"></p>',
+        '      <a href="https://xharig.com/discord" translate="no">Discord</a>',
+        '      <a href="%s" data-t="footer_join"></a>' % REFERRAL_LINK,
+        "    </div>",
+        "    <div>",
+        '      <p class="fuss-titel" data-t="footer_title_more"></p>',
+        '      <a href="%s" data-t="footer_all_tools"></a>' % EXTERNAL["xharig"][lang],
+        '      <a href="%s" data-t="footer_versekit"></a>' % html.escape(EXTERNAL["versekit"][lang]),
+        '      <a href="https://xharig.com/impressum.html" data-t="footer_imprint"></a>',
+        '      <a href="https://xharig.com/datenschutz.html" data-t="footer_privacy"></a>',
+        "    </div>",
         "  </div>",
-        '  <img class="fankit" src="assets/made-by-the-community.png"'
-        ' alt="Star Citizen — Made by the Community" width="120">',
-        '  <p class="fan" lang="en" data-t="footer_fan"></p>',
-        '  <p class="recht"><span data-t="app_name"></span> v%s · GPL-3.0 · '
+        '  <div class="fuss-fan">',
+        '    <img class="fankit" src="assets/made-by-the-community-240.png"'
+        ' alt="Star Citizen: Made by the Community" width="120" height="120" loading="lazy">',
+        '    <p class="fan" lang="en" data-t="footer_fan"></p>',
+        "  </div>",
+        '  <p class="recht"><span data-t="app_name"></span> v%s, GPL-3.0, '
         '<span data-t="footer_by"></span></p>' % APP_VERSION,
         "</div>",
         "",
@@ -368,8 +405,8 @@ def render(source, name, lang, texts):
     out = _replace(r'<html lang="[a-z]+">', '<html lang="%s">' % lang, out, "<html lang>", where)
     out = _replace(r"<!-- head:begin.*?<!-- head:end -->", head_block(page, lang, texts),
                    out, "head block", where, re.DOTALL)
-    out = _replace(r'(?<=<header id="kopf">).*?(?=</header>)', header(page, lang),
-                   out, '<header id="kopf">', where, re.DOTALL)
+    out = _replace(r'(?<=<header id="kopf" class="kopfleiste">).*?(?=</header>)', header(page, lang),
+                   out, '<header id="kopf" class="kopfleiste">', where, re.DOTALL)
     out = _replace(r'(?<=<footer id="fuss">).*?(?=</footer>)', footer(lang),
                    out, '<footer id="fuss">', where, re.DOTALL)
     out = fill(out, texts, lang, where)

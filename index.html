@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0d0d0d">
+<meta name="theme-color" content="#10141c">
 <meta name="color-scheme" content="dark">
 <!-- head:begin (tools/build_pages.py) -->
-<title>VerseSpotter — Star-Citizen-Schiffe erkennen lernen</title>
+<title>VerseSpotter: Star-Citizen-Schiffe erkennen lernen</title>
 <meta name="description" content="Kostenloses Training für Star Citizen: Schiffe am Hologramm im HUD, am Umriss und aus der Distanz erkennen. Mit Karteikasten-Wiederholung und drei Antworten, auf Deutsch und Englisch.">
 <link rel="canonical" href="https://versespotter.xharig.com/">
 <link rel="alternate" hreflang="de" href="https://versespotter.xharig.com/">
@@ -19,7 +19,7 @@
 <meta property="og:locale" content="de_DE">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://versespotter.xharig.com/">
-<meta property="og:title" content="VerseSpotter — Star-Citizen-Schiffe erkennen lernen">
+<meta property="og:title" content="VerseSpotter: Star-Citizen-Schiffe erkennen lernen">
 <meta property="og:description" content="Kostenloses Training für Star Citizen: Schiffe am Hologramm im HUD, am Umriss und aus der Distanz erkennen. Mit Karteikasten-Wiederholung und drei Antworten, auf Deutsch und Englisch.">
 <script type="application/ld+json">
 {
@@ -68,17 +68,30 @@
 <!-- head:end -->
 <script src="assets/lang.js?v=8"></script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/style.css?v=9">
+<link rel="preload" href="assets/schrift/lato-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/schrift/lato-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/basis.css?v=1">
+<link rel="stylesheet" href="assets/style.css?v=10">
 </head>
 <body data-page="home">
-<header id="kopf">
+<a class="springen" href="#inhalt" data-t="skip_link">Zum Inhalt springen</a>
+<header id="kopf" class="kopfleiste">
 <div class="mitte kopf">
-  <a class="logo" href="./"><img src="assets/logo.svg" alt="" width="38" height="38"><span class="marke" data-t="app_name">VerseSpotter</span></a>
+  <a class="marke" href="./"><img src="assets/logo.svg" alt="" width="36" height="36"><span data-t="app_name">VerseSpotter</span></a>
   <nav data-t-aria="app_name" aria-label="VerseSpotter">
-    <a class="alle" href="https://xharig.com/" data-t-title="nav_all_tools_hint" title="Alle Werkzeuge von Xharig"><span class="ic ic-layout-grid" aria-hidden="true"></span><span class="txt" data-t="nav_all_tools">xharig.com</span></a>
-    <a href="./" aria-current="page"><span class="ic ic-crosshair" aria-hidden="true"></span><span class="txt" data-t="nav_train">Training</span></a>
-    <a href="katalog.html"><span class="ic ic-book-open" aria-hidden="true"></span><span class="txt" data-t="nav_catalog">Schiffskatalog</span></a>
-    <a href="danke.html"><span class="ic ic-heart-handshake" aria-hidden="true"></span><span class="txt" data-t="nav_thanks">Danke &amp; Lizenzen</span></a>
+    <a class="weg" href="./" aria-current="page" data-t="nav_train">Training</a>
+    <a class="weg" href="katalog.html" data-t="nav_catalog">Schiffskatalog</a>
+    <a class="weg" href="danke.html" data-t="nav_thanks">Danke &amp; Lizenzen</a>
+    <details class="menue">
+      <summary data-t="nav_menu">Menü</summary>
+      <div class="menue-liste">
+      <a href="./" aria-current="page" data-t="nav_train">Training</a>
+      <a href="katalog.html" data-t="nav_catalog">Schiffskatalog</a>
+      <a href="danke.html" data-t="nav_thanks">Danke &amp; Lizenzen</a>
+        <a href="https://xharig.com/" data-t="footer_all_tools">Alle Werkzeuge auf xharig.com</a>
+      </div>
+    </details>
+    <a class="alle" href="https://xharig.com/" data-t-title="nav_all_tools_hint" title="Alle Werkzeuge von Xharig" data-t-aria="nav_all_tools_hint" aria-label="Alle Werkzeuge von Xharig"><svg class="ic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg><span data-t="nav_all_tools">xharig.com</span></a>
     <div class="sprache" role="group" data-t-aria="lang_switch" aria-label="Sprache">
       <a href="./" data-lang="de" hreflang="de" lang="de" class="an" aria-current="true">DE</a>
       <a href="en/" data-lang="en" hreflang="en" lang="en">EN</a>
@@ -89,21 +102,19 @@
   <div class="mitte">
     <span id="hinweis-sprache-text" lang="en"></span>
     <a id="hinweis-sprache-link" href="en/" hreflang="en" lang="en"></a>
-    <button type="button" id="hinweis-sprache-zu" data-t-aria="lang_hint_close" aria-label="Hinweis schließen" data-t-title="lang_hint_close" title="Hinweis schließen">×</button>
+    <button type="button" id="hinweis-sprache-zu" data-t-aria="lang_hint_close" aria-label="Hinweis schließen" data-t-title="lang_hint_close" title="Hinweis schließen"><svg class="ic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
   </div>
 </div>
 </header>
 
-<main>
+<main id="inhalt">
   <!-- Start: Einstellungen und Lernstand -->
   <div id="ansicht-start">
     <div class="hero">
-      <div class="kreis a"></div>
-      <div class="kreis b"></div>
       <div class="mitte">
-        <img class="zeichen" src="assets/logo.svg" alt="" width="140" height="140">
+        <img class="zeichen" src="assets/logo.svg" alt="" width="88" height="88">
         <h1 data-t="app_name">VerseSpotter</h1>
-        <p class="unter" data-t="app_claim">Erkenne jedes Schiff — am Hologramm im HUD, am Umriss und klein am Himmel.</p>
+        <p class="unter" data-t="app_claim">Erkenne jedes Schiff: am Hologramm im HUD, am Umriss und klein am Himmel.</p>
       </div>
     </div>
 
@@ -132,7 +143,7 @@
           </div>
         </form>
 
-        <div class="fortschritt karte" id="fortschritt">
+        <div class="fortschritt karte winkel" id="fortschritt">
           <h3 data-t="progress_title">Dein Lernstand</h3>
           <div class="zeile zeile-fuss">
             <span class="klein" data-t="progress_note">Der Balken unter jeder Bildart wächst mit jeder richtigen Antwort. Ein Schiff sitzt nach 4× richtig hintereinander. Der Lernstand liegt nur in diesem Browser. Wer den Browserverlauf komplett löscht, fängt von vorn an.</span>
@@ -142,7 +153,7 @@
           </div>
         </div>
 
-        <div class="fortschritt karte">
+        <div class="fortschritt karte winkel">
           <h3 data-t="how_title">So funktioniert es</h3>
           <ul class="liste-leise">
             <li data-t="how_1">Du siehst ein Bild und wählst aus drei Schiffen.</li>
@@ -193,7 +204,7 @@
       <p class="zeit" id="ergebnis-zeit"><span class="ic ic-timer" aria-hidden="true"></span><span id="ergebnis-zeit-text"></span></p>
       <p class="einleitung einleitung-mitte" id="ergebnis-text"></p>
 
-      <div class="kopierbox karte">
+      <div class="kopierbox karte winkel">
         <h3 data-t="share_title">Ergebnis teilen</h3>
         <pre id="kopiertext"></pre>
         <button type="button" class="knopf" id="kopieren">
@@ -239,27 +250,42 @@
 
 <footer id="fuss">
 <div class="mitte">
-  <div class="einladen">
+  <div class="einladen winkel">
     <p><span data-t="footer_ref_before">Neu in Star Citizen? Meldest du dich mit meinem Empfehlungscode</span> <code translate="no">STAR-YC7L-S4W2</code> <span data-t="footer_ref_after">an, bekommst du nach dem Kauf eines Spielpakets 50.000 UEC Startguthaben im Spiel dazu.</span></p>
     <p data-t="footer_ref_pass">Gib den Code gern an Freunde weiter, die neu anfangen, sie bekommen dieselben 50.000 UEC.</p>
     <div class="knopfreihe">
       <a class="knopf" href="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_ref_button">Mit meinem Code anmelden</a>
-      <button type="button" class="knopf zweit" id="ref-teilen" data-code="STAR-YC7L-S4W2" data-link="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_ref_share">Link weitergeben</button>
+      <button type="button" class="knopf" id="ref-teilen" data-code="STAR-YC7L-S4W2" data-link="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_ref_share">Link weitergeben</button>
     </div>
     <p class="ref-meldung" id="ref-meldung" aria-live="polite"></p>
     <script src="assets/teilen.js?v=1"></script>
   </div>
-  <div class="fusslinks">
-    <a href="https://xharig.com/" data-t="footer_all_tools">Alle Werkzeuge auf xharig.com</a>
-    <a href="https://versekit.xharig.com/?von=versespotter" data-t="footer_versekit">VerseKit — Baupläne live im Blick</a>
-    <a href="danke.html" data-t="nav_thanks">Danke &amp; Lizenzen</a>
-    <a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source">Quelltext</a>
-    <a href="https://xharig.com/impressum.html" data-t="footer_imprint">Impressum</a>
-    <a href="https://xharig.com/datenschutz.html" data-t="footer_privacy">Datenschutz</a>
+  <div class="fuss-raster">
+    <div>
+      <p class="fuss-titel" data-t="app_name">VerseSpotter</p>
+      <a href="./" data-t="nav_train">Training</a>
+      <a href="katalog.html" data-t="nav_catalog">Schiffskatalog</a>
+      <a href="danke.html" data-t="nav_thanks">Danke &amp; Lizenzen</a>
+      <a href="https://github.com/Xharig/VerseSpotter" data-t="footer_source">Quelltext</a>
+    </div>
+    <div>
+      <p class="fuss-titel" data-t="footer_title_community">Gemeinschaft</p>
+      <a href="https://xharig.com/discord" translate="no">Discord</a>
+      <a href="https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2" data-t="footer_join">Lust auf Star Citizen</a>
+    </div>
+    <div>
+      <p class="fuss-titel" data-t="footer_title_more">Mehr von Xharig</p>
+      <a href="https://xharig.com/" data-t="footer_all_tools">Alle Werkzeuge auf xharig.com</a>
+      <a href="https://versekit.xharig.com/?von=versespotter" data-t="footer_versekit">VerseKit: Baupläne live im Blick</a>
+      <a href="https://xharig.com/impressum.html" data-t="footer_imprint">Impressum</a>
+      <a href="https://xharig.com/datenschutz.html" data-t="footer_privacy">Datenschutz</a>
+    </div>
   </div>
-  <img class="fankit" src="assets/made-by-the-community.png" alt="Star Citizen — Made by the Community" width="120">
-  <p class="fan" lang="en" data-t="footer_fan">This is an unofficial Star Citizen fan site, not affiliated with the Cloud Imperium group of companies. All content on this site not authored by its host or users are property of their respective owners. Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC.</p>
-  <p class="recht"><span data-t="app_name">VerseSpotter</span> v1.0.0 · GPL-3.0 · <span data-t="footer_by">von Xharig</span></p>
+  <div class="fuss-fan">
+    <img class="fankit" src="assets/made-by-the-community-240.png" alt="Star Citizen: Made by the Community" width="120" height="120" loading="lazy">
+    <p class="fan" lang="en" data-t="footer_fan">This is an unofficial Star Citizen fan site, not affiliated with the Cloud Imperium group of companies. All content on this site not authored by its host or users are property of their respective owners. Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC.</p>
+  </div>
+  <p class="recht"><span data-t="app_name">VerseSpotter</span> v1.0.0, GPL-3.0, <span data-t="footer_by">von Xharig</span></p>
 </div>
 </footer>
 <script src="assets/texts.js?v=9"></script>
