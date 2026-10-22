@@ -8,20 +8,22 @@
 
 <sub>in your browser · on PC and phone · free · no account, no install</sub>
 
-[![Website](https://img.shields.io/badge/Website-versespotter.xharig.com-5fa522)](https://versespotter.xharig.com/)
-[![Licence](https://img.shields.io/badge/Licence-GPL--3.0-5fa522)](LICENSE)
-[![Images](https://img.shields.io/badge/Images-CC%20BY--NC%204.0-5fa522)](LICENSE-IMAGES.md)
-[![Discord](https://img.shields.io/badge/Discord-join-5fa522?logo=discord&logoColor=white)](https://xharig.com/discord)
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-buy%20me%20a%20coffee-5fa522?logo=kofi&logoColor=white)](https://ko-fi.com/xharig)
+[![Website](https://img.shields.io/badge/Website-versespotter.xharig.com-9ce430?labelColor=161c28)](https://versespotter.xharig.com/)
+[![Licence](https://img.shields.io/badge/Licence-GPL--3.0-9ce430?labelColor=161c28)](LICENSE)
+[![Images](https://img.shields.io/badge/Images-CC%20BY--NC%204.0-9ce430?labelColor=161c28)](LICENSE-IMAGES.md)
+[![Discord](https://img.shields.io/badge/Discord-join-9ce430?labelColor=161c28&logo=discord&logoColor=9ce430)](https://xharig.com/discord)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-buy%20me%20a%20coffee-9ce430?labelColor=161c28&logo=kofi&logoColor=9ce430)](https://ko-fi.com/xharig)
 <br>
-[![Browser](https://img.shields.io/badge/Runs%20in-browser-0a4a7a)](https://versespotter.xharig.com/)
-[![Star Citizen](https://img.shields.io/badge/Star%20Citizen-compatible-0a4a7a)](https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2)
+[![Browser](https://img.shields.io/badge/Runs%20in-browser-34415a?labelColor=161c28)](https://versespotter.xharig.com/)
+[![Star Citizen](https://img.shields.io/badge/Star%20Citizen-compatible-34415a?labelColor=161c28)](https://robertsspaceindustries.com/enlist?referral=STAR-YC7L-S4W2)
 
 [Deutsch](https://github.com/Xharig/VerseSpotter/blob/main/README.md) · **English**
 
 </div>
 
 ---
+
+<img src="assets/readme-kopf-en.png" alt="VerseSpotter on a PC and a phone" width="100%">
 
 A trainer in your browser that works like a driving-theory app: you see an image, pick one of three ships and get your results at the end. What you got wrong comes back soon, what you know comes up less often.
 
