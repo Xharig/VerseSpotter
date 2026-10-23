@@ -197,6 +197,14 @@ def structured_data(lang, desc):
     return '<script type="application/ld+json">\n%s\n</script>' % text
 
 
+# Link preview image (1280 x 640) in assets/, one per language.
+PREVIEW_IMAGE = {"de": "social-preview.png", "en": "social-preview-en.png"}
+PREVIEW_ALT = {
+    "de": "VerseSpotter: Hologramm, Umriss und Distanz eines Schiffs zum Erkennen lernen",
+    "en": "VerseSpotter: hologram, outline and distance view of a ship to learn to recognise",
+}
+
+
 def head_block(page, lang, texts):
     _, title_key, desc_key = PAGES[PAGE_FILE[page]]
     where = PAGE_FILE[page] + " head"
@@ -220,6 +228,11 @@ def head_block(page, lang, texts):
         '<meta property="og:url" content="%s">' % url(page, lang),
         '<meta property="og:title" content="%s">' % title,
         '<meta property="og:description" content="%s">' % desc,
+        '<meta property="og:image" content="%sassets/%s">' % (SITE, PREVIEW_IMAGE[lang]),
+        '<meta property="og:image:width" content="1280">',
+        '<meta property="og:image:height" content="640">',
+        '<meta property="og:image:alt" content="%s">' % html.escape(PREVIEW_ALT[lang]),
+        '<meta name="twitter:card" content="summary_large_image">',
     ] + extra + [
         "<!-- head:end -->",
     ])
